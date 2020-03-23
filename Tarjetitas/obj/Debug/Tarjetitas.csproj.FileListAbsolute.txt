@@ -1,0 +1,9 @@
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\bin\Debug\Tarjetitas.exe.config
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\bin\Debug\Tarjetitas.exe
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\bin\Debug\Tarjetitas.pdb
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Login.resources
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Properties.Resources.resources
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
