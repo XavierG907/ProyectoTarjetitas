@@ -16,5 +16,39 @@ namespace Tarjetitas
         {
             InitializeComponent();
         }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("Usuario"))
+            {
+                txtUsuario.Clear();
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals(""))
+            {
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.CornflowerBlue;
+            }
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text.Equals("Contraseña"))
+            {
+                txtContraseña.Clear();
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text.Equals(""))
+            {
+                txtContraseña.Text =  "Contraseña";
+            }
+        }
     }
 }

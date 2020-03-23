@@ -16,3 +16,4 @@ C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.P
 C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.GenerateResource.cache
 C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
+C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.MenuPrincipal.resources
