@@ -7,3 +7,12 @@ C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Properties.Res
 C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\bin\Debug\Tarjetitas.exe.config
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\bin\Debug\Tarjetitas.exe
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\bin\Debug\Tarjetitas.pdb
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csprojAssemblyReference.cache
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Login.resources
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Properties.Resources.resources
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.GenerateResource.cache
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
+C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
