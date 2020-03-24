@@ -17,3 +17,13 @@ C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.c
 C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\ageus\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
 C:\Users\admin\Desktop\Tarjetitas\Tarjetitas\obj\Debug\Tarjetitas.MenuPrincipal.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Tarjetitas.exe.config
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Tarjetitas.exe
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Tarjetitas.pdb
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csprojAssemblyReference.cache
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Login.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.MenuPrincipal.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Properties.Resources.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.GenerateResource.cache
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
