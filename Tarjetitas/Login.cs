@@ -57,5 +57,12 @@ namespace Tarjetitas
             mp.ShowDialog();
             this.Close();
         }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            UserRegister ur = new UserRegister();
+            ur.ShowDialog();
+            this.Close();
+        }
     }
 }
