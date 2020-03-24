@@ -50,5 +50,12 @@ namespace Tarjetitas
                 txtContraseña.Text =  "Contraseña";
             }
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal mp = new MenuPrincipal();
+            mp.ShowDialog();
+            this.Close();
+        }
     }
 }
