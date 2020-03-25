@@ -10,6 +10,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data;
 
 namespace Tarjetitas
 {
@@ -19,6 +20,7 @@ namespace Tarjetitas
 	public partial class UserRegister : Form
 	{
 		private string verificationCode;
+		private TarjetitasDB bd = new TarjetitasDB();
 		public UserRegister()
 		{
 			//
@@ -78,8 +80,7 @@ namespace Tarjetitas
 				errorUserName.Text = "Campo vacio";
 				flag = true;}
 			if (txtPassword.Text.Length == 0) {
-				errorPassword.Text = "Debe contener al menos 8 caracteres, una mayúscula, caracter especial(#/()=?\\.)" +
-					" y dígito";
+				errorPassword.Text = "Debe contener entre 8 y 16 caracteres, una mayúscula, una minuscula y dígito";
 				flag = true;}
 			if (txtVerification.Text.Length == 0) {
 				errorCode.Text = "Campo vacio";
@@ -98,10 +99,9 @@ namespace Tarjetitas
 				errorLastName.Text = "Debe contener letras y un espacio entre cada apellido";
 				flag = true;
 			}
-			regla = new Regex("^[\\w#/()=?\\.]{8,32}$");
+			regla = new Regex("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\w{8,16}$");
 			if (!regla.IsMatch(txtPassword.Text)) { //Falta validar toda la contraseña
-				errorPassword.Text = "Debe contener al menos 8 caracteres, una mayúscula, caracter especial(#/()=?\\.)" +
-					" y dígito";
+				errorPassword.Text = "Debe contener entre 8 y 16 caracteres, una mayúscula, una minuscula y dígito";
 				flag = true;
 			}
 			else if (txtPassword.Text != txtConfPassword.Text) {
@@ -110,11 +110,18 @@ namespace Tarjetitas
 			}
 			if (txtVerification.Text != verificationCode) {
 				errorCode.Text = "El código de verificación no coincide";
+				flag = true;
 			}
 			return flag;
 		}
 		bool exitsUserName() {
 			//Necesito la base de datos para validar esta parte
+			string comando = "SELECT COUNT(*) FROM usuario WHERE usuario='"+txtUserName.Text+"';";
+			if (bd.consulta(comando).Rows.Count != 0)
+			{
+				errorUserName.Text = "Usuario ya registrado. Introduzca otro.";
+				return true;
+			}
 			return false;
 		}
 		void ClearErros() {
@@ -127,6 +134,7 @@ namespace Tarjetitas
 			errorGeneral.Text 		= "";
 		}
 		void BtnCreateUserClick(object sender, EventArgs e) {
+			string fechNa = dtpBirthdaay.Value.ToString("yyyy-MM-dd");
 			if (emptyFields()) {
 				errorGeneral.Text = "* Los campos marcados con rojo son obligatorios";
 				return;
@@ -140,7 +148,11 @@ namespace Tarjetitas
 				return;
 			}
 			//Añadir usuario
-			
+			string comando = "INSERT INTO usuario VALUES('"+txtUserName.Text+"','"+txtName.Text+"','"+
+				txtLastName.Text+"','"+fechNa+"','"+txtEmail.Text+"','"+txtPassword.Text+"',"+
+				(cbTema.SelectedIndex+1).ToString()+");";
+			bd.ejecutarComando(comando);
+
 			//Abrir ventana de inicio con mensaje de bienvenida
 			
 		}

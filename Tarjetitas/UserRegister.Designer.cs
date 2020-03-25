@@ -410,6 +410,8 @@ namespace Tarjetitas
             // 
             // dtpBirthdaay
             // 
+            this.dtpBirthdaay.CustomFormat = "dd-MM-yyyy";
+            this.dtpBirthdaay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthdaay.Location = new System.Drawing.Point(246, 160);
             this.dtpBirthdaay.MaxDate = new System.DateTime(2016, 12, 31, 0, 0, 0, 0);
             this.dtpBirthdaay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
