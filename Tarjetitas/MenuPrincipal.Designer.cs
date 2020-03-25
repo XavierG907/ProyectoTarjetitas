@@ -30,25 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.label1Main = new System.Windows.Forms.Label();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.labelUser = new System.Windows.Forms.Label();
+            this.labelWelcome = new System.Windows.Forms.Label();
+            this.labelMain = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonConfig = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
+            this.buttonRecycleBin = new System.Windows.Forms.Button();
+            this.buttonFavoriteDecks = new System.Windows.Forms.Button();
+            this.buttonPublicDecks = new System.Windows.Forms.Button();
+            this.buttonMyDecks = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelMainMenu.SuspendLayout();
-            this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMainMenu
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
-            this.panelMainMenu.Controls.Add(this.label1);
-            this.panelMainMenu.Controls.Add(this.label1Main);
+            this.panelMainMenu.Controls.Add(this.pictureBoxImage);
+            this.panelMainMenu.Controls.Add(this.labelUser);
+            this.panelMainMenu.Controls.Add(this.labelWelcome);
+            this.panelMainMenu.Controls.Add(this.labelMain);
             this.panelMainMenu.Controls.Add(this.buttonHelp);
             this.panelMainMenu.Controls.Add(this.buttonConfig);
             this.panelMainMenu.Controls.Add(this.buttonLogOut);
@@ -58,18 +62,50 @@
             this.panelMainMenu.Size = new System.Drawing.Size(831, 77);
             this.panelMainMenu.TabIndex = 0;
             // 
-            // label1Main
+            // pictureBoxImage
             // 
-            this.label1Main.AutoSize = true;
-            this.label1Main.BackColor = System.Drawing.Color.Transparent;
-            this.label1Main.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Main.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.label1Main.Location = new System.Drawing.Point(260, 11);
-            this.label1Main.Name = "label1Main";
-            this.label1Main.Size = new System.Drawing.Size(292, 44);
-            this.label1Main.TabIndex = 5;
-            this.label1Main.Text = "TARJETITAS PRO";
-            this.label1Main.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
+            this.pictureBoxImage.Location = new System.Drawing.Point(649, 5);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(151, 66);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage.TabIndex = 9;
+            this.pictureBoxImage.TabStop = false;
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUser.ForeColor = System.Drawing.Color.White;
+            this.labelUser.Location = new System.Drawing.Point(423, 58);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(36, 16);
+            this.labelUser.TabIndex = 7;
+            this.labelUser.Text = "Raúl";
+            // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.ForeColor = System.Drawing.Color.White;
+            this.labelWelcome.Location = new System.Drawing.Point(343, 58);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(79, 16);
+            this.labelWelcome.TabIndex = 6;
+            this.labelWelcome.Text = "Bienvenido,";
+            // 
+            // labelMain
+            // 
+            this.labelMain.AutoSize = true;
+            this.labelMain.BackColor = System.Drawing.Color.Transparent;
+            this.labelMain.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelMain.Location = new System.Drawing.Point(274, 11);
+            this.labelMain.Name = "labelMain";
+            this.labelMain.Size = new System.Drawing.Size(292, 44);
+            this.labelMain.TabIndex = 5;
+            this.labelMain.Text = "TARJETITAS PRO";
+            this.labelMain.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // buttonHelp
             // 
@@ -119,97 +155,86 @@
             this.buttonLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonLogOut.UseVisualStyleBackColor = false;
             // 
+            // buttonRecycleBin
+            // 
+            this.buttonRecycleBin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonRecycleBin.FlatAppearance.BorderSize = 0;
+            this.buttonRecycleBin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRecycleBin.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRecycleBin.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonRecycleBin.Image = ((System.Drawing.Image)(resources.GetObject("buttonRecycleBin.Image")));
+            this.buttonRecycleBin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRecycleBin.Location = new System.Drawing.Point(216, 368);
+            this.buttonRecycleBin.Name = "buttonRecycleBin";
+            this.buttonRecycleBin.Size = new System.Drawing.Size(398, 58);
+            this.buttonRecycleBin.TabIndex = 27;
+            this.buttonRecycleBin.Text = "Papelería de Reciclaje";
+            this.buttonRecycleBin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRecycleBin.UseVisualStyleBackColor = false;
+            this.buttonRecycleBin.Click += new System.EventHandler(this.buttonRecycleBin_Click);
+            // 
+            // buttonFavoriteDecks
+            // 
+            this.buttonFavoriteDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonFavoriteDecks.FlatAppearance.BorderSize = 0;
+            this.buttonFavoriteDecks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFavoriteDecks.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFavoriteDecks.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonFavoriteDecks.Image = ((System.Drawing.Image)(resources.GetObject("buttonFavoriteDecks.Image")));
+            this.buttonFavoriteDecks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonFavoriteDecks.Location = new System.Drawing.Point(216, 279);
+            this.buttonFavoriteDecks.Name = "buttonFavoriteDecks";
+            this.buttonFavoriteDecks.Size = new System.Drawing.Size(398, 58);
+            this.buttonFavoriteDecks.TabIndex = 26;
+            this.buttonFavoriteDecks.Text = "Barajas Favoritas";
+            this.buttonFavoriteDecks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonFavoriteDecks.UseVisualStyleBackColor = false;
+            this.buttonFavoriteDecks.Click += new System.EventHandler(this.buttonFavoriteDecks_Click);
+            // 
+            // buttonPublicDecks
+            // 
+            this.buttonPublicDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonPublicDecks.FlatAppearance.BorderSize = 0;
+            this.buttonPublicDecks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPublicDecks.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPublicDecks.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonPublicDecks.Image = ((System.Drawing.Image)(resources.GetObject("buttonPublicDecks.Image")));
+            this.buttonPublicDecks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPublicDecks.Location = new System.Drawing.Point(216, 190);
+            this.buttonPublicDecks.Name = "buttonPublicDecks";
+            this.buttonPublicDecks.Size = new System.Drawing.Size(398, 58);
+            this.buttonPublicDecks.TabIndex = 25;
+            this.buttonPublicDecks.Text = "Barajas Públicas";
+            this.buttonPublicDecks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPublicDecks.UseVisualStyleBackColor = false;
+            this.buttonPublicDecks.Click += new System.EventHandler(this.buttonPublicDecks_Click);
+            // 
+            // buttonMyDecks
+            // 
+            this.buttonMyDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonMyDecks.FlatAppearance.BorderSize = 0;
+            this.buttonMyDecks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMyDecks.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMyDecks.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonMyDecks.Image = ((System.Drawing.Image)(resources.GetObject("buttonMyDecks.Image")));
+            this.buttonMyDecks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonMyDecks.Location = new System.Drawing.Point(216, 101);
+            this.buttonMyDecks.Name = "buttonMyDecks";
+            this.buttonMyDecks.Size = new System.Drawing.Size(398, 58);
+            this.buttonMyDecks.TabIndex = 24;
+            this.buttonMyDecks.Text = "Mis Barajas";
+            this.buttonMyDecks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMyDecks.UseVisualStyleBackColor = false;
+            this.buttonMyDecks.Click += new System.EventHandler(this.buttonMyDecks_Click);
+            // 
             // panelContainer
             // 
-            this.panelContainer.Controls.Add(this.button4);
-            this.panelContainer.Controls.Add(this.button3);
-            this.panelContainer.Controls.Add(this.button2);
-            this.panelContainer.Controls.Add(this.button1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.ForeColor = System.Drawing.Color.Silver;
             this.panelContainer.Location = new System.Drawing.Point(0, 77);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(831, 373);
-            this.panelContainer.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkGray;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(214, 288);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(398, 58);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Papelería de Reciclaje";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkGray;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(214, 199);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(398, 58);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Barajas Favoritas";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkGray;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(214, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(398, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Barajas Públicas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkGray;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(214, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(398, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Mis Barajas";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(359, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Bienvenido, Raúl!";
+            this.panelContainer.TabIndex = 28;
+            this.panelContainer.Visible = false;
             // 
             // MenuPrincipal
             // 
@@ -218,14 +243,19 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.buttonRecycleBin);
+            this.Controls.Add(this.buttonFavoriteDecks);
+            this.Controls.Add(this.buttonPublicDecks);
+            this.Controls.Add(this.buttonMyDecks);
             this.Controls.Add(this.panelMainMenu);
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TarjetitasPro V1.1";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panelMainMenu.ResumeLayout(false);
             this.panelMainMenu.PerformLayout();
-            this.panelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,13 +266,15 @@
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.Button buttonConfig;
-        private System.Windows.Forms.Label label1Main;
+        private System.Windows.Forms.Label labelMain;
+        private System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Label labelUser;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Button buttonRecycleBin;
+        private System.Windows.Forms.Button buttonFavoriteDecks;
+        private System.Windows.Forms.Button buttonPublicDecks;
+        private System.Windows.Forms.Button buttonMyDecks;
         private System.Windows.Forms.Panel panelContainer;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
     }
 }
 
