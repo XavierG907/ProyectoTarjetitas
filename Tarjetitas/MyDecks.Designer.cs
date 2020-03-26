@@ -37,6 +37,7 @@
             this.labelMyDecks = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonConfig = new System.Windows.Forms.Button();
+            this.deckButton1 = new Tarjetitas.DeckButton();
             this.panelMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
@@ -151,12 +152,26 @@
             this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConfig.UseVisualStyleBackColor = false;
             // 
+            // deckButton1
+            // 
+            this.deckButton1.Author = "Admin";
+            this.deckButton1.BackColor = System.Drawing.Color.Transparent;
+            this.deckButton1.Cards = 28;
+            this.deckButton1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.deckButton1.Id = 0;
+            this.deckButton1.Location = new System.Drawing.Point(12, 94);
+            this.deckButton1.Name = "deckButton1";
+            this.deckButton1.Size = new System.Drawing.Size(582, 81);
+            this.deckButton1.TabIndex = 11;
+            this.deckButton1.Title = "Verbos irregulares en inglés I";
+            // 
             // MyDecks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.deckButton1);
             this.Controls.Add(this.panelMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyDecks";
@@ -179,5 +194,6 @@
         private System.Windows.Forms.Label labelMyDecks;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.Button buttonConfig;
+        private DeckButton deckButton1;
     }
 }
