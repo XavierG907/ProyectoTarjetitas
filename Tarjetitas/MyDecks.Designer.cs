@@ -36,15 +36,18 @@
             this.labelPresentation = new System.Windows.Forms.Label();
             this.labelMyDecks = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
+            this.flowLayoutPanelDecks = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonAddDeck = new System.Windows.Forms.Button();
+            this.textBoxDeckTitle = new System.Windows.Forms.TextBox();
+            this.labelAddTitle = new System.Windows.Forms.Label();
             this.buttonConfig = new System.Windows.Forms.Button();
-            this.deckButton1 = new Tarjetitas.DeckButton();
             this.panelMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBack
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
             this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBack.FlatAppearance.BorderSize = 0;
@@ -77,6 +80,7 @@
             // 
             // pictureBoxImage
             // 
+            this.pictureBoxImage.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
             this.pictureBoxImage.Location = new System.Drawing.Point(649, 5);
             this.pictureBoxImage.Name = "pictureBoxImage";
@@ -88,6 +92,7 @@
             // labelUser
             // 
             this.labelUser.AutoSize = true;
+            this.labelUser.BackColor = System.Drawing.Color.Transparent;
             this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUser.ForeColor = System.Drawing.Color.White;
             this.labelUser.Location = new System.Drawing.Point(423, 58);
@@ -99,6 +104,7 @@
             // labelPresentation
             // 
             this.labelPresentation.AutoSize = true;
+            this.labelPresentation.BackColor = System.Drawing.Color.Transparent;
             this.labelPresentation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPresentation.ForeColor = System.Drawing.Color.White;
             this.labelPresentation.Location = new System.Drawing.Point(359, 58);
@@ -122,7 +128,7 @@
             // 
             // buttonHelp
             // 
-            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.buttonHelp.BackColor = System.Drawing.Color.Transparent;
             this.buttonHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHelp.BackgroundImage")));
             this.buttonHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonHelp.FlatAppearance.BorderSize = 0;
@@ -136,9 +142,62 @@
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHelp.UseVisualStyleBackColor = false;
             // 
+            // flowLayoutPanelDecks
+            // 
+            this.flowLayoutPanelDecks.AutoScroll = true;
+            this.flowLayoutPanelDecks.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelDecks.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanelDecks.Location = new System.Drawing.Point(0, 77);
+            this.flowLayoutPanelDecks.Name = "flowLayoutPanelDecks";
+            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(585, 373);
+            this.flowLayoutPanelDecks.TabIndex = 11;
+            // 
+            // buttonAddDeck
+            // 
+            this.buttonAddDeck.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddDeck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAddDeck.BackgroundImage")));
+            this.buttonAddDeck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonAddDeck.FlatAppearance.BorderSize = 0;
+            this.buttonAddDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddDeck.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonAddDeck.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonAddDeck.Location = new System.Drawing.Point(769, 400);
+            this.buttonAddDeck.Name = "buttonAddDeck";
+            this.buttonAddDeck.Size = new System.Drawing.Size(50, 38);
+            this.buttonAddDeck.TabIndex = 10;
+            this.buttonAddDeck.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAddDeck.UseVisualStyleBackColor = false;
+            this.buttonAddDeck.Click += new System.EventHandler(this.buttonAddDeck_Click);
+            // 
+            // textBoxDeckTitle
+            // 
+            this.textBoxDeckTitle.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxDeckTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDeckTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDeckTitle.ForeColor = System.Drawing.Color.Black;
+            this.textBoxDeckTitle.Location = new System.Drawing.Point(616, 415);
+            this.textBoxDeckTitle.Name = "textBoxDeckTitle";
+            this.textBoxDeckTitle.Size = new System.Drawing.Size(147, 16);
+            this.textBoxDeckTitle.TabIndex = 12;
+            this.textBoxDeckTitle.Text = "Baraja sin Titulo";
+            this.textBoxDeckTitle.Enter += new System.EventHandler(this.textBoxDeckTitle_Enter);
+            this.textBoxDeckTitle.Leave += new System.EventHandler(this.textBoxDeckTitle_Leave);
+            // 
+            // labelAddTitle
+            // 
+            this.labelAddTitle.AutoSize = true;
+            this.labelAddTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelAddTitle.Location = new System.Drawing.Point(613, 395);
+            this.labelAddTitle.Name = "labelAddTitle";
+            this.labelAddTitle.Size = new System.Drawing.Size(46, 16);
+            this.labelAddTitle.TabIndex = 13;
+            this.labelAddTitle.Text = "Titulo:";
+            // 
             // buttonConfig
             // 
-            this.buttonConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.buttonConfig.BackColor = System.Drawing.Color.Transparent;
             this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
             this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonConfig.FlatAppearance.BorderSize = 0;
@@ -152,26 +211,16 @@
             this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConfig.UseVisualStyleBackColor = false;
             // 
-            // deckButton1
-            // 
-            this.deckButton1.Author = "Admin";
-            this.deckButton1.BackColor = System.Drawing.Color.Transparent;
-            this.deckButton1.Cards = 28;
-            this.deckButton1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
-            this.deckButton1.Id = 0;
-            this.deckButton1.Location = new System.Drawing.Point(12, 94);
-            this.deckButton1.Name = "deckButton1";
-            this.deckButton1.Size = new System.Drawing.Size(582, 81);
-            this.deckButton1.TabIndex = 11;
-            this.deckButton1.Title = "Verbos irregulares en inglés I";
-            // 
             // MyDecks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(831, 450);
-            this.Controls.Add(this.deckButton1);
+            this.Controls.Add(this.labelAddTitle);
+            this.Controls.Add(this.textBoxDeckTitle);
+            this.Controls.Add(this.buttonAddDeck);
+            this.Controls.Add(this.flowLayoutPanelDecks);
             this.Controls.Add(this.panelMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyDecks";
@@ -181,6 +230,7 @@
             this.panelMainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,7 +243,10 @@
         private System.Windows.Forms.Label labelPresentation;
         private System.Windows.Forms.Label labelMyDecks;
         private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDecks;
+        private System.Windows.Forms.Button buttonAddDeck;
+        private System.Windows.Forms.TextBox textBoxDeckTitle;
+        private System.Windows.Forms.Label labelAddTitle;
         private System.Windows.Forms.Button buttonConfig;
-        private DeckButton deckButton1;
     }
 }

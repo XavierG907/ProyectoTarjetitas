@@ -109,7 +109,7 @@
             // 
             // buttonHelp
             // 
-            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.buttonHelp.BackColor = System.Drawing.Color.Transparent;
             this.buttonHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHelp.BackgroundImage")));
             this.buttonHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonHelp.FlatAppearance.BorderSize = 0;
@@ -125,7 +125,7 @@
             // 
             // buttonConfig
             // 
-            this.buttonConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.buttonConfig.BackColor = System.Drawing.Color.Transparent;
             this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
             this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonConfig.FlatAppearance.BorderSize = 0;
@@ -141,7 +141,7 @@
             // 
             // buttonLogOut
             // 
-            this.buttonLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.buttonLogOut.BackColor = System.Drawing.Color.Transparent;
             this.buttonLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonLogOut.BackgroundImage")));
             this.buttonLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonLogOut.FlatAppearance.BorderSize = 0;
@@ -157,7 +157,7 @@
             // 
             // buttonRecycleBin
             // 
-            this.buttonRecycleBin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonRecycleBin.BackColor = System.Drawing.Color.Crimson;
             this.buttonRecycleBin.FlatAppearance.BorderSize = 0;
             this.buttonRecycleBin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRecycleBin.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,7 +175,7 @@
             // 
             // buttonFavoriteDecks
             // 
-            this.buttonFavoriteDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonFavoriteDecks.BackColor = System.Drawing.Color.Crimson;
             this.buttonFavoriteDecks.FlatAppearance.BorderSize = 0;
             this.buttonFavoriteDecks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFavoriteDecks.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,7 +193,7 @@
             // 
             // buttonPublicDecks
             // 
-            this.buttonPublicDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonPublicDecks.BackColor = System.Drawing.Color.Crimson;
             this.buttonPublicDecks.FlatAppearance.BorderSize = 0;
             this.buttonPublicDecks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPublicDecks.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,7 +211,7 @@
             // 
             // buttonMyDecks
             // 
-            this.buttonMyDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.buttonMyDecks.BackColor = System.Drawing.Color.Crimson;
             this.buttonMyDecks.FlatAppearance.BorderSize = 0;
             this.buttonMyDecks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMyDecks.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

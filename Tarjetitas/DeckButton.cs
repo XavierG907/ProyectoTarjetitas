@@ -24,6 +24,7 @@ namespace Tarjetitas
         private int _cards;
         private int _id;
         private Color _color;
+        private bool _privacy;
 
         [Category("Propiedades Personalizadas")]
         public string Title
@@ -57,10 +58,8 @@ namespace Tarjetitas
         public Color Color
         {
             get { return _color; }
-            set { _color = value; panelContainer.BackColor = _color; }
+            set { _color = value; panelContainer.BackColor = _color;}
         }
-
-        private bool _privacy;
 
         [Category("Propiedades Personalizadas")]
         public bool Privacy

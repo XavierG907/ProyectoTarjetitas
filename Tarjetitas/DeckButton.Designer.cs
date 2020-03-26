@@ -42,11 +42,12 @@
             // 
             // labelTitle
             // 
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
             this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
             this.labelTitle.Location = new System.Drawing.Point(12, 10);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(471, 23);
+            this.labelTitle.Size = new System.Drawing.Size(435, 23);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Titulo";
             this.labelTitle.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
@@ -55,6 +56,7 @@
             // labelAuthor
             // 
             this.labelAuthor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelAuthor.BackColor = System.Drawing.Color.Transparent;
             this.labelAuthor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.labelAuthor.Location = new System.Drawing.Point(13, 33);
@@ -68,11 +70,12 @@
             // labelNumCards
             // 
             this.labelNumCards.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelNumCards.BackColor = System.Drawing.Color.Transparent;
             this.labelNumCards.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumCards.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.labelNumCards.Location = new System.Drawing.Point(337, 33);
             this.labelNumCards.Name = "labelNumCards";
-            this.labelNumCards.Size = new System.Drawing.Size(147, 23);
+            this.labelNumCards.Size = new System.Drawing.Size(110, 23);
             this.labelNumCards.TabIndex = 2;
             this.labelNumCards.Text = "Cartas: ";
             this.labelNumCards.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
@@ -81,8 +84,9 @@
             // pictureBoxNotFavourite
             // 
             this.pictureBoxNotFavourite.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBoxNotFavourite.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxNotFavourite.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotFavourite.Image")));
-            this.pictureBoxNotFavourite.Location = new System.Drawing.Point(489, 6);
+            this.pictureBoxNotFavourite.Location = new System.Drawing.Point(462, 6);
             this.pictureBoxNotFavourite.Name = "pictureBoxNotFavourite";
             this.pictureBoxNotFavourite.Size = new System.Drawing.Size(71, 50);
             this.pictureBoxNotFavourite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,20 +99,22 @@
             // pictureBoxFavourite
             // 
             this.pictureBoxFavourite.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBoxFavourite.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxFavourite.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFavourite.Image")));
-            this.pictureBoxFavourite.Location = new System.Drawing.Point(489, 6);
+            this.pictureBoxFavourite.Location = new System.Drawing.Point(462, 6);
             this.pictureBoxFavourite.Name = "pictureBoxFavourite";
             this.pictureBoxFavourite.Size = new System.Drawing.Size(71, 50);
             this.pictureBoxFavourite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxFavourite.TabIndex = 4;
             this.pictureBoxFavourite.TabStop = false;
+            this.pictureBoxFavourite.Visible = false;
             this.pictureBoxFavourite.Click += new System.EventHandler(this.pictureBoxFavourite_Click);
             this.pictureBoxFavourite.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
             this.pictureBoxFavourite.MouseLeave += new System.EventHandler(this.panelContainer_MouseEnter);
             // 
             // panelContainer
             // 
-            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
+            this.panelContainer.BackColor = System.Drawing.Color.Crimson;
             this.panelContainer.Controls.Add(this.labelTitle);
             this.panelContainer.Controls.Add(this.pictureBoxFavourite);
             this.panelContainer.Controls.Add(this.labelAuthor);
@@ -116,7 +122,7 @@
             this.panelContainer.Controls.Add(this.labelNumCards);
             this.panelContainer.Location = new System.Drawing.Point(8, 8);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(566, 65);
+            this.panelContainer.Size = new System.Drawing.Size(539, 65);
             this.panelContainer.TabIndex = 5;
             this.panelContainer.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
             this.panelContainer.MouseLeave += new System.EventHandler(this.panelContainer_MouseLeave);
