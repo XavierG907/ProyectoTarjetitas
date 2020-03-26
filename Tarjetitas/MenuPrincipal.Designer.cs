@@ -116,7 +116,7 @@
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.Transparent;
             this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonHelp.Location = new System.Drawing.Point(129, 4);
+            this.buttonHelp.Location = new System.Drawing.Point(149, 3);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(50, 50);
             this.buttonHelp.TabIndex = 4;
@@ -132,7 +132,7 @@
             this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
             this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonConfig.Location = new System.Drawing.Point(66, 3);
+            this.buttonConfig.Location = new System.Drawing.Point(72, 3);
             this.buttonConfig.Name = "buttonConfig";
             this.buttonConfig.Size = new System.Drawing.Size(50, 50);
             this.buttonConfig.TabIndex = 3;
@@ -229,10 +229,9 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(0, 77);
+            this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(831, 373);
+            this.panelContainer.Size = new System.Drawing.Size(831, 450);
             this.panelContainer.TabIndex = 28;
             this.panelContainer.Visible = false;
             // 
