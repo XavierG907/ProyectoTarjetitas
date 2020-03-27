@@ -12,6 +12,7 @@ namespace Tarjetitas
 {
     public partial class Login : Form
     {
+        TarjetitasDB bd = new TarjetitasDB();
         public Login()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Tarjetitas
             if (txtUsuario.Text.Equals("Usuario"))
             {
                 txtUsuario.Clear();
-                txtUsuario.ForeColor = Color.Black;
+                txtUsuario.ForeColor = Color.DarkSlateBlue;
             }
         }
 
@@ -31,7 +32,7 @@ namespace Tarjetitas
             if (txtUsuario.Text.Equals(""))
             {
                 txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.CornflowerBlue;
+                txtUsuario.ForeColor = Color.DimGray;
             }
         }
 
@@ -40,6 +41,7 @@ namespace Tarjetitas
             if (txtContraseña.Text.Equals("Contraseña"))
             {
                 txtContraseña.Clear();
+                txtContraseña.ForeColor = Color.DarkSlateBlue;
             }
         }
 
@@ -48,20 +50,19 @@ namespace Tarjetitas
             if (txtContraseña.Text.Equals(""))
             {
                 txtContraseña.Text =  "Contraseña";
+                txtContraseña.ForeColor = Color.DimGray;
             }
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            bd.abrirConexion();
+
+            string query = "SELECT * FROM admin WHERE usuario = '" + txtUsuario.Text + "' AND " +
+                "password = '" + txtContraseña.Text + "';";
+
             MenuPrincipal mp = new MenuPrincipal();
             mp.ShowDialog();
-            this.Close();
-        }
-
-        private void btnRegistrarse_Click(object sender, EventArgs e)
-        {
-            UserRegister ur = new UserRegister();
-            ur.ShowDialog();
             this.Close();
         }
     }

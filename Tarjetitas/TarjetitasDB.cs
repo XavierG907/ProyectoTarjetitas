@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using System.Data;
 using System.Windows.Forms;
 namespace Tarjetitas
 {
@@ -26,27 +25,12 @@ namespace Tarjetitas
             if(conexion.State == System.Data.ConnectionState.Open)
                 conexion.Close();
         }
-        public void ejecutarComando(string strComando)
+        public void ejecutarComando(string cadenaComando)
         {
             abrirConexion();
-            comando = new MySqlCommand(strComando, conexion);
-            comando.Connection = conexion;
-            comando.ExecuteNonQuery();
+            comando = new MySqlCommand(cadenaComando, conexion);
             cerrarConexion();
         }
-        public DataTable consulta(string strComando)
-        {
-            DataTable tabla = new DataTable(); ;
-            MySqlDataReader leer;
-            comando = new MySqlCommand(strComando, conexion);
 
-            abrirConexion();
-            comando.Connection = conexion;
-            leer = comando.ExecuteReader();
-            tabla.Load(leer);
-            cerrarConexion();
-
-            return tabla;
-        }
     }
 }
