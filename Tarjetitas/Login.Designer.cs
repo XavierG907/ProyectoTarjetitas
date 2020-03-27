@@ -36,7 +36,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNewUser = new System.Windows.Forms.Button();
+            this.errorLogIn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,7 +73,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(107, 218);
+            this.txtUsuario.Location = new System.Drawing.Point(107, 226);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(174, 27);
             this.txtUsuario.TabIndex = 3;
@@ -98,7 +99,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(61, 218);
+            this.pictureBox2.Location = new System.Drawing.Point(61, 226);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 27);
             this.pictureBox2.TabIndex = 5;
@@ -125,29 +126,45 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "¿No tienes una cuenta?";
             // 
-            // button1
+            // btnNewUser
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(200, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 24);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Registrate Aquí";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.btnNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewUser.FlatAppearance.BorderSize = 0;
+            this.btnNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewUser.ForeColor = System.Drawing.Color.White;
+            this.btnNewUser.Location = new System.Drawing.Point(200, 362);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(126, 24);
+            this.btnNewUser.TabIndex = 9;
+            this.btnNewUser.Text = "Registrate Aquí";
+            this.btnNewUser.UseVisualStyleBackColor = false;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
+            // 
+            // errorLogIn
+            // 
+            this.errorLogIn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLogIn.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.errorLogIn.Image = ((System.Drawing.Image)(resources.GetObject("errorLogIn.Image")));
+            this.errorLogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.errorLogIn.Location = new System.Drawing.Point(10, 177);
+            this.errorLogIn.Name = "errorLogIn";
+            this.errorLogIn.Size = new System.Drawing.Size(343, 42);
+            this.errorLogIn.TabIndex = 33;
+            this.errorLogIn.Text = "Error al Iniciar Sesión, Intentalo de nuevo";
+            this.errorLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.errorLogIn.Visible = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(356, 402);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(361, 402);
+            this.Controls.Add(this.errorLogIn);
+            this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -177,6 +194,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNewUser;
+        private System.Windows.Forms.Label errorLogIn;
     }
 }

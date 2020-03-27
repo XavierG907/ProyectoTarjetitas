@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Tarjetitas
 {
     public partial class Login : Form
     {
-        TarjetitasDB bd = new TarjetitasDB();
+        private TarjetitasDB bd = new TarjetitasDB();
         public Login()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Tarjetitas
                 txtUsuario.Clear();
                 txtUsuario.ForeColor = Color.DarkSlateBlue;
             }
+            errorLogIn.Visible = false;
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace Tarjetitas
             {
                 txtUsuario.Text = "Usuario";
                 txtUsuario.ForeColor = Color.DimGray;
-            }
+            } 
         }
 
         private void txtContraseña_Enter(object sender, EventArgs e)
@@ -42,7 +44,9 @@ namespace Tarjetitas
             {
                 txtContraseña.Clear();
                 txtContraseña.ForeColor = Color.DarkSlateBlue;
+                errorLogIn.Visible = false;
             }
+            errorLogIn.Visible = false;
         }
 
         private void txtContraseña_Leave(object sender, EventArgs e)
@@ -56,10 +60,24 @@ namespace Tarjetitas
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            //Buscar Usuario Existente
+            string query = "SELECT * FROM usuario WHERE usuario = '" + txtUsuario.Text + "' AND " +
+           "contraseña = '" + txtContraseña.Text + "';";
 
-            MenuPrincipal mp = new MenuPrincipal();
-            mp.ShowDialog();
-            this.Close();
+            if (bd.consulta(query).Rows.Count != 0)
+            {
+                MenuPrincipal mp = new MenuPrincipal();
+                mp.ShowDialog();
+                this.Close();
+            }
+            else
+                errorLogIn.Visible = true;
+        }
+
+        private void btnNewUser_Click(object sender, EventArgs e)
+        {
+            UserRegister ur = new UserRegister();
+            ur.ShowDialog();
         }
     }
 }
