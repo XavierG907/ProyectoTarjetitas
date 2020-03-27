@@ -134,7 +134,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panelContainer);
             this.Name = "DeckButton";
-            this.Size = new System.Drawing.Size(582, 81);
+            this.Size = new System.Drawing.Size(555, 81);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotFavourite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavourite)).EndInit();
             this.panelContainer.ResumeLayout(false);

@@ -36,13 +36,17 @@
             this.labelPresentation = new System.Windows.Forms.Label();
             this.labelMyDecks = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonConfig = new System.Windows.Forms.Button();
             this.flowLayoutPanelDecks = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddDeck = new System.Windows.Forms.Button();
             this.textBoxDeckTitle = new System.Windows.Forms.TextBox();
             this.labelAddTitle = new System.Windows.Forms.Label();
-            this.buttonConfig = new System.Windows.Forms.Button();
+            this.panelAddDeck = new System.Windows.Forms.Panel();
+            this.labelTitleAddDeck = new System.Windows.Forms.Label();
+            this.checkBoxDeckPrivacy = new System.Windows.Forms.CheckBox();
             this.panelMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            this.panelAddDeck.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonBack
@@ -142,6 +146,22 @@
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHelp.UseVisualStyleBackColor = false;
             // 
+            // buttonConfig
+            // 
+            this.buttonConfig.BackColor = System.Drawing.Color.Transparent;
+            this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
+            this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonConfig.FlatAppearance.BorderSize = 0;
+            this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonConfig.Location = new System.Drawing.Point(72, 3);
+            this.buttonConfig.Name = "buttonConfig";
+            this.buttonConfig.Size = new System.Drawing.Size(50, 50);
+            this.buttonConfig.TabIndex = 3;
+            this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonConfig.UseVisualStyleBackColor = false;
+            // 
             // flowLayoutPanelDecks
             // 
             this.flowLayoutPanelDecks.AutoScroll = true;
@@ -161,7 +181,7 @@
             this.buttonAddDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddDeck.ForeColor = System.Drawing.Color.Transparent;
             this.buttonAddDeck.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonAddDeck.Location = new System.Drawing.Point(769, 400);
+            this.buttonAddDeck.Location = new System.Drawing.Point(159, 47);
             this.buttonAddDeck.Name = "buttonAddDeck";
             this.buttonAddDeck.Size = new System.Drawing.Size(50, 38);
             this.buttonAddDeck.TabIndex = 10;
@@ -175,7 +195,7 @@
             this.textBoxDeckTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDeckTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDeckTitle.ForeColor = System.Drawing.Color.Black;
-            this.textBoxDeckTitle.Location = new System.Drawing.Point(616, 415);
+            this.textBoxDeckTitle.Location = new System.Drawing.Point(6, 65);
             this.textBoxDeckTitle.Name = "textBoxDeckTitle";
             this.textBoxDeckTitle.Size = new System.Drawing.Size(147, 16);
             this.textBoxDeckTitle.TabIndex = 12;
@@ -189,27 +209,48 @@
             this.labelAddTitle.BackColor = System.Drawing.Color.Transparent;
             this.labelAddTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelAddTitle.Location = new System.Drawing.Point(613, 395);
+            this.labelAddTitle.Location = new System.Drawing.Point(3, 47);
             this.labelAddTitle.Name = "labelAddTitle";
             this.labelAddTitle.Size = new System.Drawing.Size(46, 16);
             this.labelAddTitle.TabIndex = 13;
             this.labelAddTitle.Text = "Titulo:";
             // 
-            // buttonConfig
+            // panelAddDeck
             // 
-            this.buttonConfig.BackColor = System.Drawing.Color.Transparent;
-            this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
-            this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonConfig.FlatAppearance.BorderSize = 0;
-            this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonConfig.Location = new System.Drawing.Point(72, 3);
-            this.buttonConfig.Name = "buttonConfig";
-            this.buttonConfig.Size = new System.Drawing.Size(50, 50);
-            this.buttonConfig.TabIndex = 3;
-            this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonConfig.UseVisualStyleBackColor = false;
+            this.panelAddDeck.Controls.Add(this.checkBoxDeckPrivacy);
+            this.panelAddDeck.Controls.Add(this.labelTitleAddDeck);
+            this.panelAddDeck.Controls.Add(this.buttonAddDeck);
+            this.panelAddDeck.Controls.Add(this.textBoxDeckTitle);
+            this.panelAddDeck.Controls.Add(this.labelAddTitle);
+            this.panelAddDeck.Location = new System.Drawing.Point(601, 324);
+            this.panelAddDeck.Name = "panelAddDeck";
+            this.panelAddDeck.Size = new System.Drawing.Size(212, 114);
+            this.panelAddDeck.TabIndex = 14;
+            // 
+            // labelTitleAddDeck
+            // 
+            this.labelTitleAddDeck.AutoSize = true;
+            this.labelTitleAddDeck.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitleAddDeck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleAddDeck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelTitleAddDeck.Location = new System.Drawing.Point(31, 9);
+            this.labelTitleAddDeck.Name = "labelTitleAddDeck";
+            this.labelTitleAddDeck.Size = new System.Drawing.Size(153, 23);
+            this.labelTitleAddDeck.TabIndex = 15;
+            this.labelTitleAddDeck.Text = "Agregar Baraja";
+            // 
+            // checkBoxDeckPrivacy
+            // 
+            this.checkBoxDeckPrivacy.AutoSize = true;
+            this.checkBoxDeckPrivacy.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxDeckPrivacy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxDeckPrivacy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.checkBoxDeckPrivacy.Location = new System.Drawing.Point(6, 87);
+            this.checkBoxDeckPrivacy.Name = "checkBoxDeckPrivacy";
+            this.checkBoxDeckPrivacy.Size = new System.Drawing.Size(124, 20);
+            this.checkBoxDeckPrivacy.TabIndex = 16;
+            this.checkBoxDeckPrivacy.Text = "Baraja Pública";
+            this.checkBoxDeckPrivacy.UseVisualStyleBackColor = false;
             // 
             // MyDecks
             // 
@@ -217,9 +258,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(831, 450);
-            this.Controls.Add(this.labelAddTitle);
-            this.Controls.Add(this.textBoxDeckTitle);
-            this.Controls.Add(this.buttonAddDeck);
+            this.Controls.Add(this.panelAddDeck);
             this.Controls.Add(this.flowLayoutPanelDecks);
             this.Controls.Add(this.panelMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -229,8 +268,9 @@
             this.panelMainMenu.ResumeLayout(false);
             this.panelMainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            this.panelAddDeck.ResumeLayout(false);
+            this.panelAddDeck.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -248,5 +288,8 @@
         private System.Windows.Forms.TextBox textBoxDeckTitle;
         private System.Windows.Forms.Label labelAddTitle;
         private System.Windows.Forms.Button buttonConfig;
+        private System.Windows.Forms.Panel panelAddDeck;
+        private System.Windows.Forms.Label labelTitleAddDeck;
+        private System.Windows.Forms.CheckBox checkBoxDeckPrivacy;
     }
 }

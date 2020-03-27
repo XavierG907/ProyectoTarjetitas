@@ -92,7 +92,5 @@ namespace Tarjetitas
         {
             panelContainer.BackColor = this.Color;
         }
-
-
     }
 }

@@ -44,7 +44,7 @@ namespace Tarjetitas
             db.Title = textBoxDeckTitle.Text;
             db.Author = labelUser.Text;
             db.Cards = 0;
-            db.Privacy = false;
+            db.Privacy = !checkBoxDeckPrivacy.Checked;
             db.Color = Color.Crimson; //obtener de bd
             db.Id = 0; //obtenerlo de la bd
 
