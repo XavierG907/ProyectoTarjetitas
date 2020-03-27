@@ -14,6 +14,9 @@ namespace Tarjetitas
     public partial class MenuPrincipal : Form
     {
         private bool loggedOut; //bandera utilizada para saber si el usuario cerro sesión o cerró la aplicación.
+
+        //id de tema y temas utilizados según el usuario que logro iniciar sesión.
+        private int idTheme;
         private Color colorButtons;
         private Color colorPanels;
         private Color colorBackground;
@@ -90,7 +93,7 @@ namespace Tarjetitas
         {
             TarjetitasDB bd = new TarjetitasDB(); //declarar conexion a BD
 
-            string query = "SELECT rgb_boton, rgb_panel, rgb_fondo FROM tema" +
+            string query = "SELECT id, rgb_boton, rgb_panel, rgb_fondo FROM tema" +
                 " INNER JOIN usuario ON usuario.idTema = tema.id WHERE usuario = '"+ labelUser.Text +"';";
 
             DataTable result = bd.consulta(query); //obtener la tupla deseada
@@ -100,6 +103,7 @@ namespace Tarjetitas
                 this.Close();
             }
 
+            idTheme = int.Parse(result.Rows[0]["id"].ToString());
             colorButtons = System.Drawing.ColorTranslator.FromHtml(result.Rows[0]["rgb_boton"].ToString());
             colorPanels = System.Drawing.ColorTranslator.FromHtml(result.Rows[0]["rgb_panel"].ToString());
             colorBackground = System.Drawing.ColorTranslator.FromHtml(result.Rows[0]["rgb_fondo"].ToString());
@@ -110,6 +114,11 @@ namespace Tarjetitas
             buttonMyDecks.BackColor = buttonPublicDecks.BackColor = buttonFavoriteDecks.BackColor = buttonRecycleBin.BackColor = colorButtons;
             this.BackColor = colorBackground;
             panelMainMenu.BackColor = colorPanels;
+
+            if(idTheme == 1){ //en caso de temas claros, cambiar el titulo a blanco, al igual que los textos.
+                labelMain.ForeColor = Color.Black;
+                buttonMyDecks.ForeColor = buttonPublicDecks.ForeColor = buttonFavoriteDecks.ForeColor = buttonRecycleBin.ForeColor = Color.Black;
+            }
         }
     }
 }
