@@ -66,9 +66,15 @@ namespace Tarjetitas
 
             if (bd.consulta(query).Rows.Count != 0)
             {
-                MenuPrincipal mp = new MenuPrincipal();
-                mp.ShowDialog();
-                this.Close();
+                MenuPrincipal mp = new MenuPrincipal(txtUsuario.Text); //inicializar main menu
+                mp.ShowDialog(); //mostrarlo
+
+                txtUsuario.Text = "Usuario";    //reestablecer valores de usuario y contraseña
+                txtContraseña.Text = "Contraseña"; 
+
+                if (!mp.LoggedOut()){ //si no cerró sesión, entonces cerró la aplicación, también cerrar esta página.
+                    this.Close();
+                }
             }
             else
                 errorLogIn.Visible = true;

@@ -79,9 +79,8 @@
             this.labelUser.ForeColor = System.Drawing.Color.White;
             this.labelUser.Location = new System.Drawing.Point(423, 58);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(36, 16);
+            this.labelUser.Size = new System.Drawing.Size(0, 16);
             this.labelUser.TabIndex = 7;
-            this.labelUser.Text = "Raúl";
             // 
             // labelWelcome
             // 
@@ -154,6 +153,7 @@
             this.buttonLogOut.TabIndex = 1;
             this.buttonLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonLogOut.UseVisualStyleBackColor = false;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // buttonRecycleBin
             // 
