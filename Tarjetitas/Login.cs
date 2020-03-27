@@ -56,10 +56,6 @@ namespace Tarjetitas
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            bd.abrirConexion();
-
-            string query = "SELECT * FROM admin WHERE usuario = '" + txtUsuario.Text + "' AND " +
-                "password = '" + txtContraseña.Text + "';";
 
             MenuPrincipal mp = new MenuPrincipal();
             mp.ShowDialog();
