@@ -232,7 +232,7 @@
             this.panelContainer.BackColor = System.Drawing.Color.Transparent;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(831, 450);
+            this.panelContainer.Size = new System.Drawing.Size(831, 451);
             this.panelContainer.TabIndex = 28;
             this.panelContainer.Visible = false;
             // 

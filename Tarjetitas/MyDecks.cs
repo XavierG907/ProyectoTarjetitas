@@ -12,10 +12,13 @@ namespace Tarjetitas
 {
     public partial class MyDecks : Form
     {
+        //para los temas
         private int idTheme;
         private Color colorButtons;
         private Color colorPanels;
         private Color colorBackground;
+        //para seleccionar barajas...
+        SelectedDeck selectedDeck;
 
         public MyDecks(int _idTheme, Color _colorButtons, Color _colorPanels, Color _colorBackground, string user)
         {
@@ -25,6 +28,8 @@ namespace Tarjetitas
             colorPanels = _colorPanels;
             colorBackground = _colorBackground;
             labelUser.Text = user;
+
+            selectedDeck = new SelectedDeck(); //crearlo para ver el deck seleccionado.
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -67,8 +72,10 @@ namespace Tarjetitas
         private void ChangeItemsColor()
         {
             if(idTheme == 1){ //cambiar color de fuentes en caso de temas claros.
-                labelMyDecks.ForeColor = labelTitleAddDeck.ForeColor =  labelAddTitle.ForeColor =  checkBoxDeckPrivacy.ForeColor = Color.Black;
+                labelMyDecks.ForeColor = labelTitleAddDeck.ForeColor =  labelAddTitle.ForeColor =  checkBoxDeckPrivacy.ForeColor = labelPresentation2.ForeColor = labelPresentation3.ForeColor = labelDeckTitle.ForeColor = labelDeckAuthor.ForeColor = Color.Black;
             }
+
+            buttonPlayDeck.BackColor = buttonEditDeck.BackColor = buttonDeleteDeck.BackColor = colorButtons;
 
             panelMyDecks.BackColor = colorPanels;
             this.BackColor = colorBackground;
@@ -88,20 +95,19 @@ namespace Tarjetitas
             for(int i = 0; i < result.Rows.Count; i++){
                 query = "SELECT COUNT(numTarjeta) FROM tarjetas WHERE idBaraja = "+ result.Rows[i]["id"] +";";
                 DataTable cards = bd.consulta(query);
-                AddDeckToFlowLayout(result.Rows[i]["titulo"].ToString(), int.Parse(cards.Rows[0]["COUNT(numTarjeta)"].ToString()), int.Parse(result.Rows[i]["id"].ToString()), i + 1, bool.Parse(result.Rows[i]["privacidad"].ToString()));
+                AddDeckToFlowLayout(result.Rows[i]["titulo"].ToString(), int.Parse(cards.Rows[0]["COUNT(numTarjeta)"].ToString()), int.Parse(result.Rows[i]["id"].ToString()), bool.Parse(result.Rows[i]["privacidad"].ToString()));
             }
         }
 
-        private void AddDeckToFlowLayout(string title, int numCards, int idBD, int idOcurrence, bool privacy)
+        private void AddDeckToFlowLayout(string title, int numCards, int idBD, bool privacy)
         {
-            DeckButton deckButton = new DeckButton(idTheme);
+            DeckButton deckButton = new DeckButton(idTheme, ref selectedDeck);
             deckButton.Title = title;
             deckButton.Author = labelUser.Text;
             deckButton.Cards = numCards;
             deckButton.Privacy = privacy;
             deckButton.Color = colorButtons;
             deckButton.Id = idBD;
-            deckButton.IdOcurrence = idOcurrence;
 
             flowLayoutPanelDecks.Controls.Add(deckButton);
         }
@@ -109,6 +115,43 @@ namespace Tarjetitas
         private void RemoveAllDecksFromFlowLayotPanel()
         {
             flowLayoutPanelDecks.Controls.Clear();
+        }
+
+        private void buttonPlayDeck_Click(object sender, EventArgs e)
+        {
+            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
+                return;
+        }
+
+        private void buttonEditDeck_Click(object sender, EventArgs e)
+        {
+            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
+                return;
+        }
+
+        private void buttonDeleteDeck_Click(object sender, EventArgs e)
+        {
+            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
+                return;
+
+            TarjetitasDB db = new TarjetitasDB();
+            string command = "UPDATE baraja SET elimLogica = 1 WHERE id = "+ selectedDeck.Id +";";
+            db.ejecutarComando(command);
+
+            //eliminar lógicamente las tarjetas de dicha baraja.... si, no?
+            command = "UPDATE tarjetas SET elimLogica = 1 WHERE idBaraja = "+ selectedDeck.Id +";";
+            db.ejecutarComando(command);
+
+            RemoveAllDecksFromFlowLayotPanel();
+            ObtainDecksFromUser();
+        }
+
+        private void timerSelection_Tick(object sender, EventArgs e)
+        {
+            if(selectedDeck.Id != 0){
+                labelDeckTitle.Text = selectedDeck.Title;
+                labelDeckAuthor.Text = selectedDeck.Author;
+            }
         }
     }
 }

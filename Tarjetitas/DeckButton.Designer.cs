@@ -50,6 +50,7 @@
             this.labelTitle.Size = new System.Drawing.Size(435, 23);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Titulo";
+            this.labelTitle.Click += new System.EventHandler(this.panelContainer_Click);
             this.labelTitle.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
             this.labelTitle.MouseLeave += new System.EventHandler(this.panelContainer_MouseLeave);
             // 
@@ -64,6 +65,7 @@
             this.labelAuthor.Size = new System.Drawing.Size(318, 23);
             this.labelAuthor.TabIndex = 1;
             this.labelAuthor.Text = "Autor: ";
+            this.labelAuthor.Click += new System.EventHandler(this.panelContainer_Click);
             this.labelAuthor.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
             this.labelAuthor.MouseLeave += new System.EventHandler(this.panelContainer_MouseLeave);
             // 
@@ -78,6 +80,7 @@
             this.labelNumCards.Size = new System.Drawing.Size(110, 23);
             this.labelNumCards.TabIndex = 2;
             this.labelNumCards.Text = "Cartas: ";
+            this.labelNumCards.Click += new System.EventHandler(this.panelContainer_Click);
             this.labelNumCards.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
             this.labelNumCards.MouseLeave += new System.EventHandler(this.panelContainer_MouseLeave);
             // 
@@ -124,6 +127,7 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(539, 65);
             this.panelContainer.TabIndex = 5;
+            this.panelContainer.Click += new System.EventHandler(this.panelContainer_Click);
             this.panelContainer.MouseEnter += new System.EventHandler(this.panelContainer_MouseEnter);
             this.panelContainer.MouseLeave += new System.EventHandler(this.panelContainer_MouseLeave);
             // 

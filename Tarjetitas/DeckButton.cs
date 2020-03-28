@@ -12,9 +12,12 @@ namespace Tarjetitas
 {
     public partial class DeckButton : UserControl
     {
-        public DeckButton(int idTheme)
+        private SelectedDeck selectedDeck;
+
+        public DeckButton(int idTheme, ref SelectedDeck _selectedDeck)
         {
             InitializeComponent();
+            selectedDeck = _selectedDeck;
             this.BackColor = Color.Transparent;
 
             if(idTheme == 1)
@@ -30,7 +33,6 @@ namespace Tarjetitas
         private int _id;
         private Color _color;
         private bool _privacy;
-        private int _idOcurrence;
 
         [Category("Propiedades Personalizadas")]
         public string Title
@@ -72,13 +74,6 @@ namespace Tarjetitas
         {
             get { return _privacy; }
             set { _privacy = value; }
-        }
-
-        [Category("Propiedades Personalizadas")]
-        public int IdOcurrence
-        {
-            get { return _idOcurrence; }
-            set { _idOcurrence = value; }
         }
 
         private void pictureBoxNotFavourite_Click(object sender, EventArgs e)
@@ -133,6 +128,28 @@ namespace Tarjetitas
                 pictureBoxNotFavourite.Visible = false;
                 pictureBoxFavourite.Visible = true;
             }
+        }
+
+        private void panelContainer_Click(object sender, EventArgs e)
+        {
+            selectedDeck.Id = this.Id;
+            selectedDeck.Title = this.Title;
+            selectedDeck.Author = this.Author;
+        }
+    }
+
+
+    public class SelectedDeck
+    {
+        public int Id;
+        public string Title;
+        public string Author;
+
+        public SelectedDeck()
+        {
+            Id = 0;
+            Title = "";
+            Author = "";
         }
     }
 }

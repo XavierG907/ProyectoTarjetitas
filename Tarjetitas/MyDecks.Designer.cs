@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyDecks));
             this.buttonBack = new System.Windows.Forms.Button();
             this.panelMyDecks = new System.Windows.Forms.Panel();
@@ -44,6 +45,14 @@
             this.panelAddDeck = new System.Windows.Forms.Panel();
             this.checkBoxDeckPrivacy = new System.Windows.Forms.CheckBox();
             this.labelTitleAddDeck = new System.Windows.Forms.Label();
+            this.buttonPlayDeck = new System.Windows.Forms.Button();
+            this.buttonEditDeck = new System.Windows.Forms.Button();
+            this.buttonDeleteDeck = new System.Windows.Forms.Button();
+            this.labelPresentation2 = new System.Windows.Forms.Label();
+            this.labelPresentation3 = new System.Windows.Forms.Label();
+            this.labelDeckTitle = new System.Windows.Forms.Label();
+            this.labelDeckAuthor = new System.Windows.Forms.Label();
+            this.timerSelection = new System.Windows.Forms.Timer(this.components);
             this.panelMyDecks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panelAddDeck.SuspendLayout();
@@ -253,12 +262,120 @@
             this.labelTitleAddDeck.TabIndex = 15;
             this.labelTitleAddDeck.Text = "Agregar Baraja";
             // 
+            // buttonPlayDeck
+            // 
+            this.buttonPlayDeck.BackColor = System.Drawing.Color.Crimson;
+            this.buttonPlayDeck.FlatAppearance.BorderSize = 0;
+            this.buttonPlayDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlayDeck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPlayDeck.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonPlayDeck.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlayDeck.Image")));
+            this.buttonPlayDeck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPlayDeck.Location = new System.Drawing.Point(634, 182);
+            this.buttonPlayDeck.Name = "buttonPlayDeck";
+            this.buttonPlayDeck.Size = new System.Drawing.Size(151, 32);
+            this.buttonPlayDeck.TabIndex = 25;
+            this.buttonPlayDeck.Text = "Jugar";
+            this.buttonPlayDeck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPlayDeck.UseVisualStyleBackColor = false;
+            this.buttonPlayDeck.Click += new System.EventHandler(this.buttonPlayDeck_Click);
+            // 
+            // buttonEditDeck
+            // 
+            this.buttonEditDeck.BackColor = System.Drawing.Color.Crimson;
+            this.buttonEditDeck.FlatAppearance.BorderSize = 0;
+            this.buttonEditDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditDeck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditDeck.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonEditDeck.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditDeck.Image")));
+            this.buttonEditDeck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditDeck.Location = new System.Drawing.Point(634, 223);
+            this.buttonEditDeck.Name = "buttonEditDeck";
+            this.buttonEditDeck.Size = new System.Drawing.Size(151, 32);
+            this.buttonEditDeck.TabIndex = 26;
+            this.buttonEditDeck.Text = "Editar";
+            this.buttonEditDeck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditDeck.UseVisualStyleBackColor = false;
+            this.buttonEditDeck.Click += new System.EventHandler(this.buttonEditDeck_Click);
+            // 
+            // buttonDeleteDeck
+            // 
+            this.buttonDeleteDeck.BackColor = System.Drawing.Color.Crimson;
+            this.buttonDeleteDeck.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteDeck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteDeck.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonDeleteDeck.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteDeck.Image")));
+            this.buttonDeleteDeck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDeleteDeck.Location = new System.Drawing.Point(634, 264);
+            this.buttonDeleteDeck.Name = "buttonDeleteDeck";
+            this.buttonDeleteDeck.Size = new System.Drawing.Size(151, 32);
+            this.buttonDeleteDeck.TabIndex = 27;
+            this.buttonDeleteDeck.Text = "Eliminar";
+            this.buttonDeleteDeck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDeleteDeck.UseVisualStyleBackColor = false;
+            this.buttonDeleteDeck.Click += new System.EventHandler(this.buttonDeleteDeck_Click);
+            // 
+            // labelPresentation2
+            // 
+            this.labelPresentation2.BackColor = System.Drawing.Color.Transparent;
+            this.labelPresentation2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPresentation2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelPresentation2.Location = new System.Drawing.Point(591, 81);
+            this.labelPresentation2.Name = "labelPresentation2";
+            this.labelPresentation2.Size = new System.Drawing.Size(179, 20);
+            this.labelPresentation2.TabIndex = 17;
+            this.labelPresentation2.Text = "Baraja Seleccionada:";
+            // 
+            // labelPresentation3
+            // 
+            this.labelPresentation3.BackColor = System.Drawing.Color.Transparent;
+            this.labelPresentation3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPresentation3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelPresentation3.Location = new System.Drawing.Point(598, 108);
+            this.labelPresentation3.Name = "labelPresentation3";
+            this.labelPresentation3.Size = new System.Drawing.Size(47, 55);
+            this.labelPresentation3.TabIndex = 28;
+            this.labelPresentation3.Text = "Titulo:\r\n\r\nAutor:";
+            // 
+            // labelDeckTitle
+            // 
+            this.labelDeckTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelDeckTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeckTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelDeckTitle.Location = new System.Drawing.Point(654, 108);
+            this.labelDeckTitle.Name = "labelDeckTitle";
+            this.labelDeckTitle.Size = new System.Drawing.Size(165, 20);
+            this.labelDeckTitle.TabIndex = 29;
+            // 
+            // labelDeckAuthor
+            // 
+            this.labelDeckAuthor.BackColor = System.Drawing.Color.Transparent;
+            this.labelDeckAuthor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeckAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelDeckAuthor.Location = new System.Drawing.Point(654, 143);
+            this.labelDeckAuthor.Name = "labelDeckAuthor";
+            this.labelDeckAuthor.Size = new System.Drawing.Size(165, 20);
+            this.labelDeckAuthor.TabIndex = 30;
+            // 
+            // timerSelection
+            // 
+            this.timerSelection.Enabled = true;
+            this.timerSelection.Tick += new System.EventHandler(this.timerSelection_Tick);
+            // 
             // MyDecks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.buttonEditDeck);
+            this.Controls.Add(this.buttonDeleteDeck);
+            this.Controls.Add(this.labelDeckAuthor);
+            this.Controls.Add(this.labelDeckTitle);
+            this.Controls.Add(this.labelPresentation3);
+            this.Controls.Add(this.labelPresentation2);
+            this.Controls.Add(this.buttonPlayDeck);
             this.Controls.Add(this.panelAddDeck);
             this.Controls.Add(this.flowLayoutPanelDecks);
             this.Controls.Add(this.panelMyDecks);
@@ -293,5 +410,13 @@
         private System.Windows.Forms.Panel panelAddDeck;
         private System.Windows.Forms.Label labelTitleAddDeck;
         private System.Windows.Forms.CheckBox checkBoxDeckPrivacy;
+        private System.Windows.Forms.Button buttonPlayDeck;
+        private System.Windows.Forms.Button buttonEditDeck;
+        private System.Windows.Forms.Button buttonDeleteDeck;
+        private System.Windows.Forms.Label labelPresentation2;
+        private System.Windows.Forms.Label labelPresentation3;
+        private System.Windows.Forms.Label labelDeckTitle;
+        private System.Windows.Forms.Label labelDeckAuthor;
+        private System.Windows.Forms.Timer timerSelection;
     }
 }
