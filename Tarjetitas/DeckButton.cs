@@ -84,6 +84,10 @@ namespace Tarjetitas
         private void pictureBoxNotFavourite_Click(object sender, EventArgs e)
         {
             //Agregar a favoritos la baraja seleccionada.
+            TarjetitasDB db = new TarjetitasDB();
+            string command = "INSERT INTO baraja_usuario_favoritiza VALUES(0, "+ this.Id +", '"+ this.Author +"');";
+            db.ejecutarComando(command);
+
             pictureBoxFavourite.Visible = true;
             pictureBoxNotFavourite.Visible = false;
         }
@@ -91,6 +95,10 @@ namespace Tarjetitas
         private void pictureBoxFavourite_Click(object sender, EventArgs e)
         {
             //Quitar de favoritos la baraja seleccionada.
+            TarjetitasDB db = new TarjetitasDB();
+            string command = "DELETE FROM baraja_usuario_favoritiza WHERE idBaraja = "+ this.Id +" AND usuario = '"+ this.Author +"';";
+            db.ejecutarComando(command);
+
             pictureBoxFavourite.Visible = false;
             pictureBoxNotFavourite.Visible = true;
         }
@@ -112,7 +120,19 @@ namespace Tarjetitas
 
         private void DeckButton_Load(object sender, EventArgs e)
         {
+            TarjetitasDB db = new TarjetitasDB();
+            string query = "SELECT id FROM baraja_usuario_favoritiza WHERE usuario = '"+ this.Author +"' AND idBaraja = "+ this.Id +";";
 
+            DataTable result = db.consulta(query);
+
+            if(result.Rows.Count == 0){
+                pictureBoxNotFavourite.Visible = true;
+                pictureBoxFavourite.Visible = false;
+            }
+            else{
+                pictureBoxNotFavourite.Visible = false;
+                pictureBoxFavourite.Visible = true;
+            }
         }
     }
 }

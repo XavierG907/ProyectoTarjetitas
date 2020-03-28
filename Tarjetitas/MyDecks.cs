@@ -50,7 +50,12 @@ namespace Tarjetitas
 
         private void buttonAddDeck_Click(object sender, EventArgs e)
         {
-            
+            TarjetitasDB db = new TarjetitasDB();
+            string command = "INSERT INTO baraja VALUES(0, '"+ textBoxDeckTitle.Text +"', "+ (!checkBoxDeckPrivacy.Checked).ToString() +", 0, '"+ labelUser.Text +"');";
+            db.ejecutarComando(command);
+
+            RemoveAllDecksFromFlowLayotPanel();
+            ObtainDecksFromUser();
         }
 
         private void MyDecks_Load(object sender, EventArgs e)
@@ -99,6 +104,11 @@ namespace Tarjetitas
             deckButton.IdOcurrence = idOcurrence;
 
             flowLayoutPanelDecks.Controls.Add(deckButton);
+        }
+
+        private void RemoveAllDecksFromFlowLayotPanel()
+        {
+            flowLayoutPanelDecks.Controls.Clear();
         }
     }
 }
