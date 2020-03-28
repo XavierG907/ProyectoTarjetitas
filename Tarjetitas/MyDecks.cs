@@ -12,9 +12,19 @@ namespace Tarjetitas
 {
     public partial class MyDecks : Form
     {
-        public MyDecks()
+        private int idTheme;
+        private Color colorButtons;
+        private Color colorPanels;
+        private Color colorBackground;
+
+        public MyDecks(int _idTheme, Color _colorButtons, Color _colorPanels, Color _colorBackground, string user)
         {
             InitializeComponent();
+            idTheme = _idTheme;
+            colorButtons = _colorButtons;
+            colorPanels = _colorPanels;
+            colorBackground = _colorBackground;
+            labelUser.Text = user;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -40,16 +50,55 @@ namespace Tarjetitas
 
         private void buttonAddDeck_Click(object sender, EventArgs e)
         {
-            DeckButton db = new DeckButton();
-            db.Title = textBoxDeckTitle.Text;
-            db.Author = labelUser.Text;
-            db.Cards = 0;
-            db.Privacy = !checkBoxDeckPrivacy.Checked;
-            db.Color = Color.Crimson; //obtener de bd
-            db.Id = 0; //obtenerlo de la bd
+            
+        }
 
-            //agregarlo a la flowLayoutPanel.
-            flowLayoutPanelDecks.Controls.Add(db);
+        private void MyDecks_Load(object sender, EventArgs e)
+        {
+            ChangeItemsColor();
+            ObtainDecksFromUser();
+        }
+
+        private void ChangeItemsColor()
+        {
+            if(idTheme == 1){ //cambiar color de fuentes en caso de temas claros.
+                labelMyDecks.ForeColor = labelTitleAddDeck.ForeColor =  labelAddTitle.ForeColor =  checkBoxDeckPrivacy.ForeColor = Color.Black;
+            }
+
+            panelMyDecks.BackColor = colorPanels;
+            this.BackColor = colorBackground;
+        }
+
+        private void ObtainDecksFromUser()
+        {
+            TarjetitasDB bd = new TarjetitasDB();
+            string query = "SELECT * FROM baraja WHERE usuario = '"+ labelUser.Text +"' AND elimLogica = 0;";
+
+            DataTable result = bd.consulta(query);
+
+            if(result.Rows.Count == 0){
+                return;
+            }
+
+            for(int i = 0; i < result.Rows.Count; i++){
+                query = "SELECT COUNT(numTarjeta) FROM tarjetas WHERE idBaraja = "+ result.Rows[i]["id"] +";";
+                DataTable cards = bd.consulta(query);
+                AddDeckToFlowLayout(result.Rows[i]["titulo"].ToString(), int.Parse(cards.Rows[0]["COUNT(numTarjeta)"].ToString()), int.Parse(result.Rows[i]["id"].ToString()), i + 1, bool.Parse(result.Rows[i]["privacidad"].ToString()));
+            }
+        }
+
+        private void AddDeckToFlowLayout(string title, int numCards, int idBD, int idOcurrence, bool privacy)
+        {
+            DeckButton deckButton = new DeckButton(idTheme);
+            deckButton.Title = title;
+            deckButton.Author = labelUser.Text;
+            deckButton.Cards = numCards;
+            deckButton.Privacy = privacy;
+            deckButton.Color = colorButtons;
+            deckButton.Id = idBD;
+            deckButton.IdOcurrence = idOcurrence;
+
+            flowLayoutPanelDecks.Controls.Add(deckButton);
         }
     }
 }

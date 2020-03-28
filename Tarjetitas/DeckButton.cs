@@ -12,10 +12,15 @@ namespace Tarjetitas
 {
     public partial class DeckButton : UserControl
     {
-        public DeckButton()
+        public DeckButton(int idTheme)
         {
             InitializeComponent();
             this.BackColor = Color.Transparent;
+
+            if(idTheme == 1)
+            {
+                ChangeButtonsForeColor();
+            }
         }
 
         //variables utilizadas para las propiedades...
@@ -25,6 +30,7 @@ namespace Tarjetitas
         private int _id;
         private Color _color;
         private bool _privacy;
+        private int _idOcurrence;
 
         [Category("Propiedades Personalizadas")]
         public string Title
@@ -68,6 +74,12 @@ namespace Tarjetitas
             set { _privacy = value; }
         }
 
+        [Category("Propiedades Personalizadas")]
+        public int IdOcurrence
+        {
+            get { return _idOcurrence; }
+            set { _idOcurrence = value; }
+        }
 
         private void pictureBoxNotFavourite_Click(object sender, EventArgs e)
         {
@@ -91,6 +103,16 @@ namespace Tarjetitas
         private void panelContainer_MouseLeave(object sender, EventArgs e)
         {
             panelContainer.BackColor = this.Color;
+        }
+
+        private void ChangeButtonsForeColor()
+        {
+            labelAuthor.ForeColor = labelTitle.ForeColor = labelNumCards.ForeColor = Color.Black;
+        }
+
+        private void DeckButton_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

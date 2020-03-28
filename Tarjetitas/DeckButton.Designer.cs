@@ -135,6 +135,7 @@
             this.Controls.Add(this.panelContainer);
             this.Name = "DeckButton";
             this.Size = new System.Drawing.Size(555, 81);
+            this.Load += new System.EventHandler(this.DeckButton_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotFavourite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavourite)).EndInit();
             this.panelContainer.ResumeLayout(false);

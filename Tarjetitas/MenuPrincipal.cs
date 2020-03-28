@@ -58,7 +58,7 @@ namespace Tarjetitas
 
         private void buttonMyDecks_Click(object sender, EventArgs e)
         {
-            OpenSubForm(new MyDecks()); //abrir subMenu MyDecks
+            OpenSubForm(new MyDecks(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text)); //abrir subMenu MyDecks
         }
 
         private void buttonPublicDecks_Click(object sender, EventArgs e)

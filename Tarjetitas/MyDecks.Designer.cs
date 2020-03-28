@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyDecks));
             this.buttonBack = new System.Windows.Forms.Button();
-            this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.panelMyDecks = new System.Windows.Forms.Panel();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.labelUser = new System.Windows.Forms.Label();
             this.labelPresentation = new System.Windows.Forms.Label();
@@ -42,9 +42,9 @@
             this.textBoxDeckTitle = new System.Windows.Forms.TextBox();
             this.labelAddTitle = new System.Windows.Forms.Label();
             this.panelAddDeck = new System.Windows.Forms.Panel();
-            this.labelTitleAddDeck = new System.Windows.Forms.Label();
             this.checkBoxDeckPrivacy = new System.Windows.Forms.CheckBox();
-            this.panelMainMenu.SuspendLayout();
+            this.labelTitleAddDeck = new System.Windows.Forms.Label();
+            this.panelMyDecks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panelAddDeck.SuspendLayout();
             this.SuspendLayout();
@@ -66,21 +66,21 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // panelMainMenu
+            // panelMyDecks
             // 
-            this.panelMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
-            this.panelMainMenu.Controls.Add(this.pictureBoxImage);
-            this.panelMainMenu.Controls.Add(this.buttonBack);
-            this.panelMainMenu.Controls.Add(this.labelUser);
-            this.panelMainMenu.Controls.Add(this.labelPresentation);
-            this.panelMainMenu.Controls.Add(this.labelMyDecks);
-            this.panelMainMenu.Controls.Add(this.buttonHelp);
-            this.panelMainMenu.Controls.Add(this.buttonConfig);
-            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(831, 77);
-            this.panelMainMenu.TabIndex = 10;
+            this.panelMyDecks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(110)))));
+            this.panelMyDecks.Controls.Add(this.pictureBoxImage);
+            this.panelMyDecks.Controls.Add(this.buttonBack);
+            this.panelMyDecks.Controls.Add(this.labelUser);
+            this.panelMyDecks.Controls.Add(this.labelPresentation);
+            this.panelMyDecks.Controls.Add(this.labelMyDecks);
+            this.panelMyDecks.Controls.Add(this.buttonHelp);
+            this.panelMyDecks.Controls.Add(this.buttonConfig);
+            this.panelMyDecks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMyDecks.Location = new System.Drawing.Point(0, 0);
+            this.panelMyDecks.Name = "panelMyDecks";
+            this.panelMyDecks.Size = new System.Drawing.Size(831, 77);
+            this.panelMyDecks.TabIndex = 10;
             // 
             // pictureBoxImage
             // 
@@ -217,6 +217,7 @@
             // 
             // panelAddDeck
             // 
+            this.panelAddDeck.BackColor = System.Drawing.Color.Transparent;
             this.panelAddDeck.Controls.Add(this.checkBoxDeckPrivacy);
             this.panelAddDeck.Controls.Add(this.labelTitleAddDeck);
             this.panelAddDeck.Controls.Add(this.buttonAddDeck);
@@ -226,18 +227,6 @@
             this.panelAddDeck.Name = "panelAddDeck";
             this.panelAddDeck.Size = new System.Drawing.Size(212, 114);
             this.panelAddDeck.TabIndex = 14;
-            // 
-            // labelTitleAddDeck
-            // 
-            this.labelTitleAddDeck.AutoSize = true;
-            this.labelTitleAddDeck.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitleAddDeck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleAddDeck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelTitleAddDeck.Location = new System.Drawing.Point(31, 9);
-            this.labelTitleAddDeck.Name = "labelTitleAddDeck";
-            this.labelTitleAddDeck.Size = new System.Drawing.Size(153, 23);
-            this.labelTitleAddDeck.TabIndex = 15;
-            this.labelTitleAddDeck.Text = "Agregar Baraja";
             // 
             // checkBoxDeckPrivacy
             // 
@@ -252,6 +241,18 @@
             this.checkBoxDeckPrivacy.Text = "Baraja Pública";
             this.checkBoxDeckPrivacy.UseVisualStyleBackColor = false;
             // 
+            // labelTitleAddDeck
+            // 
+            this.labelTitleAddDeck.AutoSize = true;
+            this.labelTitleAddDeck.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitleAddDeck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleAddDeck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.labelTitleAddDeck.Location = new System.Drawing.Point(31, 9);
+            this.labelTitleAddDeck.Name = "labelTitleAddDeck";
+            this.labelTitleAddDeck.Size = new System.Drawing.Size(153, 23);
+            this.labelTitleAddDeck.TabIndex = 15;
+            this.labelTitleAddDeck.Text = "Agregar Baraja";
+            // 
             // MyDecks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,13 +261,14 @@
             this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.panelAddDeck);
             this.Controls.Add(this.flowLayoutPanelDecks);
-            this.Controls.Add(this.panelMainMenu);
+            this.Controls.Add(this.panelMyDecks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyDecks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyDecks";
-            this.panelMainMenu.ResumeLayout(false);
-            this.panelMainMenu.PerformLayout();
+            this.Load += new System.EventHandler(this.MyDecks_Load);
+            this.panelMyDecks.ResumeLayout(false);
+            this.panelMyDecks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.panelAddDeck.ResumeLayout(false);
             this.panelAddDeck.PerformLayout();
@@ -277,7 +279,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Panel panelMainMenu;
+        private System.Windows.Forms.Panel panelMyDecks;
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.Label labelPresentation;
