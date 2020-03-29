@@ -102,15 +102,21 @@ namespace Tarjetitas
             this.dtpBirthdaay = new System.Windows.Forms.DateTimePicker();
             this.cbTema = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.MaskedTextBox();
             this.txtConfPassword = new System.Windows.Forms.MaskedTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaptcha)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pbCaptcha
             // 
-            this.pbCaptcha.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pbCaptcha.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pbCaptcha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbCaptcha.Location = new System.Drawing.Point(247, 463);
             this.pbCaptcha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -200,35 +206,41 @@ namespace Tarjetitas
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtName.Location = new System.Drawing.Point(247, 57);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(298, 22);
+            this.txtName.Size = new System.Drawing.Size(298, 25);
             this.txtName.TabIndex = 0;
             // 
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtLastName.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtLastName.Location = new System.Drawing.Point(247, 109);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(298, 22);
+            this.txtLastName.Size = new System.Drawing.Size(298, 25);
             this.txtLastName.TabIndex = 1;
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEmail.Location = new System.Drawing.Point(247, 212);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(298, 22);
+            this.txtEmail.Size = new System.Drawing.Size(298, 25);
             this.txtEmail.TabIndex = 3;
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(28, 53);
+            this.label9.Location = new System.Drawing.Point(28, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 30);
             this.label9.TabIndex = 18;
@@ -238,7 +250,7 @@ namespace Tarjetitas
             // 
             this.label10.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(28, 312);
+            this.label10.Location = new System.Drawing.Point(28, 316);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 30);
             this.label10.TabIndex = 19;
@@ -248,7 +260,7 @@ namespace Tarjetitas
             // 
             this.label11.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(28, 260);
+            this.label11.Location = new System.Drawing.Point(28, 264);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 30);
             this.label11.TabIndex = 20;
@@ -258,7 +270,7 @@ namespace Tarjetitas
             // 
             this.label12.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(28, 106);
+            this.label12.Location = new System.Drawing.Point(28, 110);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 30);
             this.label12.TabIndex = 21;
@@ -277,7 +289,7 @@ namespace Tarjetitas
             // 
             this.label16.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(28, 363);
+            this.label16.Location = new System.Drawing.Point(28, 367);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(28, 30);
             this.label16.TabIndex = 28;
@@ -286,17 +298,19 @@ namespace Tarjetitas
             // txtVerification
             // 
             this.txtVerification.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtVerification.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVerification.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtVerification.Location = new System.Drawing.Point(247, 567);
             this.txtVerification.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVerification.Name = "txtVerification";
-            this.txtVerification.Size = new System.Drawing.Size(298, 22);
+            this.txtVerification.Size = new System.Drawing.Size(298, 25);
             this.txtVerification.TabIndex = 9;
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(28, 564);
+            this.label14.Location = new System.Drawing.Point(28, 568);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(28, 30);
             this.label14.TabIndex = 30;
@@ -323,7 +337,7 @@ namespace Tarjetitas
             this.errorName.ForeColor = System.Drawing.Color.LightCoral;
             this.errorName.Location = new System.Drawing.Point(247, 89);
             this.errorName.Name = "errorName";
-            this.errorName.Size = new System.Drawing.Size(517, 19);
+            this.errorName.Size = new System.Drawing.Size(467, 19);
             this.errorName.TabIndex = 32;
             // 
             // errorLastName
@@ -332,7 +346,7 @@ namespace Tarjetitas
             this.errorLastName.ForeColor = System.Drawing.Color.LightCoral;
             this.errorLastName.Location = new System.Drawing.Point(247, 140);
             this.errorLastName.Name = "errorLastName";
-            this.errorLastName.Size = new System.Drawing.Size(517, 19);
+            this.errorLastName.Size = new System.Drawing.Size(467, 19);
             this.errorLastName.TabIndex = 33;
             // 
             // errorUserName
@@ -341,16 +355,16 @@ namespace Tarjetitas
             this.errorUserName.ForeColor = System.Drawing.Color.LightCoral;
             this.errorUserName.Location = new System.Drawing.Point(247, 295);
             this.errorUserName.Name = "errorUserName";
-            this.errorUserName.Size = new System.Drawing.Size(517, 19);
+            this.errorUserName.Size = new System.Drawing.Size(467, 19);
             this.errorUserName.TabIndex = 34;
             // 
             // errorPassword
             // 
             this.errorPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorPassword.ForeColor = System.Drawing.Color.LightCoral;
-            this.errorPassword.Location = new System.Drawing.Point(226, 346);
+            this.errorPassword.Location = new System.Drawing.Point(244, 346);
             this.errorPassword.Name = "errorPassword";
-            this.errorPassword.Size = new System.Drawing.Size(524, 19);
+            this.errorPassword.Size = new System.Drawing.Size(474, 19);
             this.errorPassword.TabIndex = 35;
             // 
             // errorConfPassword
@@ -359,7 +373,7 @@ namespace Tarjetitas
             this.errorConfPassword.ForeColor = System.Drawing.Color.LightCoral;
             this.errorConfPassword.Location = new System.Drawing.Point(247, 397);
             this.errorConfPassword.Name = "errorConfPassword";
-            this.errorConfPassword.Size = new System.Drawing.Size(517, 19);
+            this.errorConfPassword.Size = new System.Drawing.Size(467, 19);
             this.errorConfPassword.TabIndex = 36;
             // 
             // errorCode
@@ -368,7 +382,7 @@ namespace Tarjetitas
             this.errorCode.ForeColor = System.Drawing.Color.LightCoral;
             this.errorCode.Location = new System.Drawing.Point(247, 598);
             this.errorCode.Name = "errorCode";
-            this.errorCode.Size = new System.Drawing.Size(517, 19);
+            this.errorCode.Size = new System.Drawing.Size(467, 19);
             this.errorCode.TabIndex = 37;
             // 
             // errorEmail
@@ -377,7 +391,7 @@ namespace Tarjetitas
             this.errorEmail.ForeColor = System.Drawing.Color.LightCoral;
             this.errorEmail.Location = new System.Drawing.Point(247, 243);
             this.errorEmail.Name = "errorEmail";
-            this.errorEmail.Size = new System.Drawing.Size(517, 19);
+            this.errorEmail.Size = new System.Drawing.Size(467, 19);
             this.errorEmail.TabIndex = 40;
             // 
             // errorGeneral
@@ -386,7 +400,7 @@ namespace Tarjetitas
             this.errorGeneral.ForeColor = System.Drawing.Color.LightCoral;
             this.errorGeneral.Location = new System.Drawing.Point(247, 651);
             this.errorGeneral.Name = "errorGeneral";
-            this.errorGeneral.Size = new System.Drawing.Size(517, 19);
+            this.errorGeneral.Size = new System.Drawing.Size(467, 19);
             this.errorGeneral.TabIndex = 42;
             // 
             // label13
@@ -402,7 +416,7 @@ namespace Tarjetitas
             // 
             this.label4.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(29, 160);
+            this.label4.Location = new System.Drawing.Point(29, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 30);
             this.label4.TabIndex = 47;
@@ -411,70 +425,114 @@ namespace Tarjetitas
             // dtpBirthdaay
             // 
             this.dtpBirthdaay.CustomFormat = "dd-MM-yyyy";
+            this.dtpBirthdaay.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthdaay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthdaay.Location = new System.Drawing.Point(246, 160);
             this.dtpBirthdaay.MaxDate = new System.DateTime(2016, 12, 31, 0, 0, 0, 0);
             this.dtpBirthdaay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpBirthdaay.Name = "dtpBirthdaay";
-            this.dtpBirthdaay.Size = new System.Drawing.Size(299, 22);
+            this.dtpBirthdaay.Size = new System.Drawing.Size(299, 25);
             this.dtpBirthdaay.TabIndex = 2;
             this.dtpBirthdaay.Value = new System.DateTime(2016, 12, 31, 0, 0, 0, 0);
             // 
             // cbTema
             // 
+            this.cbTema.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.cbTema.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.cbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTema.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbTema.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTema.FormattingEnabled = true;
-            this.cbTema.Items.AddRange(new object[] {
-            "Predeterminado",
-            "Obscuro",
-            "Claro"});
             this.cbTema.Location = new System.Drawing.Point(246, 418);
             this.cbTema.Name = "cbTema";
-            this.cbTema.Size = new System.Drawing.Size(299, 25);
+            this.cbTema.Size = new System.Drawing.Size(299, 26);
             this.cbTema.TabIndex = 7;
+            this.cbTema.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cbTema_DrawItem);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(100)))), ((int)(((byte)(110)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.pictureBoxImage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 39);
+            this.panel1.Size = new System.Drawing.Size(740, 45);
             this.panel1.TabIndex = 48;
+            // 
+            // pictureBoxImage
+            // 
+            this.pictureBoxImage.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
+            this.pictureBoxImage.Location = new System.Drawing.Point(615, 0);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(125, 47);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage.TabIndex = 49;
+            this.pictureBoxImage.TabStop = false;
             // 
             // txtUserName
             // 
             this.txtUserName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUserName.Location = new System.Drawing.Point(247, 264);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(298, 22);
+            this.txtUserName.Size = new System.Drawing.Size(298, 25);
             this.txtUserName.TabIndex = 4;
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtPassword.Location = new System.Drawing.Point(246, 316);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(299, 22);
+            this.txtPassword.Size = new System.Drawing.Size(299, 25);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfPassword
             // 
             this.txtConfPassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtConfPassword.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfPassword.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtConfPassword.Location = new System.Drawing.Point(246, 368);
             this.txtConfPassword.Name = "txtConfPassword";
-            this.txtConfPassword.Size = new System.Drawing.Size(295, 22);
+            this.txtConfPassword.Size = new System.Drawing.Size(299, 25);
             this.txtConfPassword.TabIndex = 6;
             this.txtConfPassword.UseSystemPasswordChar = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label17.Location = new System.Drawing.Point(314, 13);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(126, 23);
+            this.label17.TabIndex = 50;
+            this.label17.Text = "REGISTRARSE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
             // 
             // UserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(766, 724);
+            this.ClientSize = new System.Drawing.Size(740, 689);
             this.Controls.Add(this.txtConfPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.panel1);
@@ -519,6 +577,10 @@ namespace Tarjetitas
             this.Name = "UserRegister";
             this.Text = "Registro de usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pbCaptcha)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,5 +593,8 @@ namespace Tarjetitas
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.MaskedTextBox txtPassword;
         private System.Windows.Forms.MaskedTextBox txtConfPassword;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

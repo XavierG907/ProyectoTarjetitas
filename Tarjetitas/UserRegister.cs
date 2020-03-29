@@ -21,6 +21,7 @@ namespace Tarjetitas
 	{
 		private string verificationCode;
 		private TarjetitasDB bd = new TarjetitasDB();
+		DataTable themes;
 		public UserRegister()
 		{
 			//
@@ -28,7 +29,7 @@ namespace Tarjetitas
 			//
 			InitializeComponent();
 			loadCaptchaImage();
-			cbTema.SelectedIndex = 0;
+			LoadThemes();
 		}
 		private void loadCaptchaImage() {
 			Color[] colores = {Color.AliceBlue,Color.Beige,Color.Violet,Color.Green,Color.Pink,Color.Brown,
@@ -117,7 +118,7 @@ namespace Tarjetitas
 		bool exitsUserName() {
 			//Necesito la base de datos para validar esta parte
 			string comando = "SELECT COUNT(*) FROM usuario WHERE usuario='"+txtUserName.Text+"';";
-			if (bd.consulta(comando).Rows.Count != 0)
+			if (int.Parse(bd.consulta(comando).Rows[0][0].ToString()) != 0)
 			{
 				errorUserName.Text = "Usuario ya registrado. Introduzca otro.";
 				return true;
@@ -150,11 +151,61 @@ namespace Tarjetitas
 			//Añadir usuario
 			string comando = "INSERT INTO usuario VALUES('"+txtUserName.Text+"','"+txtName.Text+"','"+
 				txtLastName.Text+"','"+fechNa+"','"+txtEmail.Text+"','"+txtPassword.Text+"',"+
-				(cbTema.SelectedIndex+1).ToString()+");";
+				(cbTema.Text).ToString()+");";
 			bd.ejecutarComando(comando);
 
 			//Abrir ventana de inicio con mensaje de bienvenida
-			
+			MessageBox.Show("Registro de usuario concluido.\nBienvenido a la aplicción :D");
+			MenuPrincipal mp = new MenuPrincipal(txtUserName.Text); //inicializar main menu
+			this.Hide();
+			mp.ShowDialog(); //mostrarlo
+			this.Close();
+		}
+		void LoadThemes()
+		{
+			cbTema.Items.Clear();
+			string comando = "SELECT * FROM tema";
+			themes = bd.consulta(comando);
+			if (themes.Rows.Count == 0)
+			{
+				//Agregar tema por defecto si no hay ninguno
+				string query = "INSERT INTO TEMA VALUES(0,'#FFFFFF','#FAFAFA','#000000');";
+				bd.ejecutarComando(query);
+				themes = bd.consulta(comando);
+			}
+			foreach (DataRow r in themes.Rows)
+			{
+				cbTema.Items.Add(r["id"]);
+			}
+			cbTema.SelectedIndex = 0;
+		}
+
+		private void cbTema_DrawItem(object sender, DrawItemEventArgs e)
+		{
+			e.DrawBackground();
+			DataRow row = themes.Rows[e.Index];
+			Brush borde = new SolidBrush(e.ForeColor);
+			Color color = ColorTranslator.FromHtml(row["rgb_boton"].ToString());
+			Brush pincel = new SolidBrush(color);
+			Pen boli = new Pen(e.ForeColor);
+
+			e.Graphics.DrawRectangle(boli, new Rectangle(e.Bounds.Left+2, e.Bounds.Top+2, 20, e.Bounds.Height-4));
+			e.Graphics.FillRectangle(pincel,new Rectangle(e.Bounds.Left+3, e.Bounds.Top+3, 18, e.Bounds.Height-6));
+			e.Graphics.DrawString("Boton",e.Font,borde,e.Bounds.Left+25, e.Bounds.Top+2);
+
+			color = ColorTranslator.FromHtml(row["rgb_panel"].ToString());
+			pincel = new SolidBrush(color);
+			e.Graphics.DrawRectangle(boli, new Rectangle(e.Bounds.Left+82 + 2, e.Bounds.Top + 2, 20, e.Bounds.Height - 4));
+			e.Graphics.FillRectangle(pincel, new Rectangle(e.Bounds.Left+85, e.Bounds.Top + 3, 18, e.Bounds.Height - 6));
+			e.Graphics.DrawString("Panel", e.Font, borde, e.Bounds.Left+107, e.Bounds.Top + 2);
+
+			color = ColorTranslator.FromHtml(row["rgb_fondo"].ToString());
+			pincel = new SolidBrush(color);
+			e.Graphics.DrawRectangle(boli, new Rectangle(e.Bounds.Left + 162 + 2, e.Bounds.Top + 2, 20, e.Bounds.Height - 4));
+			e.Graphics.FillRectangle(pincel, new Rectangle(e.Bounds.Left + 165, e.Bounds.Top + 3, 18, e.Bounds.Height - 6));
+			e.Graphics.DrawString("Fondo", e.Font, borde, e.Bounds.Left + 187, e.Bounds.Top + 2);
+
+			e.DrawFocusRectangle();
 		}
 	}
 }

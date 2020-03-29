@@ -68,3 +68,4 @@ C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.c
 C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.CopyComplete
 C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
+C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.DeckButton.resources
