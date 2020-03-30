@@ -47,11 +47,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Card.designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardAudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardAudio.designer.cs">
+      <DependentUpon>CardAudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardImage.designer.cs">
+      <DependentUpon>CardImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardText.designer.cs">
+      <DependentUpon>CardText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardVideo.designer.cs">
+      <DependentUpon>CardVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeckButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DeckButton.Designer.cs">
       <DependentUpon>DeckButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCards.designer.cs">
+      <DependentUpon>EditCards.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -86,8 +122,26 @@
     <Compile Include="UserRegister.designer.cs">
       <DependentUpon>UserRegister.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardAudio.resx">
+      <DependentUpon>CardAudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImage.resx">
+      <DependentUpon>CardImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardText.resx">
+      <DependentUpon>CardText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardVideo.resx">
+      <DependentUpon>CardVideo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeckButton.resx">
       <DependentUpon>DeckButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCards.resx">
+      <DependentUpon>EditCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -125,6 +179,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

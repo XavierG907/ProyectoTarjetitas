@@ -69,3 +69,15 @@ C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.c
 C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\admin\Source\Repos\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.DeckButton.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Interop.WMPLib.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Interop.WMPLib.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.ResolveComReference.cache
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Card.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.CardAudio.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.CardImage.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.CardText.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.CardVideo.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.EditCards.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Memorama.resources
