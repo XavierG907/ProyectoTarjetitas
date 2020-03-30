@@ -247,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(831, 451);
+            this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.buttonDeleteCard);
             this.Controls.Add(this.labelSelectedCard);
             this.Controls.Add(this.labelPresentation2);
@@ -256,6 +256,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCards";
             this.Text = "EditCards";
+            this.Load += new System.EventHandler(this.EditCards_Load);
             this.panelEditCards.ResumeLayout(false);
             this.panelEditCards.PerformLayout();
             this.ResumeLayout(false);

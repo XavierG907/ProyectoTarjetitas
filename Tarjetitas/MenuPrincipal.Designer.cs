@@ -112,6 +112,8 @@
             this.buttonHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHelp.BackgroundImage")));
             this.buttonHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.Transparent;
             this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -128,6 +130,8 @@
             this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
             this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonConfig.FlatAppearance.BorderSize = 0;
+            this.buttonConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
             this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -144,6 +148,8 @@
             this.buttonLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonLogOut.BackgroundImage")));
             this.buttonLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonLogOut.FlatAppearance.BorderSize = 0;
+            this.buttonLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogOut.ForeColor = System.Drawing.Color.Transparent;
             this.buttonLogOut.ImageAlign = System.Drawing.ContentAlignment.TopLeft;

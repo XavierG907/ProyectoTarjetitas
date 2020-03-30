@@ -53,6 +53,7 @@
             this.labelDeckTitle = new System.Windows.Forms.Label();
             this.labelDeckAuthor = new System.Windows.Forms.Label();
             this.timerSelection = new System.Windows.Forms.Timer(this.components);
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panelMyDecks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panelAddDeck.SuspendLayout();
@@ -64,6 +65,8 @@
             this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
             this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.ForeColor = System.Drawing.Color.Transparent;
             this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -145,6 +148,8 @@
             this.buttonHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHelp.BackgroundImage")));
             this.buttonHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.Transparent;
             this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -161,6 +166,8 @@
             this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
             this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonConfig.FlatAppearance.BorderSize = 0;
+            this.buttonConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
             this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -178,7 +185,7 @@
             this.flowLayoutPanelDecks.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanelDecks.Location = new System.Drawing.Point(0, 77);
             this.flowLayoutPanelDecks.Name = "flowLayoutPanelDecks";
-            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(585, 373);
+            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(585, 374);
             this.flowLayoutPanelDecks.TabIndex = 11;
             // 
             // buttonAddDeck
@@ -187,6 +194,8 @@
             this.buttonAddDeck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAddDeck.BackgroundImage")));
             this.buttonAddDeck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonAddDeck.FlatAppearance.BorderSize = 0;
+            this.buttonAddDeck.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonAddDeck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonAddDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddDeck.ForeColor = System.Drawing.Color.Transparent;
             this.buttonAddDeck.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -363,12 +372,22 @@
             this.timerSelection.Enabled = true;
             this.timerSelection.Tick += new System.EventHandler(this.timerSelection_Tick);
             // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(831, 451);
+            this.panelContainer.TabIndex = 31;
+            this.panelContainer.Visible = false;
+            // 
             // MyDecks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.ClientSize = new System.Drawing.Size(831, 451);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.buttonEditDeck);
             this.Controls.Add(this.buttonDeleteDeck);
             this.Controls.Add(this.labelDeckAuthor);
@@ -418,5 +437,6 @@
         private System.Windows.Forms.Label labelDeckTitle;
         private System.Windows.Forms.Label labelDeckAuthor;
         private System.Windows.Forms.Timer timerSelection;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }

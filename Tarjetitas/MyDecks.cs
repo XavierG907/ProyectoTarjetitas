@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Tarjetitas
 {
@@ -19,6 +20,16 @@ namespace Tarjetitas
         private Color colorBackground;
         //para seleccionar barajas...
         SelectedDeck selectedDeck;
+
+
+
+        //Librerias para movilizar la interfaz (libreria system.runtime.interopservices)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
 
         public MyDecks(int _idTheme, Color _colorButtons, Color _colorPanels, Color _colorBackground, string user)
         {
@@ -65,7 +76,9 @@ namespace Tarjetitas
 
         private void MyDecks_Load(object sender, EventArgs e)
         {
+            panelContainer.Visible = false;
             ChangeItemsColor();
+            RemoveAllDecksFromFlowLayotPanel();
             ObtainDecksFromUser();
         }
 
@@ -127,6 +140,7 @@ namespace Tarjetitas
         {
             if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
                 return;
+            OpenSubForm(new EditCards(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text, selectedDeck.Id));
         }
 
         private void buttonDeleteDeck_Click(object sender, EventArgs e)
@@ -152,6 +166,24 @@ namespace Tarjetitas
                 labelDeckTitle.Text = selectedDeck.Title;
                 labelDeckAuthor.Text = selectedDeck.Author;
             }
+        }
+
+        private void OpenSubForm(object subform)
+        {
+            panelContainer.Visible = true;  //hacer visible el panel sobrepuesto para mostrar los submenus...
+
+            if (this.panelContainer.Controls.Count > 0)
+            { //liberar control ocupado en caso de tenerlo.
+                this.panelContainer.Controls.RemoveAt(0);
+            }
+            //crear subform
+            var sf = subform as Form;
+            sf.TopLevel = false;
+            sf.Dock = DockStyle.Fill;
+            this.panelContainer.Controls.Add(sf);
+            this.panelContainer.Tag = sf;
+            sf.FormClosing += MyDecks_Load;
+            sf.Show();
         }
     }
 }
