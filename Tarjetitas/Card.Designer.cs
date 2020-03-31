@@ -75,6 +75,7 @@
             this.labelIdOcurrence.Name = "labelIdOcurrence";
             this.labelIdOcurrence.Size = new System.Drawing.Size(0, 19);
             this.labelIdOcurrence.TabIndex = 2;
+            this.labelIdOcurrence.Click += new System.EventHandler(this.Card_Click);
             // 
             // buttonAddMultContent
             // 
@@ -101,6 +102,7 @@
             this.labelSide.Size = new System.Drawing.Size(55, 20);
             this.labelSide.TabIndex = 4;
             this.labelSide.Text = "Frente";
+            this.labelSide.Click += new System.EventHandler(this.Card_Click);
             // 
             // contextMenuStripOptions
             // 
@@ -110,7 +112,7 @@
             this.toolStripMenuItemAudio,
             this.toolStripMenuItemVideo});
             this.contextMenuStripOptions.Name = "contextMenuStripOptions";
-            this.contextMenuStripOptions.Size = new System.Drawing.Size(185, 114);
+            this.contextMenuStripOptions.Size = new System.Drawing.Size(185, 92);
             this.contextMenuStripOptions.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStripOptions_ItemClicked);
             // 
             // toolStripMenuItemText
@@ -150,6 +152,7 @@
             this.Name = "Card";
             this.Size = new System.Drawing.Size(285, 285);
             this.Click += new System.EventHandler(this.Card_Click);
+            this.Leave += new System.EventHandler(this.Card_Leave);
             this.contextMenuStripOptions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

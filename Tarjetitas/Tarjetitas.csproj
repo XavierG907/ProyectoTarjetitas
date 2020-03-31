@@ -83,11 +83,11 @@
     <Compile Include="DeckButton.Designer.cs">
       <DependentUpon>DeckButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditCards.cs">
+    <Compile Include="EditDeck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCards.designer.cs">
-      <DependentUpon>EditCards.cs</DependentUpon>
+    <Compile Include="EditDeck.designer.cs">
+      <DependentUpon>EditDeck.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="DeckButton.resx">
       <DependentUpon>DeckButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCards.resx">
-      <DependentUpon>EditCards.cs</DependentUpon>
+    <EmbeddedResource Include="EditDeck.resx">
+      <DependentUpon>EditDeck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

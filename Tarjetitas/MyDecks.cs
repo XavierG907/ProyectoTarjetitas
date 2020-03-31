@@ -106,7 +106,7 @@ namespace Tarjetitas
             }
 
             for(int i = 0; i < result.Rows.Count; i++){
-                query = "SELECT COUNT(numTarjeta) FROM tarjetas WHERE idBaraja = "+ result.Rows[i]["id"] +";";
+                query = "SELECT COUNT(numTarjeta) FROM tarjetas WHERE idBaraja = "+ result.Rows[i]["id"] +" AND elimLogica = 0;";
                 DataTable cards = bd.consulta(query);
                 AddDeckToFlowLayout(result.Rows[i]["titulo"].ToString(), int.Parse(cards.Rows[0]["COUNT(numTarjeta)"].ToString()), int.Parse(result.Rows[i]["id"].ToString()), bool.Parse(result.Rows[i]["privacidad"].ToString()));
             }
@@ -140,7 +140,7 @@ namespace Tarjetitas
         {
             if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
                 return;
-            OpenSubForm(new EditCards(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text, selectedDeck.Id));
+            OpenSubForm(new EditDeck(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text, selectedDeck.Id));
         }
 
         private void buttonDeleteDeck_Click(object sender, EventArgs e)
@@ -156,7 +156,10 @@ namespace Tarjetitas
             command = "UPDATE tarjetas SET elimLogica = 1 WHERE idBaraja = "+ selectedDeck.Id +";";
             db.ejecutarComando(command);
 
-            RemoveAllDecksFromFlowLayotPanel();
+            labelDeckTitle.Text = labelDeckAuthor.Text = ""; //vacíar objeto seleccionado
+            selectedDeck.Clear();
+
+            RemoveAllDecksFromFlowLayotPanel(); //actualizar data
             ObtainDecksFromUser();
         }
 
@@ -165,6 +168,9 @@ namespace Tarjetitas
             if(selectedDeck.Id != 0){
                 labelDeckTitle.Text = selectedDeck.Title;
                 labelDeckAuthor.Text = selectedDeck.Author;
+            }
+            else{
+                labelDeckTitle.Text = labelDeckAuthor.Text = "";
             }
         }
 

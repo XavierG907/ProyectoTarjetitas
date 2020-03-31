@@ -53,6 +53,7 @@
             this.buttonPlay.TabIndex = 2;
             this.buttonPlay.UseVisualStyleBackColor = false;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            this.buttonPlay.Leave += new System.EventHandler(this.CardAudio_Leave);
             // 
             // pictureBoxImage
             // 

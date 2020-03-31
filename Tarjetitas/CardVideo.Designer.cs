@@ -60,6 +60,8 @@
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(285, 235);
             this.axWindowsMediaPlayer1.TabIndex = 1;
+            this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
+            this.axWindowsMediaPlayer1.Leave += new System.EventHandler(this.axWindowsMediaPlayer1_Leave);
             // 
             // CardVideo
             // 
@@ -73,6 +75,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CardVideo";
             this.Load += new System.EventHandler(this.CardVideo_Load);
+            this.Leave += new System.EventHandler(this.axWindowsMediaPlayer1_Leave);
             this.contextMenuStripOpenVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);

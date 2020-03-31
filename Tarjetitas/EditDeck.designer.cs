@@ -1,6 +1,6 @@
 ﻿namespace Tarjetitas
 {
-    partial class EditCards
+    partial class EditDeck
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCards));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditDeck));
             this.buttonBack = new System.Windows.Forms.Button();
             this.panelEditCards = new System.Windows.Forms.Panel();
             this.labelUser = new System.Windows.Forms.Label();
@@ -135,7 +135,7 @@
             this.textBoxDeckTitle.Name = "textBoxDeckTitle";
             this.textBoxDeckTitle.Size = new System.Drawing.Size(261, 22);
             this.textBoxDeckTitle.TabIndex = 4;
-            this.textBoxDeckTitle.Text = "Verbos irregulares en inglés I";
+            this.textBoxDeckTitle.Text = "Titulo de la baraja";
             // 
             // buttonSave
             // 
@@ -143,7 +143,7 @@
             this.buttonSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSave.BackgroundImage")));
             this.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonSave.FlatAppearance.BorderSize = 0;
-            this.buttonSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.buttonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Location = new System.Drawing.Point(58, 3);
@@ -151,6 +151,7 @@
             this.buttonSave.Size = new System.Drawing.Size(49, 49);
             this.buttonSave.TabIndex = 2;
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonAddCard
             // 
@@ -242,7 +243,7 @@
             this.timerSelectedCard.Enabled = true;
             this.timerSelectedCard.Tick += new System.EventHandler(this.timerSelectedCard_Tick);
             // 
-            // EditCards
+            // EditDeck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +255,7 @@
             this.Controls.Add(this.flowLayoutPanelCards);
             this.Controls.Add(this.panelEditCards);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EditCards";
+            this.Name = "EditDeck";
             this.Text = "EditCards";
             this.Load += new System.EventHandler(this.EditCards_Load);
             this.panelEditCards.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace Tarjetitas
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        public Card(int idOcurrence, bool _edit, ref SelectedCard _cardSelected)
+        public Card(int idOcurrence, bool _edit, ref SelectedCard _cardSelected, string _front = "", string _reverse = "")
         {
             InitializeComponent();
 
@@ -30,6 +30,8 @@ namespace Tarjetitas
             edit = _edit;                               //asignar el modo de presentación (edit = true / visual = false)
             front = new Content();                      //inicializar frente
             reverse = new Content();                    //inicializar reverso
+            front.content = ReplaceDoubleSlashToRoute(_front);
+            reverse.content = ReplaceDoubleSlashToRoute(_reverse);
             OpenSubForm(new CardText(edit, ref front)); //asignar al panelContainer el frente de la tarjeta (solo texto)
         }
 
@@ -138,6 +140,36 @@ namespace Tarjetitas
             this.panelContainer.Tag = sf;
             sf.Show();
         }
+
+        private void Card_Leave(object sender, EventArgs e)
+        {
+            if (!edit)
+                return;
+
+            TarjetitasDB bd = new TarjetitasDB();
+            string command = "UPDATE tarjetas SET tipoDeTarjeta = '"+ this.CardType +"', frente = '"+ AddSlashToRoute(front.content) +"', reverso = '"+ AddSlashToRoute(reverse.content) +"' WHERE numTarjeta = "+ this.CardNumber +";"; //update tarjeta por todos los cambios realizados.
+            bd.ejecutarComando(command);
+        }
+
+        private string AddSlashToRoute(string _str) //utilizado para guardar en BD
+        {
+            string str = "";
+
+            foreach (var ctr in _str)
+            {
+                str += ctr;
+                if (ctr == '\\')
+                    str += ctr;
+            }
+
+            return str;
+        }
+
+        private string ReplaceDoubleSlashToRoute(string str) //utilizado para extraer de BD
+        {
+            str.Replace("\\\\", "\\");
+            return str;
+        }
     }
 
     public class SelectedCard   //objeto utilizado para saber que carta se selecciona
@@ -145,6 +177,12 @@ namespace Tarjetitas
         public int IdOcurrence;     //id de ocurrencia
         public int CardNumber;      //identificador en BD
         public SelectedCard()
+        {
+            CardNumber = 0;
+            IdOcurrence = 0;
+        }
+
+        public void Clear()
         {
             CardNumber = 0;
             IdOcurrence = 0;

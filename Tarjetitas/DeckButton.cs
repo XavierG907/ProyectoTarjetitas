@@ -151,5 +151,12 @@ namespace Tarjetitas
             Title = "";
             Author = "";
         }
+
+        public void Clear()
+        {
+            Id = 0;
+            Title = "";
+            Author = "";
+        }
     }
 }
