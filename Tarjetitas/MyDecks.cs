@@ -130,12 +130,6 @@ namespace Tarjetitas
             flowLayoutPanelDecks.Controls.Clear();
         }
 
-        private void buttonPlayDeck_Click(object sender, EventArgs e)
-        {
-            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
-                return;
-        }
-
         private void buttonEditDeck_Click(object sender, EventArgs e)
         {
             if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
@@ -190,6 +184,21 @@ namespace Tarjetitas
             this.panelContainer.Tag = sf;
             sf.FormClosing += MyDecks_Load;
             sf.Show();
+        }
+
+        private void contextMenuStripGames_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Text == "Estudiar Baraja") {
+                OpenSubForm(new StudyDeck(idTheme, colorButtons, colorPanels, colorBackground, selectedDeck.Id));
+            }
+        }
+
+        private void buttonPlayDeck_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
+                return;
+
+            contextMenuStripGames.Show(buttonPlayDeck, new Point(e.X, e.Y));
         }
     }
 }

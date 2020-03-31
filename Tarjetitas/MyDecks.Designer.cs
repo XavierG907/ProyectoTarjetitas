@@ -54,9 +54,13 @@
             this.labelDeckAuthor = new System.Windows.Forms.Label();
             this.timerSelection = new System.Windows.Forms.Timer(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.contextMenuStripGames = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMyDecks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panelAddDeck.SuspendLayout();
+            this.contextMenuStripGames.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonBack
@@ -287,7 +291,7 @@
             this.buttonPlayDeck.Text = "Jugar";
             this.buttonPlayDeck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPlayDeck.UseVisualStyleBackColor = false;
-            this.buttonPlayDeck.Click += new System.EventHandler(this.buttonPlayDeck_Click);
+            this.buttonPlayDeck.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonPlayDeck_MouseClick);
             // 
             // buttonEditDeck
             // 
@@ -381,6 +385,27 @@
             this.panelContainer.TabIndex = 31;
             this.panelContainer.Visible = false;
             // 
+            // contextMenuStripGames
+            // 
+            this.contextMenuStripGames.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.contextMenuStripGames.Name = "contextMenuStripGames";
+            this.contextMenuStripGames.Size = new System.Drawing.Size(168, 48);
+            this.contextMenuStripGames.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStripGames_ItemClicked);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Estudiar Baraja";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "Jugar Memorama";
+            // 
             // MyDecks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.panelAddDeck.ResumeLayout(false);
             this.panelAddDeck.PerformLayout();
+            this.contextMenuStripGames.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -438,5 +464,8 @@
         private System.Windows.Forms.Label labelDeckAuthor;
         private System.Windows.Forms.Timer timerSelection;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripGames;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

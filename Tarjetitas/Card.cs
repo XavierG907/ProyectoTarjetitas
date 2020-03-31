@@ -24,7 +24,8 @@ namespace Tarjetitas
             InitializeComponent();
 
             this.IdOcurrence =  idOcurrence;                        //obtener el id de ocurrencia de la tarjeta
-            labelIdOcurrence.Text = this.IdOcurrence.ToString();    //mostrar el id de ocurrencia
+            if(!_edit) //siempre y cuando no se trate de visualización:
+                labelIdOcurrence.Text = this.IdOcurrence.ToString();    //mostrar el id de ocurrencia
             cardSelected = _cardSelected;                           //referencia de editCards para seleccionar tarjeta
 
             edit = _edit;                               //asignar el modo de presentación (edit = true / visual = false)
@@ -66,6 +67,9 @@ namespace Tarjetitas
 
         private void Card_Click(object sender, EventArgs e)
         {
+            if (!edit)  //ignorar este clic en caso de presentación de tarjeta solo para visualización.
+                return;
+
             cardSelected.IdOcurrence = this.IdOcurrence;    //asignar a la referencia de selección el id de ocurrencia y el identificador en BD
             cardSelected.CardNumber = this.CardNumber;
         }
@@ -169,6 +173,16 @@ namespace Tarjetitas
         {
             str.Replace("\\\\", "\\");
             return str;
+        }
+
+        public string GetFront()
+        {
+            return front.content;
+        }
+
+        public string GetReverse()
+        {
+            return reverse.content;
         }
     }
 
