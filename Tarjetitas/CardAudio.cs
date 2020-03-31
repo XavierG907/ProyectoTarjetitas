@@ -97,13 +97,7 @@ namespace Tarjetitas
 
         private void CardAudio_Load(object sender, EventArgs e)
         {
-            try{
-                player.SoundLocation = content.content; //proporcionar la ruta de la grabación (por content)
-                player.Play();  //reproducir
-            }
-            catch (Exception){
-                return;
-            }
+            player.SoundLocation = content.content; //proporcionar la ruta de la grabación (por content)
         }
 
         private void CardAudio_Leave(object sender, EventArgs e)

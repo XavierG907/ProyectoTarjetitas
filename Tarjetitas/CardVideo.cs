@@ -15,6 +15,7 @@ namespace Tarjetitas
     {
         bool edit; //bandera que indica si la forma se utilizará para editar o para visualizar
         Content content; //tiene la referencia del content de la tarjeta, solo reverso
+        
         public CardVideo(bool _edit, ref Content _content)
         {
             InitializeComponent();
@@ -54,6 +55,7 @@ namespace Tarjetitas
             {
                 try{
                     axWindowsMediaPlayer1.URL = content.content; //cargar el url a la ruta de content. se reproducirá automáticamente
+                    axWindowsMediaPlayer1.Ctlcontrols.stop();
                 }catch (Exception){
                     return;
                 }
