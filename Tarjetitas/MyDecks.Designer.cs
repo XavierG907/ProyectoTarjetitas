@@ -37,7 +37,6 @@
             this.labelPresentation = new System.Windows.Forms.Label();
             this.labelMyDecks = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
-            this.buttonConfig = new System.Windows.Forms.Button();
             this.flowLayoutPanelDecks = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddDeck = new System.Windows.Forms.Button();
             this.textBoxDeckTitle = new System.Windows.Forms.TextBox();
@@ -91,7 +90,6 @@
             this.panelMyDecks.Controls.Add(this.labelPresentation);
             this.panelMyDecks.Controls.Add(this.labelMyDecks);
             this.panelMyDecks.Controls.Add(this.buttonHelp);
-            this.panelMyDecks.Controls.Add(this.buttonConfig);
             this.panelMyDecks.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMyDecks.Location = new System.Drawing.Point(0, 0);
             this.panelMyDecks.Name = "panelMyDecks";
@@ -157,30 +155,12 @@
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.Transparent;
             this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonHelp.Location = new System.Drawing.Point(149, 3);
+            this.buttonHelp.Location = new System.Drawing.Point(77, 2);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(50, 50);
             this.buttonHelp.TabIndex = 4;
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHelp.UseVisualStyleBackColor = false;
-            // 
-            // buttonConfig
-            // 
-            this.buttonConfig.BackColor = System.Drawing.Color.Transparent;
-            this.buttonConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfig.BackgroundImage")));
-            this.buttonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonConfig.FlatAppearance.BorderSize = 0;
-            this.buttonConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonConfig.Location = new System.Drawing.Point(72, 3);
-            this.buttonConfig.Name = "buttonConfig";
-            this.buttonConfig.Size = new System.Drawing.Size(50, 50);
-            this.buttonConfig.TabIndex = 3;
-            this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonConfig.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanelDecks
             // 
@@ -397,13 +377,13 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
             this.toolStripMenuItem1.Text = "Estudiar Baraja";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
             this.toolStripMenuItem2.Text = "Jugar Memorama";
             // 
             // MyDecks
@@ -451,7 +431,6 @@
         private System.Windows.Forms.Button buttonAddDeck;
         private System.Windows.Forms.TextBox textBoxDeckTitle;
         private System.Windows.Forms.Label labelAddTitle;
-        private System.Windows.Forms.Button buttonConfig;
         private System.Windows.Forms.Panel panelAddDeck;
         private System.Windows.Forms.Label labelTitleAddDeck;
         private System.Windows.Forms.CheckBox checkBoxDeckPrivacy;

@@ -33,6 +33,7 @@ namespace Tarjetitas
         private int _id;
         private Color _color;
         private bool _privacy;
+        private string _currentUser;
 
         [Category("Propiedades Personalizadas")]
         public string Title
@@ -76,11 +77,19 @@ namespace Tarjetitas
             set { _privacy = value; }
         }
 
+        [Category("Propiedades Personalizadas")]
+        public string CurrentUser
+        {
+            get { return _currentUser; }
+            set { _currentUser = value; }
+        }
+
+
         private void pictureBoxNotFavourite_Click(object sender, EventArgs e)
         {
             //Agregar a favoritos la baraja seleccionada.
             TarjetitasDB db = new TarjetitasDB();
-            string command = "INSERT INTO baraja_usuario_favoritiza VALUES(0, "+ this.Id +", '"+ this.Author +"');";
+            string command = "INSERT INTO baraja_usuario_favoritiza VALUES(0, "+ this.Id +", '"+ this.CurrentUser +"');";
             db.ejecutarComando(command);
 
             pictureBoxFavourite.Visible = true;
@@ -91,7 +100,7 @@ namespace Tarjetitas
         {
             //Quitar de favoritos la baraja seleccionada.
             TarjetitasDB db = new TarjetitasDB();
-            string command = "DELETE FROM baraja_usuario_favoritiza WHERE idBaraja = "+ this.Id +" AND usuario = '"+ this.Author +"';";
+            string command = "DELETE FROM baraja_usuario_favoritiza WHERE idBaraja = "+ this.Id +" AND usuario = '"+ this.CurrentUser +"';";
             db.ejecutarComando(command);
 
             pictureBoxFavourite.Visible = false;
@@ -116,7 +125,7 @@ namespace Tarjetitas
         private void DeckButton_Load(object sender, EventArgs e)
         {
             TarjetitasDB db = new TarjetitasDB();
-            string query = "SELECT id FROM baraja_usuario_favoritiza WHERE usuario = '"+ this.Author +"' AND idBaraja = "+ this.Id +";";
+            string query = "SELECT id FROM baraja_usuario_favoritiza WHERE usuario = '"+ this.CurrentUser +"' AND idBaraja = "+ this.Id +";";
 
             DataTable result = db.consulta(query);
 

@@ -63,12 +63,12 @@ namespace Tarjetitas
 
         private void buttonPublicDecks_Click(object sender, EventArgs e)
         {
-
+            OpenSubForm(new OtherDecks(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text, "Barajas Públicas")); //abrir subMenu barajas públicas
         }
 
         private void buttonFavoriteDecks_Click(object sender, EventArgs e)
         {
-
+            OpenSubForm(new OtherDecks(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text, "Barajas Favoritas")); //abrir subMenu barajas favoritas
         }
 
         private void buttonRecycleBin_Click(object sender, EventArgs e)

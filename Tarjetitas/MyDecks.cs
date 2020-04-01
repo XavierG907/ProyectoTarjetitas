@@ -121,6 +121,7 @@ namespace Tarjetitas
             deckButton.Privacy = privacy;
             deckButton.Color = colorButtons;
             deckButton.Id = idBD;
+            deckButton.CurrentUser = labelUser.Text;
 
             flowLayoutPanelDecks.Controls.Add(deckButton);
         }
