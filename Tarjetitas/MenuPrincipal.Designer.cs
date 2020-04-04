@@ -141,6 +141,7 @@
             this.buttonConfig.TabIndex = 3;
             this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConfig.UseVisualStyleBackColor = false;
+            this.buttonConfig.Click += new System.EventHandler(this.buttonConfig_Click);
             // 
             // buttonLogOut
             // 

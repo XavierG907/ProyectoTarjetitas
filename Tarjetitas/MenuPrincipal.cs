@@ -120,5 +120,10 @@ namespace Tarjetitas
                 buttonMyDecks.ForeColor = buttonPublicDecks.ForeColor = buttonFavoriteDecks.ForeColor = buttonRecycleBin.ForeColor = Color.Black;
             }
         }
+
+        private void buttonConfig_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

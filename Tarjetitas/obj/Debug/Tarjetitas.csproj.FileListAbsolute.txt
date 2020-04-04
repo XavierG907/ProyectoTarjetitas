@@ -83,3 +83,4 @@ C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\T
 C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.EditDeck.resources
 C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.StudyDeck.resources
 C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.OtherDecks.resources
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.UserSettings.resources
