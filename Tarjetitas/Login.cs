@@ -67,6 +67,7 @@ namespace Tarjetitas
             if (bd.consulta(query).Rows.Count != 0)
             {
                 MenuPrincipal mp = new MenuPrincipal(txtUsuario.Text); //inicializar main menu
+                this.Hide(); //ocultar la página de iniciar sesión
                 mp.ShowDialog(); //mostrarlo
 
                 txtUsuario.Text = "Usuario";    //reestablecer valores de usuario y contraseña
@@ -75,6 +76,7 @@ namespace Tarjetitas
                 if (!mp.LoggedOut()){ //si no cerró sesión, entonces cerró la aplicación, también cerrar esta página.
                     this.Close();
                 }
+                this.ShowDialog(); //mostrar página de iniciar sesión
             }
             else
                 errorLogIn.Visible = true;

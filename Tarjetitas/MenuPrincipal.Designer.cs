@@ -255,6 +255,7 @@
             this.Controls.Add(this.buttonPublicDecks);
             this.Controls.Add(this.buttonMyDecks);
             this.Controls.Add(this.panelMainMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

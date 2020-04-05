@@ -127,6 +127,12 @@
     <Compile Include="RecycleBin.Designer.cs">
       <DependentUpon>RecycleBin.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecycleCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecycleCards.Designer.cs">
+      <DependentUpon>RecycleCards.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudyDeck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RecycleBin.resx">
+      <DependentUpon>RecycleBin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecycleCards.resx">
+      <DependentUpon>RecycleCards.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudyDeck.resx">
       <DependentUpon>StudyDeck.cs</DependentUpon>
     </EmbeddedResource>

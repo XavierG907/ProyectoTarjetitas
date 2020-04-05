@@ -73,7 +73,7 @@ namespace Tarjetitas
 
         private void buttonRecycleBin_Click(object sender, EventArgs e)
         {
-
+            OpenSubForm(new RecycleBin(idTheme, colorButtons, colorPanels, colorBackground, labelUser.Text));
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
