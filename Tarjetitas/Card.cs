@@ -98,7 +98,42 @@ namespace Tarjetitas
                 OpenSubForm(new CardText(edit, ref front)); //abrir subform text para frente
             }
         }
+        public void voltearCarta()
+        {
+            if (edit)
+            {  //mantener en falso siempre y cuando el modo sea solo visualizar, si es editar:
+                buttonAddMultContent.Visible = !buttonAddMultContent.Visible; //intercalar su visible según frente o reverso
+            }
 
+            if (labelSide.Text == "Frente")
+            {   //si se está en el frente de la tarjeta    
+
+                labelSide.Text = "Reverso";                 //cambiar al reverso
+                this.panelContainer.Controls.RemoveAt(0);   //eliminar cualquier control que tenía asignado el panel
+
+                if (this.CardType == "TEXT-IMAGE")                      //abrir text-image
+                    OpenSubForm(new CardImage(edit, ref reverse));
+                else if (this.CardType == "TEXT-AUDIO")                 //abrir text-audio
+                    OpenSubForm(new CardAudio(edit, ref reverse));
+                else if (this.CardType == "TEXT-VIDEO")                 //abrir text-video
+                    OpenSubForm(new CardVideo(edit, ref reverse));
+                else
+                {
+                    this.CardType = "TEXT";
+                    OpenSubForm(new CardText(edit, ref reverse));       //abrir TEXT a secas, ya sea que tuviese el valor text o nunca se haya mostrado el reverso
+                }
+            }
+            else
+            { //de otra forma, se estaba en el reverso
+                labelSide.Text = "Frente";                  //cambiar a frente
+                OpenSubForm(new CardText(edit, ref front)); //abrir subform text para frente
+            }
+        }
+        public void deshabilitarReverso()
+        {
+            buttonReverse.Enabled = buttonReverse.Visible = false;
+
+        }
         private void buttonAddMultContent_MouseClick(object sender, MouseEventArgs e)
         {
             contextMenuStripOptions.Show(this.buttonAddMultContent, new Point(e.X, e.Y)); //show menustrip para asignar tipo de tarjeta

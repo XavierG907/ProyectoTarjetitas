@@ -28,31 +28,351 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memorama));
+            this.panelFront = new System.Windows.Forms.Panel();
+            this.panelBack = new System.Windows.Forms.Panel();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.btnRules = new System.Windows.Forms.Button();
+            this.btnClues = new System.Windows.Forms.Button();
+            this.tiempo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelAciertos = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelErrores = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnFront = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.error = new System.Windows.Forms.PictureBox();
+            this.acierto = new System.Windows.Forms.PictureBox();
+            this.panelFront.SuspendLayout();
+            this.panelBack.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acierto)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelFront
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
-            this.panel1.TabIndex = 0;
+            this.panelFront.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelFront.Controls.Add(this.acierto);
+            this.panelFront.Controls.Add(this.error);
+            this.panelFront.Controls.Add(this.btnFront);
+            this.panelFront.Location = new System.Drawing.Point(2, 80);
+            this.panelFront.Name = "panelFront";
+            this.panelFront.Size = new System.Drawing.Size(411, 368);
+            this.panelFront.TabIndex = 0;
+            // 
+            // panelBack
+            // 
+            this.panelBack.BackColor = System.Drawing.Color.Navy;
+            this.panelBack.Controls.Add(this.btnBack);
+            this.panelBack.Controls.Add(this.btnContinue);
+            this.panelBack.Location = new System.Drawing.Point(419, 80);
+            this.panelBack.Name = "panelBack";
+            this.panelBack.Size = new System.Drawing.Size(411, 368);
+            this.panelBack.TabIndex = 1;
+            // 
+            // pictureBoxImage
+            // 
+            this.pictureBoxImage.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
+            this.pictureBoxImage.Location = new System.Drawing.Point(705, 12);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(114, 50);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage.TabIndex = 50;
+            this.pictureBoxImage.TabStop = false;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHelp.BackgroundImage")));
+            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnHelp.Location = new System.Drawing.Point(638, 12);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(50, 50);
+            this.btnHelp.TabIndex = 51;
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Location = new System.Drawing.Point(12, 12);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(49, 49);
+            this.buttonBack.TabIndex = 52;
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // btnRules
+            // 
+            this.btnRules.BackColor = System.Drawing.Color.Transparent;
+            this.btnRules.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRules.BackgroundImage")));
+            this.btnRules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRules.FlatAppearance.BorderSize = 0;
+            this.btnRules.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRules.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRules.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRules.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRules.Location = new System.Drawing.Point(570, 12);
+            this.btnRules.Name = "btnRules";
+            this.btnRules.Size = new System.Drawing.Size(50, 50);
+            this.btnRules.TabIndex = 53;
+            this.btnRules.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRules.UseVisualStyleBackColor = false;
+            // 
+            // btnClues
+            // 
+            this.btnClues.BackColor = System.Drawing.Color.Transparent;
+            this.btnClues.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClues.BackgroundImage")));
+            this.btnClues.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClues.FlatAppearance.BorderSize = 0;
+            this.btnClues.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClues.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClues.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClues.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClues.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnClues.Location = new System.Drawing.Point(498, 11);
+            this.btnClues.Name = "btnClues";
+            this.btnClues.Size = new System.Drawing.Size(56, 51);
+            this.btnClues.TabIndex = 54;
+            this.btnClues.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClues.UseVisualStyleBackColor = false;
+            // 
+            // tiempo
+            // 
+            this.tiempo.AutoSize = true;
+            this.tiempo.BackColor = System.Drawing.Color.Transparent;
+            this.tiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiempo.ForeColor = System.Drawing.SystemColors.Window;
+            this.tiempo.Location = new System.Drawing.Point(400, 37);
+            this.tiempo.Name = "tiempo";
+            this.tiempo.Size = new System.Drawing.Size(36, 25);
+            this.tiempo.TabIndex = 55;
+            this.tiempo.Text = "60";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Turquoise;
+            this.label1.Location = new System.Drawing.Point(371, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 25);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "TIEMPO";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightGreen;
+            this.label2.Location = new System.Drawing.Point(120, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Aciertos";
+            // 
+            // labelAciertos
+            // 
+            this.labelAciertos.AutoSize = true;
+            this.labelAciertos.BackColor = System.Drawing.Color.Transparent;
+            this.labelAciertos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAciertos.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelAciertos.Location = new System.Drawing.Point(144, 40);
+            this.labelAciertos.Name = "labelAciertos";
+            this.labelAciertos.Size = new System.Drawing.Size(18, 20);
+            this.labelAciertos.TabIndex = 57;
+            this.labelAciertos.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Pink;
+            this.label4.Location = new System.Drawing.Point(236, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Errores";
+            // 
+            // labelErrores
+            // 
+            this.labelErrores.AutoSize = true;
+            this.labelErrores.BackColor = System.Drawing.Color.Transparent;
+            this.labelErrores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrores.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelErrores.Location = new System.Drawing.Point(252, 40);
+            this.labelErrores.Name = "labelErrores";
+            this.labelErrores.Size = new System.Drawing.Size(18, 20);
+            this.labelErrores.TabIndex = 59;
+            this.labelErrores.Text = "0";
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStart.ForeColor = System.Drawing.Color.Ivory;
+            this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnStart.Location = new System.Drawing.Point(373, 12);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(90, 53);
+            this.btnStart.TabIndex = 61;
+            this.btnStart.Text = "COMENZAR";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnFront
+            // 
+            this.btnFront.BackColor = System.Drawing.Color.White;
+            this.btnFront.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFront.BackgroundImage")));
+            this.btnFront.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFront.FlatAppearance.BorderSize = 0;
+            this.btnFront.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFront.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFront.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFront.Location = new System.Drawing.Point(242, 241);
+            this.btnFront.Name = "btnFront";
+            this.btnFront.Size = new System.Drawing.Size(40, 40);
+            this.btnFront.TabIndex = 1;
+            this.btnFront.UseVisualStyleBackColor = false;
+            this.btnFront.Click += new System.EventHandler(this.btnFront_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(242, 241);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(40, 40);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContinue.FlatAppearance.BorderSize = 0;
+            this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnContinue.ForeColor = System.Drawing.Color.Ivory;
+            this.btnContinue.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnContinue.Location = new System.Drawing.Point(18, 319);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(90, 39);
+            this.btnContinue.TabIndex = 62;
+            this.btnContinue.Text = "CONTINUAR";
+            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
+            // error
+            // 
+            this.error.BackColor = System.Drawing.Color.White;
+            this.error.Image = ((System.Drawing.Image)(resources.GetObject("error.Image")));
+            this.error.Location = new System.Drawing.Point(352, 319);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(40, 39);
+            this.error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.error.TabIndex = 62;
+            this.error.TabStop = false;
+            // 
+            // acierto
+            // 
+            this.acierto.BackColor = System.Drawing.Color.White;
+            this.acierto.Image = ((System.Drawing.Image)(resources.GetObject("acierto.Image")));
+            this.acierto.Location = new System.Drawing.Point(352, 319);
+            this.acierto.Name = "acierto";
+            this.acierto.Size = new System.Drawing.Size(40, 39);
+            this.acierto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.acierto.TabIndex = 63;
+            this.acierto.TabStop = false;
             // 
             // Memorama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelErrores);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelAciertos);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tiempo);
+            this.Controls.Add(this.btnClues);
+            this.Controls.Add(this.btnRules);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.pictureBoxImage);
+            this.Controls.Add(this.panelBack);
+            this.Controls.Add(this.panelFront);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Memorama";
             this.Text = "Memorama";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Memorama_FormClosed);
+            this.panelFront.ResumeLayout(false);
+            this.panelBack.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acierto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelFront;
+        private System.Windows.Forms.Panel panelBack;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button btnRules;
+        private System.Windows.Forms.Button btnClues;
+        private System.Windows.Forms.Label tiempo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelAciertos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelErrores;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnFront;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.PictureBox acierto;
+        private System.Windows.Forms.PictureBox error;
+        private System.Windows.Forms.Button btnContinue;
     }
 }

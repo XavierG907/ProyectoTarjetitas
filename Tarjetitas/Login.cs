@@ -75,6 +75,7 @@ namespace Tarjetitas
 
                 if (!mp.LoggedOut()){ //si no cerró sesión, entonces cerró la aplicación, también cerrar esta página.
                     this.Close();
+                    return;
                 }
                 this.ShowDialog(); //mostrar página de iniciar sesión
             }

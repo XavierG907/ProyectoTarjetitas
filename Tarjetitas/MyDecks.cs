@@ -192,6 +192,10 @@ namespace Tarjetitas
             if (e.ClickedItem.Text == "Estudiar Baraja") {
                 OpenSubForm(new StudyDeck(idTheme, colorButtons, colorPanels, colorBackground, selectedDeck.Id));
             }
+            else if (e.ClickedItem.Text == "Jugar Memorama")
+            {
+                OpenSubForm(new Memorama(idTheme, colorButtons, colorPanels, colorBackground, selectedDeck.Id));
+            }
         }
 
         private void buttonPlayDeck_MouseClick(object sender, MouseEventArgs e)
