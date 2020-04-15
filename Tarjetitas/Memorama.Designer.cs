@@ -30,7 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memorama));
             this.panelFront = new System.Windows.Forms.Panel();
+            this.acierto = new System.Windows.Forms.PictureBox();
+            this.error = new System.Windows.Forms.PictureBox();
+            this.btnFront = new System.Windows.Forms.Button();
             this.panelBack = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -43,16 +48,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labelErrores = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
-            this.btnFront = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnContinue = new System.Windows.Forms.Button();
-            this.error = new System.Windows.Forms.PictureBox();
-            this.acierto = new System.Windows.Forms.PictureBox();
             this.panelFront.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.acierto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acierto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFront
@@ -66,6 +66,44 @@
             this.panelFront.Size = new System.Drawing.Size(411, 368);
             this.panelFront.TabIndex = 0;
             // 
+            // acierto
+            // 
+            this.acierto.BackColor = System.Drawing.Color.White;
+            this.acierto.Image = ((System.Drawing.Image)(resources.GetObject("acierto.Image")));
+            this.acierto.Location = new System.Drawing.Point(352, 319);
+            this.acierto.Name = "acierto";
+            this.acierto.Size = new System.Drawing.Size(40, 39);
+            this.acierto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.acierto.TabIndex = 63;
+            this.acierto.TabStop = false;
+            // 
+            // error
+            // 
+            this.error.BackColor = System.Drawing.Color.White;
+            this.error.Image = ((System.Drawing.Image)(resources.GetObject("error.Image")));
+            this.error.Location = new System.Drawing.Point(352, 319);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(40, 39);
+            this.error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.error.TabIndex = 62;
+            this.error.TabStop = false;
+            // 
+            // btnFront
+            // 
+            this.btnFront.BackColor = System.Drawing.Color.White;
+            this.btnFront.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFront.BackgroundImage")));
+            this.btnFront.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFront.FlatAppearance.BorderSize = 0;
+            this.btnFront.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFront.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFront.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFront.Location = new System.Drawing.Point(242, 241);
+            this.btnFront.Name = "btnFront";
+            this.btnFront.Size = new System.Drawing.Size(40, 40);
+            this.btnFront.TabIndex = 1;
+            this.btnFront.UseVisualStyleBackColor = false;
+            this.btnFront.Click += new System.EventHandler(this.btnFront_Click);
+            // 
             // panelBack
             // 
             this.panelBack.BackColor = System.Drawing.Color.Navy;
@@ -75,6 +113,40 @@
             this.panelBack.Name = "panelBack";
             this.panelBack.Size = new System.Drawing.Size(411, 368);
             this.panelBack.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(242, 241);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(40, 40);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContinue.FlatAppearance.BorderSize = 0;
+            this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnContinue.ForeColor = System.Drawing.Color.Ivory;
+            this.btnContinue.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnContinue.Location = new System.Drawing.Point(18, 319);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(90, 39);
+            this.btnContinue.TabIndex = 62;
+            this.btnContinue.Text = "CONTINUAR";
+            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // pictureBoxImage
             // 
@@ -156,6 +228,7 @@
             this.btnClues.TabIndex = 54;
             this.btnClues.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClues.UseVisualStyleBackColor = false;
+            this.btnClues.Click += new System.EventHandler(this.btnClues_Click);
             // 
             // tiempo
             // 
@@ -247,78 +320,6 @@
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // btnFront
-            // 
-            this.btnFront.BackColor = System.Drawing.Color.White;
-            this.btnFront.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFront.BackgroundImage")));
-            this.btnFront.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFront.FlatAppearance.BorderSize = 0;
-            this.btnFront.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFront.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnFront.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFront.Location = new System.Drawing.Point(242, 241);
-            this.btnFront.Name = "btnFront";
-            this.btnFront.Size = new System.Drawing.Size(40, 40);
-            this.btnFront.TabIndex = 1;
-            this.btnFront.UseVisualStyleBackColor = false;
-            this.btnFront.Click += new System.EventHandler(this.btnFront_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.White;
-            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(242, 241);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(40, 40);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnContinue
-            // 
-            this.btnContinue.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContinue.FlatAppearance.BorderSize = 0;
-            this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnContinue.ForeColor = System.Drawing.Color.Ivory;
-            this.btnContinue.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnContinue.Location = new System.Drawing.Point(18, 319);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(90, 39);
-            this.btnContinue.TabIndex = 62;
-            this.btnContinue.Text = "CONTINUAR";
-            this.btnContinue.UseVisualStyleBackColor = false;
-            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
-            // 
-            // error
-            // 
-            this.error.BackColor = System.Drawing.Color.White;
-            this.error.Image = ((System.Drawing.Image)(resources.GetObject("error.Image")));
-            this.error.Location = new System.Drawing.Point(352, 319);
-            this.error.Name = "error";
-            this.error.Size = new System.Drawing.Size(40, 39);
-            this.error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.error.TabIndex = 62;
-            this.error.TabStop = false;
-            // 
-            // acierto
-            // 
-            this.acierto.BackColor = System.Drawing.Color.White;
-            this.acierto.Image = ((System.Drawing.Image)(resources.GetObject("acierto.Image")));
-            this.acierto.Location = new System.Drawing.Point(352, 319);
-            this.acierto.Name = "acierto";
-            this.acierto.Size = new System.Drawing.Size(40, 39);
-            this.acierto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.acierto.TabIndex = 63;
-            this.acierto.TabStop = false;
-            // 
             // Memorama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,10 +345,10 @@
             this.Text = "Memorama";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Memorama_FormClosed);
             this.panelFront.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.acierto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.panelBack.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acierto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

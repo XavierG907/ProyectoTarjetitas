@@ -13,7 +13,6 @@ namespace Tarjetitas
 {
     public partial class Memorama : Form
     {
-        string usuario;
         Color boton;
         Color panel;
         Color fondo;
@@ -26,6 +25,7 @@ namespace Tarjetitas
         int limit;
         int totalErrores;
         int totalAciertos;
+        int remainingClues;
         List<int> id_FrontCards;
         List<int> id_BackCards;
         Card currentFront;
@@ -33,6 +33,8 @@ namespace Tarjetitas
         TableLayoutPanel FrontCards;
         TableLayoutPanel BackCards;
         SelectedCard cardSelected;
+        PictureBox pbCurrentBack = new PictureBox();
+        PictureBox pbCurrentFront = new PictureBox();
         bool IsPlaying;
         public Memorama(int _idTheme, Color _colorButtons, Color _colorPanels, Color _colorBackground, int _id_baraja)
         {
@@ -62,6 +64,7 @@ namespace Tarjetitas
             totalAciertos = 0;
             totalErrores = 0;
             IsPlaying = false;
+            btnClues.Enabled = false;
 
             GetAllCards();
             chooseAtMost20Cards();
@@ -82,8 +85,9 @@ namespace Tarjetitas
         {
             panelFront.Enabled = true;
             panelBack.Enabled = true;
-            btnStart.Enabled = false;
             btnStart.Visible = false;
+            btnClues.Enabled = true;
+            remainingClues = 3;
 
             IsPlaying = true;
             juego = new Thread(this.Inicio);
@@ -170,7 +174,7 @@ namespace Tarjetitas
                 CartasJuego.Image = Properties.Resources.Girada;
                 CartasJuego.Cursor = Cursors.Hand;
                 CartasJuego.Click += (sender, EventArgs) => { ShowContent(sender, EventArgs, CartasJuego); };
-                tablaPanel.Controls.Add(CartasJuego, i%4, i/5);
+                tablaPanel.Controls.Add(CartasJuego);
             }
             tablaPanel.Dock = DockStyle.Fill;
             p.Controls.Add(tablaPanel);
@@ -183,12 +187,14 @@ namespace Tarjetitas
             {
                 btnFront.Visible = true;
                 FrontCards.Visible = false;
+                pbCurrentFront = pb;
                 ShowCardSelected(ref currentFront, id, panelFront, false);
             }
             else
             {
                 btnBack.Visible = true;
                 BackCards.Visible = false;
+                pbCurrentBack = pb;
                 ShowCardSelected(ref currentBack, id, panelBack, true);
             }
         }
@@ -212,6 +218,7 @@ namespace Tarjetitas
                 {
                     acierto.Visible = true;
                     totalAciertos++;
+                    deleteCardPair();
                 }
                 else
                 {
@@ -257,6 +264,69 @@ namespace Tarjetitas
         {
             labelAciertos.Text = totalAciertos.ToString();
             labelErrores.Text = totalErrores.ToString();
+        }
+        void deleteCardPair()
+        {
+            pbCurrentFront.Image = null;
+            pbCurrentFront.Enabled = false;
+
+            pbCurrentBack.Image = null;
+            pbCurrentBack.Enabled = false;
+
+            if (totalAciertos == totalCards)
+            {
+                IsPlaying = false;
+                btnStart.Text = "Volver a jugar";
+                btnStart.Visible = true;
+            }
+        }
+
+        private void btnClues_Click(object sender, EventArgs e) //Funcion para dar una pista
+        {
+            if (remainingClues == 0)
+            {
+                return;
+            }
+            remainingClues--;
+            string s = "";
+            for (int i=0; i < totalCards; i++)
+            {
+                if (!FrontCards.Controls[i].Enabled)
+                {
+                    continue;
+                }
+                for (int j=0; j < totalCards; j++)
+                {
+                    if (FrontCards.Controls[i].Name.Substring(1) == BackCards.Controls[j].Name.Substring(1))
+                    {
+                        ShowClue(FrontCards.Controls[i], BackCards.Controls[j]);
+                        return;
+                    }
+                }
+            }
+        }
+        void ShowClue(Control pbF, Control pbB)
+        {
+            Thread DrawClue = new Thread(drawing);
+            DrawClue.Start();
+            void drawing()
+            {
+                int i = 6;
+                while (i-- != 0)
+                {
+                    if (pbF.BackColor == Color.Silver)
+                    {
+                        pbB.BackColor = Color.Transparent;
+                        pbF.BackColor = Color.Transparent;
+                    }
+                    else
+                    {
+                        pbB.BackColor = Color.Silver;
+                        pbF.BackColor = Color.Silver;
+                    }
+                    Thread.Sleep(300);
+                }
+            }
         }
     }
 }

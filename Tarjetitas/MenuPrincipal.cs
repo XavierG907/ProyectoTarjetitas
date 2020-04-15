@@ -125,5 +125,11 @@ namespace Tarjetitas
         {
             
         }
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var frm = Application.OpenForms.OfType<Memorama>().FirstOrDefault();
+            if (frm != null) frm.Close();
+        }
     }
 }
