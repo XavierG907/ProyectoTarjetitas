@@ -288,6 +288,7 @@ namespace Tarjetitas
                 return;
             }
             remainingClues--;
+            btnClues.Enabled = false;
             string s = "";
             for (int i=0; i < totalCards; i++)
             {
@@ -304,6 +305,7 @@ namespace Tarjetitas
                     }
                 }
             }
+            btnClues.Enabled = true;
         }
         void ShowClue(Control pbF, Control pbB)
         {
@@ -326,6 +328,7 @@ namespace Tarjetitas
                     }
                     Thread.Sleep(300);
                 }
+                btnClues.Enabled = true;
             }
         }
     }
