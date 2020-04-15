@@ -210,6 +210,7 @@
             this.btnRules.TabIndex = 53;
             this.btnRules.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRules.UseVisualStyleBackColor = false;
+            this.btnRules.Click += new System.EventHandler(this.btnRules_Click);
             // 
             // btnClues
             // 

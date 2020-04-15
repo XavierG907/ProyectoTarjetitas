@@ -331,5 +331,49 @@ namespace Tarjetitas
                 btnClues.Enabled = true;
             }
         }
+
+        private void btnRules_Click(object sender, EventArgs e)
+        {
+            string s = "\n\n1° Para comenzar a jugar necesita presionar el boton de \"COMENZAR\"\n\n" +
+                "2° Al jugar se contara con un cronometro para medir el tiempo que requeriste para resolver el memorama\n\n" +
+                "3° Cuentas con solamente tres pistas (pares) que indican la posicion de las cartas\n\n" +
+                "4° Si aun con esto no te sientes seguro de lo que puedes hacer, pulsa en el boton con el simbolo \"?\" para acceder a la guia de usuario\n\n" +
+                "NOTA: El tiempo no se guarda, solo se muestra durante y al final de cada partida\n\n\n" +
+                "DIVIERTETE Y ESTUDA!!";
+            Form temp = new Form();
+            Label l = new Label();
+            l.Text = s;
+            l.Font = new Font("Arial", 10, FontStyle.Bold);
+            l.ForeColor = Color.White;
+            l.AutoSize = true;
+
+            Button continuar = new Button();
+            continuar.Text = "Continuar";
+            continuar.BackColor = Color.Red;
+            continuar.Font = new Font("Arial", 12, FontStyle.Bold);
+            continuar.ForeColor = Color.White;
+            continuar.Location = new Point(850, 220);
+            continuar.AutoSize = true;
+            continuar.Cursor = Cursors.Hand;
+            continuar.FlatStyle = FlatStyle.Popup;
+            continuar.Click += (_sender, _EventArgs) => { btnContinuar_Click(_sender, _EventArgs); };
+
+            void btnContinuar_Click(object _sender, EventArgs _e)
+            {
+                temp.Close();
+            }
+
+            temp.Controls.Add(continuar);
+            temp.Controls.Add(l);
+            temp.AutoSize = true;
+            temp.BackColor = ColorTranslator.FromHtml("#253449");
+            temp.Text = "INSTRUCCIONES";
+            //temp.FormBorderStyle = FormBorderStyle.None;
+            temp.MaximizeBox = false;
+            temp.MinimizeBox = false;
+            temp.StartPosition = FormStartPosition.CenterScreen;
+
+            temp.ShowDialog();
+        }
     }
 }
