@@ -123,7 +123,7 @@ namespace Tarjetitas
 
         private void buttonConfig_Click(object sender, EventArgs e)
         {
-            
+            OpenSubForm(new Settings(colorButtons, colorPanels, colorBackground, labelUser.Text, this, this.panelContainer));
         }
 
         private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)

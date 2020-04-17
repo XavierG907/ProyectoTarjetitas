@@ -101,3 +101,4 @@ C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarj
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.RecycleBin.resources
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.RecycleCards.resources
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.StudyDeck.resources
+C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Settings.resources
