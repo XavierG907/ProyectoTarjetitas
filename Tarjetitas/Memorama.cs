@@ -42,6 +42,7 @@ namespace Tarjetitas
             
             this.BackColor = _colorBackground;
             limit = 20;
+            totalCards = 0;
             id_FrontCards = new List<int>();
             id_BackCards = new List<int>();
             juego = new Thread(Inicio);
@@ -88,6 +89,9 @@ namespace Tarjetitas
             btnStart.Visible = false;
             btnClues.Enabled = true;
             remainingClues = 3;
+
+            if (totalCards == 0)
+                return;
 
             IsPlaying = true;
             juego = new Thread(this.Inicio);
@@ -368,7 +372,7 @@ namespace Tarjetitas
             temp.AutoSize = true;
             temp.BackColor = ColorTranslator.FromHtml("#253449");
             temp.Text = "INSTRUCCIONES";
-            //temp.FormBorderStyle = FormBorderStyle.None;
+            temp.FormBorderStyle = FormBorderStyle.FixedSingle;
             temp.MaximizeBox = false;
             temp.MinimizeBox = false;
             temp.StartPosition = FormStartPosition.CenterScreen;

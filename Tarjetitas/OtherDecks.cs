@@ -117,7 +117,9 @@ namespace Tarjetitas
 
         private void buttonPlayMemorama_Click(object sender, EventArgs e)
         {
-
+            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
+                return;
+            OpenSubForm(new Memorama(idTheme, colorButtons, colorPanels, colorBackground, deckSelected.Id));
         }
 
         private void timerSelection_Tick(object sender, EventArgs e)
