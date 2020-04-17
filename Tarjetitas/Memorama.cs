@@ -36,6 +36,7 @@ namespace Tarjetitas
         PictureBox pbCurrentBack = new PictureBox();
         PictureBox pbCurrentFront = new PictureBox();
         bool IsPlaying;
+        bool restart;
         public Memorama(int _idTheme, Color _colorButtons, Color _colorPanels, Color _colorBackground, int _id_baraja)
         {
             InitializeComponent();
@@ -65,6 +66,7 @@ namespace Tarjetitas
             totalAciertos = 0;
             totalErrores = 0;
             IsPlaying = false;
+            restart = false;
             btnClues.Enabled = false;
 
             GetAllCards();
@@ -84,6 +86,9 @@ namespace Tarjetitas
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            if (restart)
+                RestartCards();
+
             panelFront.Enabled = true;
             panelBack.Enabled = true;
             btnStart.Visible = false;
@@ -97,6 +102,37 @@ namespace Tarjetitas
             juego = new Thread(this.Inicio);
             juego.Start();
         }
+        void RestartCards()
+        {
+            //Primero borrar elementos basura
+            panelFront.Controls.Remove(FrontCards);
+            panelBack.Controls.Remove(BackCards);
+
+            limit = 20;
+            totalCards = 0;
+            id_FrontCards = new List<int>();
+            id_BackCards = new List<int>();
+
+            time = 0;
+            tiempo.Text = time.ToString();
+            btnBack.Visible = false;
+            btnFront.Visible = false;
+            error.Visible = false;
+            acierto.Visible = false;
+            btnContinue.Visible = false;
+            totalAciertos = 0;
+            totalErrores = 0;
+            updateForm();
+            IsPlaying = false;
+            restart = false;
+            btnClues.Enabled = false;
+
+            chooseAtMost20Cards();
+            LoadCards(panelFront, id_FrontCards, 'F', ref FrontCards);
+            LoadCards(panelBack, id_BackCards, 'B', ref BackCards);
+            panelFront.Enabled = false;
+            panelBack.Enabled = false;
+        }
         void Inicio()
         {
             while (IsPlaying)
@@ -106,6 +142,8 @@ namespace Tarjetitas
                 time++;
             }
         }
+
+        //Parte donde se obtienen las cartas
         void GetAllCards()
         {
             string query = "SELECT * FROM tarjetas WHERE idBaraja="+id_baraja.ToString()+" AND elimLogica=0;";
@@ -117,6 +155,8 @@ namespace Tarjetitas
             if (juego.IsAlive)
                 juego.Abort();
         }
+
+//******Parte donde se eligen las cartas y además se agregan a la interfaz*******************************************
         bool chooseAtMost20Cards()
         {
             if (tarjetas.Rows.Count < 5)
@@ -183,6 +223,11 @@ namespace Tarjetitas
             tablaPanel.Dock = DockStyle.Fill;
             p.Controls.Add(tablaPanel);
         }
+//******************************************************************************************************************
+
+//******************************************************************************************************************
+        //Esta funcion es para el evento del click en una carta, se muestra y se puede volver a regresar o elegir otra
+        //Al elegir otra se determinara si ambas son par o no.
         void ShowContent(object sender, EventArgs e, PictureBox pb)
         {
             //Mostrar carta
@@ -235,6 +280,7 @@ namespace Tarjetitas
                 btnFront.Visible = false;
             }
         }
+//******************************************************************************************************************
 
         private void btnFront_Click(object sender, EventArgs e)
         {
@@ -279,6 +325,7 @@ namespace Tarjetitas
 
             if (totalAciertos == totalCards)
             {
+                restart = true;
                 IsPlaying = false;
                 btnStart.Text = "Volver a jugar";
                 btnStart.Visible = true;
@@ -293,7 +340,6 @@ namespace Tarjetitas
             }
             remainingClues--;
             btnClues.Enabled = false;
-            string s = "";
             for (int i=0; i < totalCards; i++)
             {
                 if (!FrontCards.Controls[i].Enabled)
