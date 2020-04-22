@@ -54,8 +54,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
             this.buttonConfig = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.errorGeneral = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +110,7 @@
             this.cbTema.Name = "cbTema";
             this.cbTema.Size = new System.Drawing.Size(299, 26);
             this.cbTema.TabIndex = 65;
+            this.cbTema.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cbTema_DrawItem);
             // 
             // dtpBirthdaay
             // 
@@ -116,7 +118,7 @@
             this.dtpBirthdaay.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthdaay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthdaay.Location = new System.Drawing.Point(269, 192);
-            this.dtpBirthdaay.MaxDate = new System.DateTime(2016, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthdaay.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             this.dtpBirthdaay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpBirthdaay.Name = "dtpBirthdaay";
             this.dtpBirthdaay.Size = new System.Drawing.Size(299, 25);
@@ -214,6 +216,7 @@
             this.txtUserName.Location = new System.Drawing.Point(270, 296);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(298, 25);
             this.txtUserName.TabIndex = 61;
             // 
@@ -246,7 +249,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 30);
             this.label7.TabIndex = 67;
-            this.label7.Text = "CONTRASEÑA";
+            this.label7.Text = "NUEVA CONTRASEÑA";
             // 
             // label6
             // 
@@ -306,6 +309,7 @@
             this.btnCreateUser.TabIndex = 81;
             this.btnCreateUser.Text = "CONFIRMAR CAMBIOS";
             this.btnCreateUser.UseVisualStyleBackColor = false;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // panel1
             // 
@@ -318,17 +322,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 73);
             this.panel1.TabIndex = 82;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label17.Location = new System.Drawing.Point(317, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(199, 23);
-            this.label17.TabIndex = 50;
-            this.label17.Text = "AJUSTES DE USUARIO";
             // 
             // buttonConfig
             // 
@@ -348,12 +341,33 @@
             this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConfig.UseVisualStyleBackColor = false;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label17.Location = new System.Drawing.Point(317, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(199, 23);
+            this.label17.TabIndex = 50;
+            this.label17.Text = "AJUSTES DE USUARIO";
+            // 
+            // errorGeneral
+            // 
+            this.errorGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorGeneral.ForeColor = System.Drawing.Color.LightCoral;
+            this.errorGeneral.Location = new System.Drawing.Point(270, 532);
+            this.errorGeneral.Name = "errorGeneral";
+            this.errorGeneral.Size = new System.Drawing.Size(467, 19);
+            this.errorGeneral.TabIndex = 83;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(800, 545);
+            this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.errorGeneral);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCreateUser);
             this.Controls.Add(this.txtConfPassword);
@@ -381,6 +395,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.Text = "Settings";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -416,5 +431,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button buttonConfig;
+        private System.Windows.Forms.Label errorGeneral;
     }
 }

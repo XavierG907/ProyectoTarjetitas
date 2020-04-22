@@ -77,7 +77,7 @@ namespace Tarjetitas
                     this.Close();
                     return;
                 }
-                this.ShowDialog(); //mostrar página de iniciar sesión
+                this.Show(); //mostrar página de iniciar sesión
             }
             else
                 errorLogIn.Visible = true;
