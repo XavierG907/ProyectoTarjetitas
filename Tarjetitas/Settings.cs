@@ -49,6 +49,16 @@ namespace Tarjetitas
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            if (IsUpdating())
+            {
+                DialogResult result = MessageBox.Show("¿Deseas guardar los cambios?", "Configuración de usuario", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    SaveChanges();
+                }
+                else if (result == DialogResult.Cancel)
+                    return;
+            }
             origenF.Size = tempF;
             origenP.Size = tempP;
             this.Close();
@@ -185,6 +195,86 @@ namespace Tarjetitas
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
+            SaveChanges();
+        }
+
+        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            origenF.Size = tempF;
+            origenP.Size = tempP;
+        }
+
+        private bool IsUpdating()
+        {
+            if (txtUserName.Text == UserData.Rows[0][0].ToString() && txtName.Text == UserData.Rows[0][1].ToString() &&
+                txtLastName.Text == UserData.Rows[0][2].ToString() && dtpBirthdaay.Value == DateTime.Parse(UserData.Rows[0][3].ToString()) &&
+                txtEmail.Text == UserData.Rows[0][4].ToString() && txtPassword.Text == UserData.Rows[0][5].ToString() &&
+                txtConfPassword.Text == UserData.Rows[0][5].ToString() && cbTema.Text == UserData.Rows[0][6].ToString())
+                return false;
+            return true;
+        }
+        private bool ConfirmCurrentPassword()
+        {
+            bool IsCorrect = false;
+            string s = "Ingresar contraseña actual: ";
+            Form temp = new Form();
+            Label l = new Label();
+            l.Text = s;
+            l.Font = new Font("Arial", 10, FontStyle.Bold);
+            l.ForeColor = Color.White;
+            l.AutoSize = true;
+            l.Location = new Point(10, 10);
+
+            MaskedTextBox txtContinuar = new MaskedTextBox();
+            
+            txtContinuar.Size = new Size(300, txtContinuar.Height);
+            txtContinuar.Location = new Point(l.Location.X+230, l.Location.Y);
+            txtContinuar.UseSystemPasswordChar = true;
+            txtContinuar.Font = new Font("Arial", 10, FontStyle.Regular);
+
+            Button continuar = new Button();
+            continuar.Text = "Continuar";
+            continuar.BackColor = Color.Red;
+            continuar.Font = new Font("Arial", 12, FontStyle.Bold);
+            continuar.ForeColor = Color.White;
+            continuar.AutoSize = true;
+            continuar.Size = new Size(300, continuar.Height);
+            continuar.Location = new Point(l.Location.X + 230, l.Location.Y+l.Size.Height+10);
+            continuar.Cursor = Cursors.Hand;
+            continuar.FlatStyle = FlatStyle.Popup;
+            continuar.Click += (_sender, _EventArgs) => { btnContinuar_Click(_sender, _EventArgs); };
+
+            void btnContinuar_Click(object _sender, EventArgs _e)
+            {
+                if (txtContinuar.Text == UserData.Rows[0][5].ToString())
+                {
+                    IsCorrect = true;
+                }
+                else
+                {
+                    MessageBox.Show("La contraseña no coincide con la actual! :(");
+                    IsCorrect = false;
+                }
+                temp.Close();
+            }
+
+            temp.Controls.Add(continuar);
+            temp.Controls.Add(txtContinuar);
+            temp.Controls.Add(l);
+            temp.Size = new Size(600,130);
+            temp.BackColor = ColorTranslator.FromHtml("#253449");
+            temp.Text = "CONFIRMAR CONTRASEÑA ACTUAL";
+            temp.FormBorderStyle = FormBorderStyle.FixedSingle;
+            temp.MaximizeBox = false;
+            temp.MinimizeBox = false;
+            temp.StartPosition = FormStartPosition.CenterScreen;
+
+            temp.ShowDialog();
+
+            return IsCorrect;
+        }
+        private void SaveChanges()
+        {
             string fechNa = dtpBirthdaay.Value.ToString("yyyy-MM-dd");
             if (emptyFields())
             {
@@ -196,27 +286,31 @@ namespace Tarjetitas
                 errorGeneral.Text = "Revise los campos marcados con error";
                 return;
             }
-            
+            if (!IsUpdating())
+            {
+                MessageBox.Show("No se ha hecho ningun cambio");
+                return;
+            }
+            if (!ConfirmCurrentPassword())
+            {
+                MessageBox.Show("No se han guardado los cambios");
+                return;
+            }
+
             //Añadir usuario
             string comando = "UPDATE usuario SET " +
-                "nombre='"      + txtName.Text + "'," +
-                "apellido='"    +txtLastName.Text + "'," +
-                "fechaNac='"    + fechNa + "'," +
-                "correo='"      + txtEmail.Text + "'," +
-                "contraseña='"  + txtPassword.Text + "'," +
-                "idTema="       + (cbTema.Text).ToString() + 
-                " WHERE usuario = '"+txtUserName.Text+"';";
+                "nombre='" + txtName.Text + "'," +
+                "apellido='" + txtLastName.Text + "'," +
+                "fechaNac='" + fechNa + "'," +
+                "correo='" + txtEmail.Text + "'," +
+                "contraseña='" + txtPassword.Text + "'," +
+                "idTema=" + (cbTema.Text).ToString() +
+                " WHERE usuario = '" + txtUserName.Text + "';";
             bd.ejecutarComando(comando);
 
             //Abrir ventana de inicio con mensaje de bienvenida
             MessageBox.Show("Cambios realizados con exito! :D");
             this.Close();
-        }
-
-        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            origenF.Size = tempF;
-            origenP.Size = tempP;
         }
     }
 }

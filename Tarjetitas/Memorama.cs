@@ -75,6 +75,8 @@ namespace Tarjetitas
             LoadCards(panelBack, id_BackCards, 'B', ref BackCards);
             panelFront.Enabled = false;
             panelBack.Enabled = false;
+            if (totalCards == 0)
+                btnStart.Enabled = false; ;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
