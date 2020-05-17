@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 namespace Tarjetitas
 {
@@ -431,7 +432,11 @@ namespace Tarjetitas
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            Process.Start("Tarjetitaspro - UserManual.pdf");
+            string path = Directory.GetCurrentDirectory();
+
+            MessageBox.Show(path);
+
+           Process.Start("Tarjetitaspro - UserManual.pdf");
         }
     }
 }
