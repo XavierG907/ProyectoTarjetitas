@@ -118,7 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DIENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dientes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DUBUJAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dubujar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ESCRIBIR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\escribir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Girada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Girada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NADAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nadar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OLER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SALTAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\saltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tarjetitaspro___UserManual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\tarjetitaspro - usermanual.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

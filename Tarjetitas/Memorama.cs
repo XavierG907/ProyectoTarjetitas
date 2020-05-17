@@ -432,11 +432,21 @@ namespace Tarjetitas
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
+            //Convert The resource Data into Byte[] 
+            byte[] PDF = Properties.Resources.Tarjetitaspro___UserManual;
 
-            MessageBox.Show(path);
+            MemoryStream ms = new MemoryStream(PDF);
 
-           Process.Start("Tarjetitaspro - UserManual.pdf");
+            //Create PDF File From Binary of resources folders helpFile.pdf
+            FileStream f = new FileStream("helpFile.pdf", FileMode.OpenOrCreate);
+
+            //Write Bytes into Our Created helpFile.pdf
+            ms.WriteTo(f);
+            f.Close();
+            ms.Close();
+
+            // Finally Show the Created PDF from resources 
+            Process.Start("helpFile.pdf");
         }
     }
 }
