@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Tarjetitas
 {
@@ -426,6 +427,11 @@ namespace Tarjetitas
             temp.StartPosition = FormStartPosition.CenterScreen;
 
             temp.ShowDialog();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Tarjetitaspro - UserManual.pdf");
         }
     }
 }

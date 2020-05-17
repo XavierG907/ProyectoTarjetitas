@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Tarjetitas
@@ -204,6 +205,11 @@ namespace Tarjetitas
                 return;
 
             contextMenuStripGames.Show(buttonPlayDeck, new Point(e.X, e.Y));
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Tarjetitaspro - UserManual.pdf");
         }
     }
 }

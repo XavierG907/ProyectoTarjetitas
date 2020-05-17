@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace Tarjetitas
 {
@@ -151,6 +152,11 @@ namespace Tarjetitas
             this.panelContainer.Tag = sf;
             sf.FormClosing += OtherDecks_Load;
             sf.Show();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Tarjetitaspro - UserManual.pdf");
         }
     }
 }

@@ -61,17 +61,19 @@
             this.panelOtherDecks.Controls.Add(this.buttonHelp);
             this.panelOtherDecks.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOtherDecks.Location = new System.Drawing.Point(0, 0);
+            this.panelOtherDecks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelOtherDecks.Name = "panelOtherDecks";
-            this.panelOtherDecks.Size = new System.Drawing.Size(831, 77);
+            this.panelOtherDecks.Size = new System.Drawing.Size(1108, 95);
             this.panelOtherDecks.TabIndex = 11;
             // 
             // pictureBoxImage
             // 
             this.pictureBoxImage.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
-            this.pictureBoxImage.Location = new System.Drawing.Point(649, 5);
+            this.pictureBoxImage.Location = new System.Drawing.Point(865, 6);
+            this.pictureBoxImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(151, 66);
+            this.pictureBoxImage.Size = new System.Drawing.Size(201, 81);
             this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 9;
             this.pictureBoxImage.TabStop = false;
@@ -87,9 +89,10 @@
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.ForeColor = System.Drawing.Color.Transparent;
             this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonBack.Location = new System.Drawing.Point(3, 2);
+            this.buttonBack.Location = new System.Drawing.Point(4, 2);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(50, 50);
+            this.buttonBack.Size = new System.Drawing.Size(67, 62);
             this.buttonBack.TabIndex = 9;
             this.buttonBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonBack.UseVisualStyleBackColor = false;
@@ -101,9 +104,10 @@
             this.labelUser.BackColor = System.Drawing.Color.Transparent;
             this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUser.ForeColor = System.Drawing.Color.White;
-            this.labelUser.Location = new System.Drawing.Point(423, 58);
+            this.labelUser.Location = new System.Drawing.Point(564, 71);
+            this.labelUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(36, 16);
+            this.labelUser.Size = new System.Drawing.Size(43, 20);
             this.labelUser.TabIndex = 7;
             this.labelUser.Text = "Raúl";
             // 
@@ -113,9 +117,10 @@
             this.labelPresentation.BackColor = System.Drawing.Color.Transparent;
             this.labelPresentation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPresentation.ForeColor = System.Drawing.Color.White;
-            this.labelPresentation.Location = new System.Drawing.Point(359, 58);
+            this.labelPresentation.Location = new System.Drawing.Point(479, 71);
+            this.labelPresentation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPresentation.Name = "labelPresentation";
-            this.labelPresentation.Size = new System.Drawing.Size(58, 16);
+            this.labelPresentation.Size = new System.Drawing.Size(72, 20);
             this.labelPresentation.TabIndex = 6;
             this.labelPresentation.Text = "Usuario:";
             // 
@@ -125,9 +130,10 @@
             this.labelDecksTitle.BackColor = System.Drawing.Color.Transparent;
             this.labelDecksTitle.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDecksTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelDecksTitle.Location = new System.Drawing.Point(279, 9);
+            this.labelDecksTitle.Location = new System.Drawing.Point(372, 11);
+            this.labelDecksTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDecksTitle.Name = "labelDecksTitle";
-            this.labelDecksTitle.Size = new System.Drawing.Size(260, 44);
+            this.labelDecksTitle.Size = new System.Drawing.Size(330, 56);
             this.labelDecksTitle.TabIndex = 5;
             this.labelDecksTitle.Text = "Barajas Pu/Fv";
             this.labelDecksTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -143,21 +149,24 @@
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.Transparent;
             this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonHelp.Location = new System.Drawing.Point(77, 2);
+            this.buttonHelp.Location = new System.Drawing.Point(103, 2);
+            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(50, 50);
+            this.buttonHelp.Size = new System.Drawing.Size(67, 62);
             this.buttonHelp.TabIndex = 4;
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // flowLayoutPanelDecks
             // 
             this.flowLayoutPanelDecks.AutoScroll = true;
             this.flowLayoutPanelDecks.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelDecks.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanelDecks.Location = new System.Drawing.Point(0, 77);
+            this.flowLayoutPanelDecks.Location = new System.Drawing.Point(0, 95);
+            this.flowLayoutPanelDecks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanelDecks.Name = "flowLayoutPanelDecks";
-            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(585, 374);
+            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(780, 460);
             this.flowLayoutPanelDecks.TabIndex = 12;
             // 
             // labelDeckAuthor
@@ -165,9 +174,10 @@
             this.labelDeckAuthor.BackColor = System.Drawing.Color.Transparent;
             this.labelDeckAuthor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeckAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelDeckAuthor.Location = new System.Drawing.Point(654, 151);
+            this.labelDeckAuthor.Location = new System.Drawing.Point(872, 186);
+            this.labelDeckAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDeckAuthor.Name = "labelDeckAuthor";
-            this.labelDeckAuthor.Size = new System.Drawing.Size(165, 20);
+            this.labelDeckAuthor.Size = new System.Drawing.Size(220, 25);
             this.labelDeckAuthor.TabIndex = 34;
             // 
             // labelDeckTitle
@@ -175,9 +185,10 @@
             this.labelDeckTitle.BackColor = System.Drawing.Color.Transparent;
             this.labelDeckTitle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeckTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelDeckTitle.Location = new System.Drawing.Point(654, 116);
+            this.labelDeckTitle.Location = new System.Drawing.Point(872, 143);
+            this.labelDeckTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDeckTitle.Name = "labelDeckTitle";
-            this.labelDeckTitle.Size = new System.Drawing.Size(165, 20);
+            this.labelDeckTitle.Size = new System.Drawing.Size(220, 25);
             this.labelDeckTitle.TabIndex = 33;
             // 
             // labelPresentation3
@@ -185,9 +196,10 @@
             this.labelPresentation3.BackColor = System.Drawing.Color.Transparent;
             this.labelPresentation3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPresentation3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelPresentation3.Location = new System.Drawing.Point(598, 116);
+            this.labelPresentation3.Location = new System.Drawing.Point(797, 143);
+            this.labelPresentation3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPresentation3.Name = "labelPresentation3";
-            this.labelPresentation3.Size = new System.Drawing.Size(47, 55);
+            this.labelPresentation3.Size = new System.Drawing.Size(63, 68);
             this.labelPresentation3.TabIndex = 32;
             this.labelPresentation3.Text = "Titulo:\r\n\r\nAutor:";
             // 
@@ -196,9 +208,10 @@
             this.labelPresentation2.BackColor = System.Drawing.Color.Transparent;
             this.labelPresentation2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPresentation2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelPresentation2.Location = new System.Drawing.Point(591, 89);
+            this.labelPresentation2.Location = new System.Drawing.Point(788, 110);
+            this.labelPresentation2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPresentation2.Name = "labelPresentation2";
-            this.labelPresentation2.Size = new System.Drawing.Size(179, 20);
+            this.labelPresentation2.Size = new System.Drawing.Size(239, 25);
             this.labelPresentation2.TabIndex = 31;
             this.labelPresentation2.Text = "Baraja Seleccionada:";
             // 
@@ -211,9 +224,10 @@
             this.buttonStudyDeck.ForeColor = System.Drawing.Color.DarkGray;
             this.buttonStudyDeck.Image = ((System.Drawing.Image)(resources.GetObject("buttonStudyDeck.Image")));
             this.buttonStudyDeck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonStudyDeck.Location = new System.Drawing.Point(601, 232);
+            this.buttonStudyDeck.Location = new System.Drawing.Point(801, 286);
+            this.buttonStudyDeck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonStudyDeck.Name = "buttonStudyDeck";
-            this.buttonStudyDeck.Size = new System.Drawing.Size(218, 41);
+            this.buttonStudyDeck.Size = new System.Drawing.Size(291, 50);
             this.buttonStudyDeck.TabIndex = 35;
             this.buttonStudyDeck.Text = "Estudiar Baraja";
             this.buttonStudyDeck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,9 +243,10 @@
             this.buttonPlayMemorama.ForeColor = System.Drawing.Color.DarkGray;
             this.buttonPlayMemorama.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlayMemorama.Image")));
             this.buttonPlayMemorama.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPlayMemorama.Location = new System.Drawing.Point(601, 294);
+            this.buttonPlayMemorama.Location = new System.Drawing.Point(801, 362);
+            this.buttonPlayMemorama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPlayMemorama.Name = "buttonPlayMemorama";
-            this.buttonPlayMemorama.Size = new System.Drawing.Size(218, 41);
+            this.buttonPlayMemorama.Size = new System.Drawing.Size(291, 50);
             this.buttonPlayMemorama.TabIndex = 36;
             this.buttonPlayMemorama.Text = "Jugar Memorama";
             this.buttonPlayMemorama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,8 +257,9 @@
             // 
             this.panelContainer.BackColor = System.Drawing.Color.Transparent;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(831, 451);
+            this.panelContainer.Size = new System.Drawing.Size(1108, 555);
             this.panelContainer.TabIndex = 37;
             this.panelContainer.Visible = false;
             // 
@@ -254,10 +270,10 @@
             // 
             // OtherDecks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(831, 451);
+            this.ClientSize = new System.Drawing.Size(1108, 555);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.buttonPlayMemorama);
             this.Controls.Add(this.buttonStudyDeck);
@@ -268,6 +284,7 @@
             this.Controls.Add(this.flowLayoutPanelDecks);
             this.Controls.Add(this.panelOtherDecks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OtherDecks";
             this.Text = "OtherDecks";
             this.Load += new System.EventHandler(this.OtherDecks_Load);

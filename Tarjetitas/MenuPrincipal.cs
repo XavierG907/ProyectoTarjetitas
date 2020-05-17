@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Tarjetitas
@@ -130,6 +131,11 @@ namespace Tarjetitas
         {
             var frm = Application.OpenForms.OfType<Memorama>().FirstOrDefault();
             if (frm != null) frm.Close();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Tarjetitaspro - UserManual.pdf");
         }
     }
 }
