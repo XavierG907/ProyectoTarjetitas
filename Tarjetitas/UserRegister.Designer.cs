@@ -102,16 +102,16 @@ namespace Tarjetitas
             this.dtpBirthdaay = new System.Windows.Forms.DateTimePicker();
             this.cbTema = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.MaskedTextBox();
             this.txtConfPassword = new System.Windows.Forms.MaskedTextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaptcha)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pbCaptcha
@@ -211,7 +211,7 @@ namespace Tarjetitas
             this.txtName.Location = new System.Drawing.Point(247, 57);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(298, 25);
+            this.txtName.Size = new System.Drawing.Size(298, 30);
             this.txtName.TabIndex = 0;
             // 
             // txtLastName
@@ -222,7 +222,7 @@ namespace Tarjetitas
             this.txtLastName.Location = new System.Drawing.Point(247, 109);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(298, 25);
+            this.txtLastName.Size = new System.Drawing.Size(298, 30);
             this.txtLastName.TabIndex = 1;
             // 
             // txtEmail
@@ -233,7 +233,7 @@ namespace Tarjetitas
             this.txtEmail.Location = new System.Drawing.Point(247, 212);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(298, 25);
+            this.txtEmail.Size = new System.Drawing.Size(298, 30);
             this.txtEmail.TabIndex = 3;
             // 
             // label9
@@ -303,7 +303,7 @@ namespace Tarjetitas
             this.txtVerification.Location = new System.Drawing.Point(247, 567);
             this.txtVerification.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVerification.Name = "txtVerification";
-            this.txtVerification.Size = new System.Drawing.Size(298, 25);
+            this.txtVerification.Size = new System.Drawing.Size(298, 30);
             this.txtVerification.TabIndex = 9;
             // 
             // label14
@@ -431,7 +431,7 @@ namespace Tarjetitas
             this.dtpBirthdaay.MaxDate = new System.DateTime(2016, 12, 31, 0, 0, 0, 0);
             this.dtpBirthdaay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpBirthdaay.Name = "dtpBirthdaay";
-            this.dtpBirthdaay.Size = new System.Drawing.Size(299, 25);
+            this.dtpBirthdaay.Size = new System.Drawing.Size(299, 30);
             this.dtpBirthdaay.TabIndex = 2;
             this.dtpBirthdaay.Value = new System.DateTime(2016, 12, 31, 0, 0, 0, 0);
             // 
@@ -445,7 +445,7 @@ namespace Tarjetitas
             this.cbTema.FormattingEnabled = true;
             this.cbTema.Location = new System.Drawing.Point(246, 418);
             this.cbTema.Name = "cbTema";
-            this.cbTema.Size = new System.Drawing.Size(299, 26);
+            this.cbTema.Size = new System.Drawing.Size(299, 31);
             this.cbTema.TabIndex = 7;
             this.cbTema.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cbTema_DrawItem);
             // 
@@ -460,6 +460,28 @@ namespace Tarjetitas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 45);
             this.panel1.TabIndex = 48;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label17.Location = new System.Drawing.Point(314, 13);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(157, 28);
+            this.label17.TabIndex = 50;
+            this.label17.Text = "REGISTRARSE";
             // 
             // pictureBoxImage
             // 
@@ -480,7 +502,7 @@ namespace Tarjetitas
             this.txtUserName.Location = new System.Drawing.Point(247, 264);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(298, 25);
+            this.txtUserName.Size = new System.Drawing.Size(298, 30);
             this.txtUserName.TabIndex = 4;
             // 
             // txtPassword
@@ -490,7 +512,7 @@ namespace Tarjetitas
             this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtPassword.Location = new System.Drawing.Point(246, 316);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(299, 25);
+            this.txtPassword.Size = new System.Drawing.Size(299, 30);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -501,35 +523,13 @@ namespace Tarjetitas
             this.txtConfPassword.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtConfPassword.Location = new System.Drawing.Point(246, 368);
             this.txtConfPassword.Name = "txtConfPassword";
-            this.txtConfPassword.Size = new System.Drawing.Size(299, 25);
+            this.txtConfPassword.Size = new System.Drawing.Size(299, 30);
             this.txtConfPassword.TabIndex = 6;
             this.txtConfPassword.UseSystemPasswordChar = true;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label17.Location = new System.Drawing.Point(314, 13);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(126, 23);
-            this.label17.TabIndex = 50;
-            this.label17.Text = "REGISTRARSE";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
-            // 
             // UserRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(740, 689);
@@ -575,12 +575,13 @@ namespace Tarjetitas
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "UserRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pbCaptcha)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

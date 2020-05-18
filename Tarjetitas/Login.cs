@@ -60,6 +60,7 @@ namespace Tarjetitas
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+
             //Buscar Usuario Existente
             string query = "SELECT * FROM usuario WHERE usuario = '" + txtUsuario.Text + "' AND " +
            "contraseña = '" + txtContraseña.Text + "';";
