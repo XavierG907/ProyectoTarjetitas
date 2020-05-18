@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Runtime;
+using System.IO;
 
 namespace Tarjetitas
 {
@@ -135,7 +137,9 @@ namespace Tarjetitas
 
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            Process.Start("Tarjetitaspro - UserManual.pdf");
+            string src = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "Tarjetitaspro - UserManual.pdf");
+            System.IO.File.WriteAllBytes(src, Properties.Resources.Tarjetitaspro___UserManual);
+            Process.Start(@"" + src + "");
         }
     }
 }
