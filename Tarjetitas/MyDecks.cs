@@ -90,7 +90,7 @@ namespace Tarjetitas
                 labelMyDecks.ForeColor = labelTitleAddDeck.ForeColor =  labelAddTitle.ForeColor =  checkBoxDeckPrivacy.ForeColor = labelPresentation2.ForeColor = labelPresentation3.ForeColor = labelDeckTitle.ForeColor = labelDeckAuthor.ForeColor = Color.Black;
             }
 
-            buttonPlayDeck.BackColor = buttonEditDeck.BackColor = buttonDeleteDeck.BackColor = colorButtons;
+            buttonPlayDeck.BackColor = buttonEditDeck.BackColor = buttonDeleteDeck.BackColor = buttonExportPDF.BackColor = colorButtons;
 
             panelMyDecks.BackColor = colorPanels;
             this.BackColor = colorBackground;
@@ -214,6 +214,14 @@ namespace Tarjetitas
             if (!File.Exists(src))
                 File.WriteAllBytes(src, Properties.Resources.Tarjetitaspro___UserManual);
             Process.Start(@"" + src + "");
+        }
+
+        private void buttonExportPDF_Click(object sender, EventArgs e)
+        {
+            if (labelDeckTitle.Text == "" && labelDeckAuthor.Text == "")
+                return;
+            Exporter pdf = new Exporter(selectedDeck.Id, selectedDeck.Title,selectedDeck.Author);
+            pdf.ExportToPDF();
         }
     }
 }
