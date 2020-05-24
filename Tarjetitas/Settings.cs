@@ -24,7 +24,7 @@ namespace Tarjetitas
         TarjetitasDB bd = new TarjetitasDB();
         DataTable UserData = new DataTable();
         DataTable themes = new DataTable();
-        public Settings(Color _colorButtons, Color _colorPanels, Color _colorBackground, string _User, Form _origenF, Panel _origenP)
+        public Settings(int idTheme, Color _colorButtons, Color _colorPanels, Color _colorBackground, string _User, Form _origenF, Panel _origenP)
         {
             InitializeComponent();
 
@@ -37,9 +37,13 @@ namespace Tarjetitas
             tempF = _origenF.Size;
             _origenF.Size = new Size(_origenF.Size.Width, _origenF.Size.Height + 100);
 
-            PanelColor = _colorPanels;
+            panel1.BackColor = PanelColor = _colorPanels;
             this.BackColor = FondoColor = _colorBackground;
-            BotonColor = _colorButtons;
+            btnCreateUser.BackColor = BotonColor = _colorButtons;
+            if (idTheme == 1)
+            { //cambiar color de fuentes en caso de temas claros.
+                label17.ForeColor = btnCreateUser.ForeColor = Color.Black;
+            }
             User = _User;
 
             GetUserData();

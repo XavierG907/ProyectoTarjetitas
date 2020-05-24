@@ -301,11 +301,12 @@
             this.btnCreateUser.BackColor = System.Drawing.Color.Crimson;
             this.btnCreateUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCreateUser.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btnCreateUser.Location = new System.Drawing.Point(269, 500);
+            this.btnCreateUser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnCreateUser.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCreateUser.Location = new System.Drawing.Point(269, 494);
             this.btnCreateUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateUser.Name = "btnCreateUser";
-            this.btnCreateUser.Size = new System.Drawing.Size(299, 30);
+            this.btnCreateUser.Size = new System.Drawing.Size(299, 36);
             this.btnCreateUser.TabIndex = 81;
             this.btnCreateUser.Text = "CONFIRMAR CAMBIOS";
             this.btnCreateUser.UseVisualStyleBackColor = false;
@@ -344,11 +345,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label17.Location = new System.Drawing.Point(317, 22);
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.label17.Location = new System.Drawing.Point(267, 23);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(199, 23);
+            this.label17.Size = new System.Drawing.Size(285, 32);
             this.label17.TabIndex = 50;
             this.label17.Text = "AJUSTES DE USUARIO";
             // 
