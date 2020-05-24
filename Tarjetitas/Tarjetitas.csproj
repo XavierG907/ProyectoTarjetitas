@@ -256,6 +256,7 @@
   <ItemGroup>
     <Content Include="Resources\DIENTES.jpg" />
     <Content Include="Resources\DUBUJAR.PNG" />
+    <None Include="Resources\error.png" />
     <Content Include="Resources\ESCRIBIR.PNG" />
     <Content Include="Resources\NADAR.PNG" />
     <Content Include="Resources\OLER.PNG" />

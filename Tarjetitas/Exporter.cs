@@ -70,8 +70,8 @@ namespace Tarjetitas
 			SaveFileDialog source = new SaveFileDialog();
 			source.Filter = "PDF documents|*.pdf";
 			source.FileName = DeckName;
-			source.ShowDialog();
-			if (source.FileName == "")
+			DialogResult r = source.ShowDialog();
+			if (source.FileName == "" || r == DialogResult.Cancel)
 				return;
 			PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@source.FileName, FileMode.Create));
 			doc.SetMargins(84,84,70,70);
@@ -136,8 +136,13 @@ namespace Tarjetitas
 			//
 			temp = cards.Rows[it]["frente"].ToString();
 			celda = new PdfPCell(new Phrase(temp, f));
+			celda.BorderWidthTop = celda.BorderWidthBottom = 0;
+			celda.BackgroundColor = new BaseColor(Color.AliceBlue);
+			celda.HorizontalAlignment = Element.ALIGN_CENTER;
+			tabla_carta.AddCell(celda);
+			//salto de linea
+			celda = new PdfPCell(new Phrase(" "));//salto de linea
 			celda.BorderWidthTop = 0;
-			//celda.BorderWidth = 0;
 			celda.BackgroundColor = new BaseColor(Color.AliceBlue);
 			tabla_carta.AddCell(celda);
 
@@ -153,14 +158,45 @@ namespace Tarjetitas
 			}
 			else if (cards.Rows[it]["tipoDeTarjeta"].ToString() == "TEXT-IMAGE")
 			{
-				iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@cards.Rows[it]["reverso"].ToString());
-				celda = new PdfPCell(img);
+				iTextSharp.text.Image img;
+				if (File.Exists(@cards.Rows[it]["reverso"].ToString()))
+				{
+					img = iTextSharp.text.Image.GetInstance(@cards.Rows[it]["reverso"].ToString());
+					celda = new PdfPCell(img);
+				}
+				else
+				{
+					img = iTextSharp.text.Image.GetInstance(Properties.Resources.Error,new BaseColor(Color.LightGreen));
+					img.ScaleAbsolute(100f,100f);
+					celda = new PdfPCell(img,false);
+					celda.BorderWidthBottom = celda.BorderWidthTop = 0;
+					celda.BackgroundColor = new BaseColor(Color.LightGreen);
+					celda.HorizontalAlignment = Element.ALIGN_CENTER;
+					tabla_carta.AddCell(celda);
+
+					temp = "Lo sentimos. No se pudo encontrar la imagen!!";
+					celda = new PdfPCell(new Paragraph(temp, fError));
+				}
 			}
 			else
 			{
+				iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.Error, new BaseColor(Color.LightGreen));
+				img.ScaleAbsolute(100f, 100f);
+				celda = new PdfPCell(img, false);
+				celda.BorderWidthBottom = celda.BorderWidthTop = 0;
+				celda.BackgroundColor = new BaseColor(Color.LightGreen);
+				celda.HorizontalAlignment = Element.ALIGN_CENTER;
+				tabla_carta.AddCell(celda);
+
 				temp = "Lo sentimos. No se puede mostrar el contenido de este archivo multimedia!!";
 				celda = new PdfPCell(new Phrase(temp, fError));
 			}
+			celda.BorderWidthTop = celda.BorderWidthBottom =  0;
+			celda.BackgroundColor = new BaseColor(Color.LightGreen);
+			celda.HorizontalAlignment = Element.ALIGN_CENTER;
+			tabla_carta.AddCell(celda);
+
+			celda = new PdfPCell(new Phrase(" "));//salto de linea
 			celda.BorderWidthTop = 0;
 			celda.BackgroundColor = new BaseColor(Color.LightGreen);
 			tabla_carta.AddCell(celda);
@@ -218,6 +254,21 @@ namespace Tarjetitas
 			footer.AddCell(new Paragraph());
 
 			footer.WriteSelectedRows(0, -1, document.LeftMargin, writer.PageSize.GetBottom(document.BottomMargin)-30, writer.DirectContent);
+
+			//Agregar bordes (margen)
+			/*var content = writer.DirectContent;
+			var pageBorderRect = new iTextSharp.text.Rectangle(document.PageSize);
+
+			pageBorderRect.Left += document.LeftMargin-30;
+			pageBorderRect.Right -= document.RightMargin-30;
+			pageBorderRect.Top -= document.TopMargin-20;
+			pageBorderRect.Bottom += document.BottomMargin-20;
+
+			content.SetColorStroke(BaseColor.BLACK);
+			content.Rectangle(pageBorderRect.Left, pageBorderRect.Bottom, pageBorderRect.Width, pageBorderRect.Height);
+			
+			content.Stroke();
+			*/
 		}
 	}
 }
