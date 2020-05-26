@@ -170,5 +170,22 @@ namespace Tarjetitas
             Exporter pdf = new Exporter(deckSelected.Id, deckSelected.Title, deckSelected.Author);
             pdf.ExportToPDF();
         }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in flowLayoutPanelDecks.Controls)
+            {
+                c.Visible = true;
+            }
+
+            for (int i=0; i<flowLayoutPanelDecks.Controls.Count; i++)
+            {
+                DeckButton temp = (DeckButton)Convert.ChangeType(flowLayoutPanelDecks.Controls[i], typeof(DeckButton));
+                if (!temp.Title.Contains(txtSearch.Text))
+                {
+                    flowLayoutPanelDecks.Controls[i].Visible = false;
+                }
+            }
+        }
     }
 }

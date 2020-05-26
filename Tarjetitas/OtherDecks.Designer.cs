@@ -46,6 +46,9 @@
             this.buttonPlayMemorama = new System.Windows.Forms.Button();
             this.timerSelection = new System.Windows.Forms.Timer(this.components);
             this.buttonExportPDF = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnConsult = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelOtherDecks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
@@ -156,10 +159,9 @@
             // 
             this.flowLayoutPanelDecks.AutoScroll = true;
             this.flowLayoutPanelDecks.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanelDecks.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanelDecks.Location = new System.Drawing.Point(0, 77);
+            this.flowLayoutPanelDecks.Location = new System.Drawing.Point(0, 116);
             this.flowLayoutPanelDecks.Name = "flowLayoutPanelDecks";
-            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(585, 374);
+            this.flowLayoutPanelDecks.Size = new System.Drawing.Size(585, 335);
             this.flowLayoutPanelDecks.TabIndex = 12;
             // 
             // labelDeckAuthor
@@ -263,13 +265,41 @@
             this.buttonExportPDF.UseVisualStyleBackColor = false;
             this.buttonExportPDF.Click += new System.EventHandler(this.buttonExportPDF_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(123, 89);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(336, 20);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.label1.Location = new System.Drawing.Point(32, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 23);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Cnsultar";
+            // 
+            // btnConsult
+            // 
+            this.btnConsult.Location = new System.Drawing.Point(465, 87);
+            this.btnConsult.Name = "btnConsult";
+            this.btnConsult.Size = new System.Drawing.Size(75, 23);
+            this.btnConsult.TabIndex = 41;
+            this.btnConsult.Text = "Buscar";
+            this.btnConsult.UseVisualStyleBackColor = true;
+            this.btnConsult.Click += new System.EventHandler(this.btnConsult_Click);
+            // 
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.Transparent;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(831, 451);
-            this.panelContainer.TabIndex = 39;
+            this.panelContainer.TabIndex = 42;
             this.panelContainer.Visible = false;
             // 
             // OtherDecks
@@ -279,6 +309,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(831, 451);
             this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.btnConsult);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.buttonExportPDF);
             this.Controls.Add(this.buttonPlayMemorama);
             this.Controls.Add(this.buttonStudyDeck);
@@ -296,6 +329,7 @@
             this.panelOtherDecks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -317,6 +351,9 @@
         private System.Windows.Forms.Button buttonPlayMemorama;
         private System.Windows.Forms.Timer timerSelection;
         private System.Windows.Forms.Button buttonExportPDF;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.Panel panelContainer;
     }
 }
