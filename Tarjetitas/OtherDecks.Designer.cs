@@ -267,7 +267,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(123, 89);
+            this.txtSearch.Location = new System.Drawing.Point(123, 88);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(336, 20);
             this.txtSearch.TabIndex = 0;
@@ -285,12 +285,16 @@
             // 
             // btnConsult
             // 
-            this.btnConsult.Location = new System.Drawing.Point(465, 87);
+            this.btnConsult.BackColor = System.Drawing.Color.Crimson;
+            this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsult.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsult.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnConsult.Location = new System.Drawing.Point(465, 85);
             this.btnConsult.Name = "btnConsult";
-            this.btnConsult.Size = new System.Drawing.Size(75, 23);
+            this.btnConsult.Size = new System.Drawing.Size(75, 27);
             this.btnConsult.TabIndex = 41;
             this.btnConsult.Text = "Buscar";
-            this.btnConsult.UseVisualStyleBackColor = true;
+            this.btnConsult.UseVisualStyleBackColor = false;
             this.btnConsult.Click += new System.EventHandler(this.btnConsult_Click);
             // 
             // panelContainer

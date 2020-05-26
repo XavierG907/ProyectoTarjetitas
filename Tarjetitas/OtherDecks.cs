@@ -63,7 +63,7 @@ namespace Tarjetitas
                 labelDecksTitle.ForeColor = labelPresentation2.ForeColor = labelPresentation3.ForeColor = labelDeckTitle.ForeColor = labelDeckAuthor.ForeColor = Color.Black;
             }
 
-            buttonStudyDeck.BackColor = buttonStudyDeck.BackColor = buttonPlayMemorama.BackColor = buttonExportPDF.BackColor = colorButtons;
+            buttonStudyDeck.BackColor = buttonStudyDeck.BackColor = buttonPlayMemorama.BackColor = buttonExportPDF.BackColor = btnConsult.BackColor = colorButtons;
 
             panelOtherDecks.BackColor = colorPanels;
             this.BackColor = colorBackground;
