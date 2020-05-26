@@ -152,3 +152,17 @@ C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarj
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.CopyComplete
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\itextsharp.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Zstandard.Net.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Renci.SshNet.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\System.Buffers.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\System.Memory.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe.config
+C:\Users\ivana\Source\Repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.Settings.resources

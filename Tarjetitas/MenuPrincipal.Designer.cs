@@ -58,18 +58,16 @@
             this.panelMainMenu.Controls.Add(this.buttonLogOut);
             this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(1108, 95);
+            this.panelMainMenu.Size = new System.Drawing.Size(831, 77);
             this.panelMainMenu.TabIndex = 0;
             // 
             // pictureBoxImage
             // 
             this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
-            this.pictureBoxImage.Location = new System.Drawing.Point(865, 6);
-            this.pictureBoxImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxImage.Location = new System.Drawing.Point(649, 5);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(201, 81);
+            this.pictureBoxImage.Size = new System.Drawing.Size(151, 66);
             this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 9;
             this.pictureBoxImage.TabStop = false;
@@ -79,10 +77,9 @@
             this.labelUser.AutoSize = true;
             this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUser.ForeColor = System.Drawing.Color.White;
-            this.labelUser.Location = new System.Drawing.Point(564, 71);
-            this.labelUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUser.Location = new System.Drawing.Point(423, 58);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(0, 20);
+            this.labelUser.Size = new System.Drawing.Size(0, 16);
             this.labelUser.TabIndex = 7;
             // 
             // labelWelcome
@@ -90,10 +87,9 @@
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.ForeColor = System.Drawing.Color.White;
-            this.labelWelcome.Location = new System.Drawing.Point(457, 71);
-            this.labelWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelWelcome.Location = new System.Drawing.Point(343, 58);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(95, 20);
+            this.labelWelcome.Size = new System.Drawing.Size(79, 16);
             this.labelWelcome.TabIndex = 6;
             this.labelWelcome.Text = "Bienvenido,";
             // 
@@ -103,10 +99,9 @@
             this.labelMain.BackColor = System.Drawing.Color.Transparent;
             this.labelMain.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.labelMain.Location = new System.Drawing.Point(365, 14);
-            this.labelMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMain.Location = new System.Drawing.Point(274, 11);
             this.labelMain.Name = "labelMain";
-            this.labelMain.Size = new System.Drawing.Size(370, 56);
+            this.labelMain.Size = new System.Drawing.Size(292, 44);
             this.labelMain.TabIndex = 5;
             this.labelMain.Text = "TARJETITAS PRO";
             this.labelMain.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -122,10 +117,9 @@
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.Transparent;
             this.buttonHelp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonHelp.Location = new System.Drawing.Point(199, 4);
-            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHelp.Location = new System.Drawing.Point(149, 3);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(67, 62);
+            this.buttonHelp.Size = new System.Drawing.Size(50, 50);
             this.buttonHelp.TabIndex = 4;
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonHelp.UseVisualStyleBackColor = false;
@@ -142,10 +136,9 @@
             this.buttonConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfig.ForeColor = System.Drawing.Color.Transparent;
             this.buttonConfig.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonConfig.Location = new System.Drawing.Point(96, 4);
-            this.buttonConfig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonConfig.Location = new System.Drawing.Point(72, 3);
             this.buttonConfig.Name = "buttonConfig";
-            this.buttonConfig.Size = new System.Drawing.Size(67, 62);
+            this.buttonConfig.Size = new System.Drawing.Size(50, 50);
             this.buttonConfig.TabIndex = 3;
             this.buttonConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConfig.UseVisualStyleBackColor = false;
@@ -162,10 +155,9 @@
             this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogOut.ForeColor = System.Drawing.Color.Transparent;
             this.buttonLogOut.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.buttonLogOut.Location = new System.Drawing.Point(4, 4);
-            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLogOut.Location = new System.Drawing.Point(3, 3);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(67, 62);
+            this.buttonLogOut.Size = new System.Drawing.Size(50, 50);
             this.buttonLogOut.TabIndex = 1;
             this.buttonLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonLogOut.UseVisualStyleBackColor = false;
@@ -180,10 +172,9 @@
             this.buttonRecycleBin.ForeColor = System.Drawing.Color.DarkGray;
             this.buttonRecycleBin.Image = ((System.Drawing.Image)(resources.GetObject("buttonRecycleBin.Image")));
             this.buttonRecycleBin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRecycleBin.Location = new System.Drawing.Point(288, 453);
-            this.buttonRecycleBin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRecycleBin.Location = new System.Drawing.Point(216, 368);
             this.buttonRecycleBin.Name = "buttonRecycleBin";
-            this.buttonRecycleBin.Size = new System.Drawing.Size(531, 71);
+            this.buttonRecycleBin.Size = new System.Drawing.Size(398, 58);
             this.buttonRecycleBin.TabIndex = 27;
             this.buttonRecycleBin.Text = "Papelería de Reciclaje";
             this.buttonRecycleBin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,10 +190,9 @@
             this.buttonFavoriteDecks.ForeColor = System.Drawing.Color.DarkGray;
             this.buttonFavoriteDecks.Image = ((System.Drawing.Image)(resources.GetObject("buttonFavoriteDecks.Image")));
             this.buttonFavoriteDecks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonFavoriteDecks.Location = new System.Drawing.Point(288, 343);
-            this.buttonFavoriteDecks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFavoriteDecks.Location = new System.Drawing.Point(216, 279);
             this.buttonFavoriteDecks.Name = "buttonFavoriteDecks";
-            this.buttonFavoriteDecks.Size = new System.Drawing.Size(531, 71);
+            this.buttonFavoriteDecks.Size = new System.Drawing.Size(398, 58);
             this.buttonFavoriteDecks.TabIndex = 26;
             this.buttonFavoriteDecks.Text = "Barajas Favoritas";
             this.buttonFavoriteDecks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,10 +208,9 @@
             this.buttonPublicDecks.ForeColor = System.Drawing.Color.DarkGray;
             this.buttonPublicDecks.Image = ((System.Drawing.Image)(resources.GetObject("buttonPublicDecks.Image")));
             this.buttonPublicDecks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPublicDecks.Location = new System.Drawing.Point(288, 234);
-            this.buttonPublicDecks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPublicDecks.Location = new System.Drawing.Point(216, 190);
             this.buttonPublicDecks.Name = "buttonPublicDecks";
-            this.buttonPublicDecks.Size = new System.Drawing.Size(531, 71);
+            this.buttonPublicDecks.Size = new System.Drawing.Size(398, 58);
             this.buttonPublicDecks.TabIndex = 25;
             this.buttonPublicDecks.Text = "Barajas Públicas";
             this.buttonPublicDecks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,10 +226,9 @@
             this.buttonMyDecks.ForeColor = System.Drawing.Color.DarkGray;
             this.buttonMyDecks.Image = ((System.Drawing.Image)(resources.GetObject("buttonMyDecks.Image")));
             this.buttonMyDecks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonMyDecks.Location = new System.Drawing.Point(288, 124);
-            this.buttonMyDecks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMyDecks.Location = new System.Drawing.Point(216, 101);
             this.buttonMyDecks.Name = "buttonMyDecks";
-            this.buttonMyDecks.Size = new System.Drawing.Size(531, 71);
+            this.buttonMyDecks.Size = new System.Drawing.Size(398, 58);
             this.buttonMyDecks.TabIndex = 24;
             this.buttonMyDecks.Text = "Mis Barajas";
             this.buttonMyDecks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,26 +239,25 @@
             // 
             this.panelContainer.BackColor = System.Drawing.Color.Transparent;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1108, 555);
+            this.panelContainer.Size = new System.Drawing.Size(831, 451);
             this.panelContainer.TabIndex = 28;
             this.panelContainer.Visible = false;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1108, 554);
+            this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.buttonRecycleBin);
             this.Controls.Add(this.buttonFavoriteDecks);
             this.Controls.Add(this.buttonPublicDecks);
             this.Controls.Add(this.buttonMyDecks);
             this.Controls.Add(this.panelMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
