@@ -21,6 +21,7 @@ namespace Tarjetitas
         int _IdBaraja;
 		string _DeckName;
 		string _Author;
+		string admin = "admin";
 		public Exporter(int idBataja, string deckName, string author)
 		{
 			_IdBaraja = idBataja;
@@ -158,11 +159,17 @@ namespace Tarjetitas
 			}
 			else if (cards.Rows[it]["tipoDeTarjeta"].ToString() == "TEXT-IMAGE")
 			{
-				iTextSharp.text.Image img;
-				if (File.Exists(@cards.Rows[it]["reverso"].ToString()))
+				string path = @cards.Rows[it]["reverso"].ToString();
+				/*if (Author == admin)
 				{
-					img = iTextSharp.text.Image.GetInstance(@cards.Rows[it]["reverso"].ToString());
-					celda = new PdfPCell(img);
+					path = Path.Combine(Directory.GetCurrentDirectory(), path);
+					MessageBox.Show(path);
+				}*/
+				iTextSharp.text.Image img;
+				if (File.Exists(@path))
+				{
+					img = iTextSharp.text.Image.GetInstance(@path);
+					celda = new PdfPCell(img, false);
 				}
 				else
 				{

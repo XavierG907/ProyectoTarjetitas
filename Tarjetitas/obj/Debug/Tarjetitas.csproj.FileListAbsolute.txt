@@ -124,6 +124,7 @@ C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Syst
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\MySql.Data.xml
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\Interop.WMPLib.dll
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csprojAssemblyReference.cache
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe.config
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Interop.WMPLib.dll
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\AxInterop.WMPLib.dll
@@ -151,4 +152,3 @@ C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarj
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.CopyComplete
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
-C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csprojAssemblyReference.cache
