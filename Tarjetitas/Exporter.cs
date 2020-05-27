@@ -74,7 +74,14 @@ namespace Tarjetitas
 			DialogResult r = source.ShowDialog();
 			if (source.FileName == "" || r == DialogResult.Cancel)
 				return;
-			PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@source.FileName, FileMode.Create));
+			PdfWriter writer;
+			try
+			{
+				writer = PdfWriter.GetInstance(doc, new FileStream(@source.FileName, FileMode.Create));
+			}
+			catch (Exception e) {
+				MessageBox.Show("El archivo está abierto, cierralo para poder ejecutar esta operación");
+				return; }
 			doc.SetMargins(84,84,70,70);
 			writer.PageEvent = new HeaderFooter("Autor: "+Author,"Tarjetitas Pro - QuickSoft");
 			// Le colocamos el título y el autor

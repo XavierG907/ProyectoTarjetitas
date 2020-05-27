@@ -165,3 +165,4 @@ C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarj
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csproj.CopyComplete
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.exe
 C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.pdb
+C:\Users\g2\source\repos\XavierG907\ProyectoTarjetitas\Tarjetitas\obj\Debug\Tarjetitas.csprojAssemblyReference.cache
